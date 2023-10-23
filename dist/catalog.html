@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="format-detection" content="telephone=no">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231023152138" />
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap&_v=20231023152138" rel="stylesheet">
+   <link rel="stylesheet" href="css/style.min.css?_v=20231023152138">
+   <title>Catalog</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <header class="header">
+   <div class="header-backdrop"></div>
+   <div class="header__wrapper">
+      <div class="container">
+         <div class="header__body">
+            <div class="header__row">
+               <ul class="header__list">
+                  <li>
+                     <a href="index.html" class="header__logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="200" height="23" viewBox="0 0 200 23"
+                           fill="none">
+                           <g clip-path="url(#clip0_597_8220)">
+                              <mask id="mask0_597_8220" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0"
+                                 y="0" width="200" height="23">
+                                 <path d="M199.415 0.0609131H0V23H199.415V0.0609131Z" fill="white" />
+                              </mask>
+                              <g mask="">
+                                 <path
+                                    d="M0 0.0609131V23H7.16255V13.8811H23.2862V8.64335H7.16255V5.26716H23.6963V0.0609131H0Z"
+                                    fill="#1B1A19" />
+                                 <path
+                                    d="M62.3805 23H70.111L57.8368 0.0609131H48.5287L36.9487 23H44.2375L46.2884 18.8034H60.1717L62.3805 23ZM57.5844 13.6287H48.9073L53.1669 5.0463L57.5844 13.6287Z"
+                                    fill="#1B1A19" />
+                                 <path
+                                    d="M105.797 13.5025C108.164 13.5025 108.637 14.6384 108.637 15.6165V15.7428C108.637 16.6578 108.164 17.9831 105.797 17.9831H93.9648V13.5025H105.797ZM105.166 4.88853C107.186 4.88853 107.659 5.74046 107.659 6.71861V6.78172C107.659 7.69675 107.154 8.64335 105.166 8.64335H93.9648V4.88853H105.166ZM86.7705 23H106.586C114.001 23 116.084 20.0024 116.084 16.4054V15.9636C116.084 11.9249 112.739 10.5996 111.161 10.1894C112.266 9.84235 114.79 8.70643 114.79 5.70891V5.26716C114.79 2.58516 112.96 0.0609131 106.397 0.0609131H86.7705V23Z"
+                                    fill="#1B1A19" />
+                                 <path d="M133.785 0.0609131V23H156.882V17.2889H140.979V0.0609131H133.785Z"
+                                    fill="#1B1A19" />
+                                 <path
+                                    d="M174.961 0.0609131V23H199.415V17.6675H182.03V13.8811H198.69V8.64335H182.03V5.26716H199.1V0.0609131H174.961Z"
+                                    fill="#1B1A19" />
+                              </g>
+                           </g>
+                           <defs>
+                              <clipPath id="clip0_597_8220">
+                                 <rect width="200" height="22.9391" fill="white" transform="translate(0 0.0609131)" />
+                              </clipPath>
+                           </defs>
+                        </svg>
+                     </a>
+                  </li>
+                  <li class="header__sublink" data-assort="men">
+                     <a href="catalog.html" class="header__link body-text">
+                        Мужское
+                     </a>
+                  </li>
+                  <li class="header__sublink" data-assort="women">
+                     <a href="catalog.html" class="header__link body-text">
+                        Женское
+                     </a>
+
+                  </li>
+                  <li class="header__sublink" data-assort="aks">
+                     <a href="catalog.html" class="header__link body-text">
+                        Аксессуары
+                     </a>
+                  </li>
+               </ul>
+               <ul class="header__actions">
+                  <li>
+                     <span class="header__action body-text header__action_sign header-sign__open header-popup__open"
+                        data-popup="header-sign">Вход</span>
+                  </li>
+                  <li>
+                     <div class="header__action body-text header__action_search header-popup__open"
+                        data-popup="header-search">
+                        <span>Поиск</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                           <line x1="15.3536" y1="15.8642" x2="19.3536" y2="19.8642" stroke="black" />
+                           <circle cx="9" cy="10.2178" r="8.5" stroke="black" />
+                        </svg>
+                     </div>
+                  </li>
+                  <li>
+                     <div class="header__action body-text header__action_cart header-popup__open"
+                        data-popup="header-cart">
+                        <span class="header-cart__span">Корзина</span>
+                        <span class="header-cart__icon">1</span>
+                     </div>
+                  </li>
+                  <li class="header__action_burger header__burger">
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="header-assortments">
+      <div class="header-assortment men">
+         <div class="container">
+            <div class="header-assortment__wrapper">
+               <div class="header-assortment__column">
+                  <ul class="header-assortment__list">
+                     <li>
+                        <a href="catalog.html" class="header-assortment__link body-text">Топы Муж</a>
+                     </li>
+                     <li>
+                        <a href="catalog.html" class="header-assortment__link body-text">Пуховики</a>
+                     </li>
+                     <li>
+                        <a href="catalog.html" class="header-assortment__link body-text">Пиджаки</a>
+                     </li>
+                     <li>
+                        <a href="catalog.html" class="header-assortment__link body-text">Жилеты</a>
+                     </li>
+                     <li>
+                        <a href="catalog.html" class="header-assortment__link body-text">Брюки</a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="header-assortment__column">
+                  <div class="header-assortment__row">
+                     <ul class="header-assortment__list">
+                        <li>
+                           <a href="catalog.html" class="header-assortment__link body-text">Лонгсливы</a>
+                        </li>
+                        <li>
+                           <a href="catalog.html" class="header-assortment__link body-text">Шорты</a>
+                        </li>
+                        <li>
+                           <a href="catalog.html" class="header-assortment__link body-text">Сумки</a>
+                        </li>
+                        <li>
+                           <a href="catalog.html" class="header-assortment__link body-text">Аксессуары</a>
+                        </li>
+                     </ul>
+                     <div class="header-assortment__image">
+                        <picture><source srcset="img/HomeView/capsul.webp" type="image/webp"><img src="img/HomeView/capsul.png" alt=""></picture>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="header-assortment women">
+         <div class="container">
+            <div class="header-assortment__wrapper">
+               <div class="header-assortment__column">
+                  <ul class="header-assortment__list">
+                     <li>
+                        <a href="catalog.html" class="header-assortment__link body-text">Топы Женское</a>
+                     </li>
+                     <li>
+                        <a href="catalog.html" class="header-assortment__link body-text">Пуховики</a>
+                     </li>
+                     <li>
+                        <a href="catalog.html" class="header-assortment__link body-text">Пиджаки</a>
+                     </li>
+                     <li>
+                        <a href="catalog.html" class="header-assortment__link body-text">Жилеты</a>
+                     </li>
+                     <li>
+                        <a href="catalog.html" class="header-assortment__link body-text">Брюки</a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="header-assortment__column">
+                  <div class="header-assortment__row">
+                     <ul class="header-assortment__list">
+                        <li>
+                           <a href="catalog.html" class="header-assortment__link body-text">Лонгсливы</a>
+                        </li>
+                        <li>
+                           <a href="catalog.html" class="header-assortment__link body-text">Шорты</a>
+                        </li>
+                        <li>
+                           <a href="catalog.html" class="header-assortment__link body-text">Сумки</a>
+                        </li>
+                        <li>
+                           <a href="catalog.html" class="header-assortment__link body-text">Аксессуары</a>
+                        </li>
+                     </ul>
+                     <div class="header-assortment__image">
+                        <picture><source srcset="img/HomeView/capsul.webp" type="image/webp"><img src="img/HomeView/capsul.png" alt=""></picture>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="header-assortment aks">
+         <div class="container">
+            <div class="header-assortment__wrapper">
+               <div class="header-assortment__column">
+                  <ul class="header-assortment__list">
+                     <li>
+                        <a href="catalog.html" class="header-assortment__link body-text">Топы
+                           Аксессуары</a>
+                     </li>
+                     <li>
+                        <a href="catalog.html" class="header-assortment__link body-text">Пуховики</a>
+                     </li>
+                     <li>
+                        <a href="catalog.html" class="header-assortment__link body-text">Пиджаки</a>
+                     </li>
+                     <li>
+                        <a href="catalog.html" class="header-assortment__link body-text">Жилеты</a>
+                     </li>
+                     <li>
+                        <a href="catalog.html" class="header-assortment__link body-text">Брюки</a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="header-assortment__column">
+                  <div class="header-assortment__row">
+                     <ul class="header-assortment__list">
+                        <li>
+                           <a href="catalog.html" class="header-assortment__link body-text">Лонгсливы</a>
+                        </li>
+                        <li>
+                           <a href="catalog.html" class="header-assortment__link body-text">Шорты</a>
+                        </li>
+                        <li>
+                           <a href="catalog.html" class="header-assortment__link body-text">Сумки</a>
+                        </li>
+                        <li>
+                           <a href="catalog.html" class="header-assortment__link body-text">Аксессуары</a>
+                        </li>
+                     </ul>
+                     <!-- <div class="header-assortment__image">
+                        <picture><source srcset="img/HomeView/capsul.webp" type="image/webp"><img src="img/HomeView/capsul.png" alt=""></picture>
+                     </div> -->
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="header__search header-search header-popup">
+      <div class="header-search__content header-popup__wrapper">
+         <div class="header-search__header header-popup__header">
+            <div class="header-search__title body-text">Поиск</div>
+            <div class="header-search__close close-btn header-popup__close">
+               <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <rect x="1.85303" y="0.90332" width="13" height="1" rx="0.5" transform="rotate(45 1.85303 0.90332)"
+                     fill="#1B1A19" />
+                  <rect x="10.854" y="1.90332" width="13" height="1" rx="0.5" transform="rotate(135 10.854 1.90332)"
+                     fill="#1B1A19" />
+               </svg>
+            </div>
+         </div>
+         <div class="header-search__body">
+            <div class="header-search__input">
+               <input type="text" placeholder="Поиск по каталогу">
+               <button>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="20" viewBox="0 0 28 20" fill="none">
+                     <line x1="1" y1="9.5" x2="26" y2="9.5" stroke="black" />
+                     <path d="M17.5435 18.0014L26.0293 9.51562L17.5435 1.02984" stroke="black" />
+                  </svg>
+               </button>
+            </div>
+         </div>
+         <div class="header-search__footer">
+            <div class="header-search__recomendations body-text">
+               Рекомендации
+            </div>
+            <ul class="header-search__labels">
+               <li>
+                  <a href="catalog.html" class="header-search__label">
+                     Fable of Dirty
+                  </a>
+               </li>
+               <li>
+                  <a href="catalog.html" class="header-search__label">
+                     Футболки
+                  </a>
+               </li>
+               <li>
+                  <a href="catalog.html" class="header-search__label">
+                     Пуховики
+                  </a>
+               </li>
+               <li>
+                  <a href="catalog.html" class="header-search__label">
+                     Sale
+                  </a>
+               </li>
+            </ul>
+            <div class="header-search__products">
+               <a href="product.html" class="product-card">
+                  <div class="arrival-slide__image">
+                     <picture><source srcset="img/HomeView/arrival1.webp" type="image/webp"><img src="img/HomeView/arrival1.png" alt=""></picture>
+                     <div class="product-card__header">
+                        <ul class="product-card__colors">
+                           <li class="product-card__color grey"></li>
+                           <li class="product-card__color orange"></li>
+                           <li class="product-card__color green"></li>
+                           <li class="product-card__color black"></li>
+                        </ul>
+                        <div class="product-card__like">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17"
+                              fill="none">
+                              <path
+                                 d="M16.1301 2.9574C15.747 2.57416 15.2922 2.27014 14.7916 2.06272C14.291 1.8553 13.7545 1.74854 13.2126 1.74854C12.6707 1.74854 12.1342 1.8553 11.6336 2.06272C11.133 2.27014 10.6782 2.57416 10.2951 2.9574L9.50009 3.7524L8.70509 2.9574C7.93132 2.18364 6.88186 1.74894 5.78759 1.74894C4.69331 1.74894 3.64386 2.18364 2.87009 2.9574C2.09632 3.73117 1.66162 4.78063 1.66162 5.8749C1.66162 6.96918 2.09632 8.01864 2.87009 8.7924L3.66509 9.5874L9.50009 15.4224L15.3351 9.5874L16.1301 8.7924C16.5133 8.40934 16.8174 7.95451 17.0248 7.45392C17.2322 6.95333 17.339 6.41677 17.339 5.8749C17.339 5.33304 17.2322 4.79648 17.0248 4.29589C16.8174 3.79529 16.5133 3.34047 16.1301 2.9574Z"
+                                 fill="transparent" stroke="transparent" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" />
+                           </svg>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="arrival-slide__content">
+                     <div class="arrival-slide__title body-text">Пуховик Grey</div>
+                     <div class="arrival-slide__price">5 000 ₽</div>
+                  </div>
+               </a>
+               <a href="product.html" class="product-card">
+                  <div class="arrival-slide__image">
+                     <picture><source srcset="img/HomeView/arrival1.webp" type="image/webp"><img src="img/HomeView/arrival1.png" alt=""></picture>
+                     <div class="product-card__header">
+                        <ul class="product-card__colors">
+                           <li class="product-card__color grey"></li>
+                           <li class="product-card__color orange"></li>
+                           <li class="product-card__color green"></li>
+                           <li class="product-card__color black"></li>
+                        </ul>
+                        <div class="product-card__like">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17"
+                              fill="none">
+                              <path
+                                 d="M16.1301 2.9574C15.747 2.57416 15.2922 2.27014 14.7916 2.06272C14.291 1.8553 13.7545 1.74854 13.2126 1.74854C12.6707 1.74854 12.1342 1.8553 11.6336 2.06272C11.133 2.27014 10.6782 2.57416 10.2951 2.9574L9.50009 3.7524L8.70509 2.9574C7.93132 2.18364 6.88186 1.74894 5.78759 1.74894C4.69331 1.74894 3.64386 2.18364 2.87009 2.9574C2.09632 3.73117 1.66162 4.78063 1.66162 5.8749C1.66162 6.96918 2.09632 8.01864 2.87009 8.7924L3.66509 9.5874L9.50009 15.4224L15.3351 9.5874L16.1301 8.7924C16.5133 8.40934 16.8174 7.95451 17.0248 7.45392C17.2322 6.95333 17.339 6.41677 17.339 5.8749C17.339 5.33304 17.2322 4.79648 17.0248 4.29589C16.8174 3.79529 16.5133 3.34047 16.1301 2.9574Z"
+                                 fill="transparent" stroke="transparent" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" />
+                           </svg>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="arrival-slide__content">
+                     <div class="arrival-slide__title body-text">Пуховик Grey</div>
+                     <div class="arrival-slide__price">5 000 ₽</div>
+                  </div>
+               </a>
+               <a href="product.html" class="product-card">
+                  <div class="arrival-slide__image">
+                     <picture><source srcset="img/HomeView/arrival1.webp" type="image/webp"><img src="img/HomeView/arrival1.png" alt=""></picture>
+                     <div class="product-card__header">
+                        <ul class="product-card__colors">
+                           <li class="product-card__color grey"></li>
+                           <li class="product-card__color orange"></li>
+                           <li class="product-card__color green"></li>
+                           <li class="product-card__color black"></li>
+                        </ul>
+                        <div class="product-card__like">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17"
+                              fill="none">
+                              <path
+                                 d="M16.1301 2.9574C15.747 2.57416 15.2922 2.27014 14.7916 2.06272C14.291 1.8553 13.7545 1.74854 13.2126 1.74854C12.6707 1.74854 12.1342 1.8553 11.6336 2.06272C11.133 2.27014 10.6782 2.57416 10.2951 2.9574L9.50009 3.7524L8.70509 2.9574C7.93132 2.18364 6.88186 1.74894 5.78759 1.74894C4.69331 1.74894 3.64386 2.18364 2.87009 2.9574C2.09632 3.73117 1.66162 4.78063 1.66162 5.8749C1.66162 6.96918 2.09632 8.01864 2.87009 8.7924L3.66509 9.5874L9.50009 15.4224L15.3351 9.5874L16.1301 8.7924C16.5133 8.40934 16.8174 7.95451 17.0248 7.45392C17.2322 6.95333 17.339 6.41677 17.339 5.8749C17.339 5.33304 17.2322 4.79648 17.0248 4.29589C16.8174 3.79529 16.5133 3.34047 16.1301 2.9574Z"
+                                 fill="transparent" stroke="transparent" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" />
+                           </svg>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="arrival-slide__content">
+                     <div class="arrival-slide__title body-text">Пуховик Grey</div>
+                     <div class="arrival-slide__price">5 000 ₽</div>
+                  </div>
+               </a>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="header__menu header-menu">
+      <ul class="header-menu__list">
+         <li class="header-menu__link header-menu__link_sub">
+            <span class="header-menu__link_sub_span">Мужское</span>
+            <div class="header-menu__submenu">
+               <ul class="header-menu__sublist">
+                  <li class="header-menu__link header-menu__back">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+                        <g clip-path="url(#clip0_302_115)">
+                           <line x1="11" y1="6.05225" x2="1" y2="6.05225" stroke="#1B1A19" />
+                           <path d="M5.24264 1.55179L1 5.79443L5.24264 10.0371" stroke="#1B1A19" />
+                        </g>
+                        <defs>
+                           <clipPath id="clip0_302_115">
+                              <rect width="11" height="10" fill="white" transform="translate(0 0.552246)" />
+                           </clipPath>
+                        </defs>
+                     </svg>
+                     <span>Мужское</span>
+                  </li>
+                  <li>
+                     <a href="catalog.html" class="header-menu__link">Верхняя одежда</a>
+                  </li>
+                  <li>
+                     <a href="catalog.html" class="header-menu__link">Футболки</a>
+                  </li>
+                  <li>
+                     <a href="catalog.html" class="header-menu__link">Брюки</a>
+                  </li>
+                  <li>
+                     <a href="catalog.html" class="header-menu__link">Шорты</a>
+                  </li>
+                  <li>
+                     <a href="catalog.html" class="header-menu__link">Аксессуары</a>
+                  </li>
+                  <li>
+                     <a href="catalog.html" class="header-menu__link">Объекты</a>
+                  </li>
+               </ul>
+            </div>
+         </li>
+         <li class="header-menu__link header-menu__link_sub">
+            <span class="header-menu__link_sub_span">Женское</span>
+            <div class="header-menu__submenu">
+               <ul class="header-menu__sublist">
+                  <li class="header-menu__link header-menu__back">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+                        <g clip-path="url(#clip0_302_115)">
+                           <line x1="11" y1="6.05225" x2="1" y2="6.05225" stroke="#1B1A19" />
+                           <path d="M5.24264 1.55179L1 5.79443L5.24264 10.0371" stroke="#1B1A19" />
+                        </g>
+                        <defs>
+                           <clipPath id="clip0_302_115">
+                              <rect width="11" height="10" fill="white" transform="translate(0 0.552246)" />
+                           </clipPath>
+                        </defs>
+                     </svg>
+                     <span>Женское</span>
+                  </li>
+                  <li>
+                     <a href="catalog.html" class="header-menu__link">Верхняя одежда</a>
+                  </li>
+                  <li>
+                     <a href="catalog.html" class="header-menu__link">Футболки</a>
+                  </li>
+                  <li>
+                     <a href="catalog.html" class="header-menu__link">Брюки</a>
+                  </li>
+                  <li>
+                     <a href="catalog.html" class="header-menu__link">Шорты</a>
+                  </li>
+                  <li>
+                     <a href="catalog.html" class="header-menu__link">Аксессуары</a>
+                  </li>
+                  <li>
+                     <a href="catalog.html" class="header-menu__link">Объекты</a>
+                  </li>
+               </ul>
+            </div>
+         </li>
+         <li class="header-menu__link header-menu__link_sub">
+            <span class="header-menu__link_sub_span">Аксессуары</span>
+            <div class="header-menu__submenu">
+               <ul class="header-menu__sublist">
+                  <li class="header-menu__link header-menu__back">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+                        <g clip-path="url(#clip0_302_115)">
+                           <line x1="11" y1="6.05225" x2="1" y2="6.05225" stroke="#1B1A19" />
+                           <path d="M5.24264 1.55179L1 5.79443L5.24264 10.0371" stroke="#1B1A19" />
+                        </g>
+                        <defs>
+                           <clipPath id="clip0_302_115">
+                              <rect width="11" height="10" fill="white" transform="translate(0 0.552246)" />
+                           </clipPath>
+                        </defs>
+                     </svg>
+                     <span>Аксессуары</span>
+                  </li>
+                  <li>
+                     <a href="catalog.html" class="header-menu__link">Верхняя одежда</a>
+                  </li>
+                  <li>
+                     <a href="catalog.html" class="header-menu__link">Футболки</a>
+                  </li>
+                  <li>
+                     <a href="catalog.html" class="header-menu__link">Брюки</a>
+                  </li>
+                  <li>
+                     <a href="catalog.html" class="header-menu__link">Шорты</a>
+                  </li>
+                  <li>
+                     <a href="catalog.html" class="header-menu__link">Аксессуары</a>
+                  </li>
+                  <li>
+                     <a href="catalog.html" class="header-menu__link">Объекты</a>
+                  </li>
+               </ul>
+            </div>
+         </li>
+         <li class="header-menu__link header-menu__link_sub">
+            <span class="header-menu__link_sub_span">Коллекции</span>
+            <div class="header-menu__submenu">
+               <ul class="header-menu__sublist">
+                  <li class="header-menu__link header-menu__back">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+                        <g clip-path="url(#clip0_302_115)">
+                           <line x1="11" y1="6.05225" x2="1" y2="6.05225" stroke="#1B1A19" />
+                           <path d="M5.24264 1.55179L1 5.79443L5.24264 10.0371" stroke="#1B1A19" />
+                        </g>
+                        <defs>
+                           <clipPath id="clip0_302_115">
+                              <rect width="11" height="10" fill="white" transform="translate(0 0.552246)" />
+                           </clipPath>
+                        </defs>
+                     </svg>
+                     <span>Коллекции</span>
+                  </li>
+                  <li>
+                     <a href="catalog.html" class="header-menu__link">Верхняя одежда</a>
+                  </li>
+                  <li>
+                     <a href="catalog.html" class="header-menu__link">Футболки</a>
+                  </li>
+                  <li>
+                     <a href="catalog.html" class="header-menu__link">Брюки</a>
+                  </li>
+                  <li>
+                     <a href="catalog.html" class="header-menu__link">Шорты</a>
+                  </li>
+                  <li>
+                     <a href="catalog.html" class="header-menu__link">Аксессуары</a>
+                  </li>
+                  <li>
+                     <a href="catalog.html" class="header-menu__link">Объекты</a>
+                  </li>
+               </ul>
+            </div>
+         </li>
+      </ul>
+      <div class="header-menu__sign header-sign__open header-popup__open" data-popup="header-sign">
+         <span class="body-text">Вход в аккаунт</span>
+      </div>
+   </div>
+   <div class="header-cart header-popup">
+      <div class="header-cart__wrapper header-popup__wrapper">
+         <div class="header-cart__header header-popup__header">
+            <div class="header-cart__title body-text">
+               Корзина
+            </div>
+            <div class="header-cart__close close-btn header-popup__close">
+               <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <rect x="1.85303" y="0.903809" width="13" height="1" rx="0.5" transform="rotate(45 1.85303 0.903809)"
+                     fill="#1B1A19" />
+                  <rect x="10.854" y="1.90381" width="13" height="1" rx="0.5" transform="rotate(135 10.854 1.90381)"
+                     fill="#1B1A19" />
+               </svg>
+            </div>
+         </div>
+         <div class="header-cart__broadcrumbs">
+            <ul class="broadcrumbs">
+               <li>
+                  <a href="index.html" class="broadcrumbs__link body-text">Главная</a>
+               </li>
+               <li>
+                  <span class="broadcrumbs__link body-text">Корзина</span>
+               </li>
+            </ul>
+         </div>
+         <div class="header-cart__main">
+            <div class="header-cart__name title">Ваш заказ</div>
+            <div class="header-cart__items">
+               <div class="cart-item">
+                  <div class="cart-item__main">
+                     <div class="cart-item__image">
+                        <picture><source srcset="img/ProductView/product-main.webp" type="image/webp"><img src="img/ProductView/product-main.png" alt=""></picture>
+                     </div>
+                     <div class="cart-item__activities">
+                        <div class="cart-item__title body-text">
+                           Пуховик Grey
+                        </div>
+                        <div class="cart-item__selects">
+                           <div class="cart-item__select">
+                              <div>
+                                 <button id="cartItemCount1Decr">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                       fill="none">
+                                       <path d="M2.9165 7H11.0832" stroke="#1B1A19" stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                    </svg>
+                                 </button>
+                                 <span id="cartItemCount1">1</span>
+                                 <button id="cartItemCount1Incr">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                       fill="none">
+                                       <path d="M2.9165 7H11.0832" stroke="#1B1A19" stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                       <path d="M7 2.91675V11.0834" stroke="#1B1A19" stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                    </svg>
+                                 </button>
+
+                              </div>
+                           </div>
+                           <div class="cart-item__select">
+                              <span>M</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="cart-item__info">
+                     <div class="cart-item__price body-text">
+                        <div class="cart-item__price_old">50 570 ₽</div>
+                        <div class="cart-item__price_actual">46 990 ₽</div>
+                     </div>
+                     <button class="cart-item__remove">удалить</button>
+                  </div>
+               </div>
+               <div class="cart-item">
+                  <div class="cart-item__main">
+                     <div class="cart-item__image">
+                        <picture><source srcset="img/ProductView/product-main.webp" type="image/webp"><img src="img/ProductView/product-main.png" alt=""></picture>
+                     </div>
+                     <div class="cart-item__activities">
+                        <div class="cart-item__title body-text">
+                           Пуховик Grey
+                        </div>
+                        <div class="cart-item__selects">
+                           <div class="cart-item__select">
+                              <div>
+                                 <button id="cartItemCount2Decr">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                       fill="none">
+                                       <path d="M2.9165 7H11.0832" stroke="#1B1A19" stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                    </svg>
+                                 </button>
+                                 <span id="cartItemCount2">1</span>
+                                 <button id="cartItemCount2Incr">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                       fill="none">
+                                       <path d="M2.9165 7H11.0832" stroke="#1B1A19" stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                       <path d="M7 2.91675V11.0834" stroke="#1B1A19" stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                    </svg>
+                                 </button>
+                              </div>
+                           </div>
+                           <div class="cart-item__select">
+                              <span>M</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="cart-item__info">
+                     <div class="cart-item__price body-text">
+                        <div class="cart-item__price_old">50 570 ₽</div>
+                        <div class="cart-item__price_actual">46 990 ₽</div>
+                     </div>
+                     <button class="cart-item__remove">удалить</button>
+                  </div>
+               </div>
+            </div>
+            <ul class="header-cart__list">
+               <li class="header-cart__item header-cart__count body-text">
+                  <span>Скидка Fable</span>
+                  <span class="sale">-757 ₽</span>
+               </li>
+               <li class="header-cart__item header-cart__result body-text">
+                  <span>Программа лояльности</span>
+                  <span class="sale">50 000 ₽</span>
+               </li>
+               <li class="header-cart__item header-cart__count body-text">
+                  <span>Промокод</span>
+                  <span class="sale">50 000 ₽</span>
+               </li>
+               <li class="header-cart__item header-cart__result body-text">
+                  <span>Общая скидка</span>
+                  <span class="sale">50 000 ₽</span>
+               </li>
+               <li class="header-cart__item header-cart__result body-text">
+                  <span>Итого</span>
+                  <span>50 000 ₽</span>
+               </li>
+            </ul>
+            <div class="header-cart__remind body-text">Стоимость доставки будет рассчитана при оформленеии заказа</div>
+            <a href="order.html" class="header-cart__btn body-text">Оформить заказ</a>
+         </div>
+         <div class="header-cart__footer">
+            <div class="header-cart__name title">Рекомендуем</div>
+
+            <div class="header-cart__products swiper">
+               <div class="swiper-wrapper">
+                  <a href="product.html" class="catalog-content__item product-card swiper-slide">
+                     <div class="product-card__image">
+                        <picture><source srcset="img/HomeView/arrival1.webp" type="image/webp"><img src="img/HomeView/arrival1.png" alt=""></picture>
+                        <ul class="product-card__colors">
+                           <li class="product-card__color grey"></li>
+                           <li class="product-card__color orange"></li>
+                           <li class="product-card__color green"></li>
+                           <li class="product-card__color black"></li>
+                        </ul>
+                     </div>
+                     <div class="product-card__content">
+                        <div class="product-card__title body-text">Пуховик Grey</div>
+                        <div class="product-card__price">
+                           <span>5 000 ₽</span>
+                        </div>
+                     </div>
+                  </a>
+                  <a href="product.html" class="catalog-content__item product-card swiper-slide">
+                     <div class="product-card__image">
+                        <picture><source srcset="img/HomeView/arrival1.webp" type="image/webp"><img src="img/HomeView/arrival1.png" alt=""></picture>
+                        <ul class="product-card__colors">
+                           <li class="product-card__color grey"></li>
+                           <li class="product-card__color orange"></li>
+                           <li class="product-card__color green"></li>
+                           <li class="product-card__color black"></li>
+                        </ul>
+                     </div>
+                     <div class="product-card__content">
+                        <div class="product-card__title body-text">Пуховик Grey</div>
+                        <div class="product-card__price">
+                           <span>5 000 ₽</span>
+                        </div>
+                     </div>
+                  </a>
+                  <a href="product.html" class="catalog-content__item product-card swiper-slide">
+                     <div class="product-card__image">
+                        <picture><source srcset="img/HomeView/arrival1.webp" type="image/webp"><img src="img/HomeView/arrival1.png" alt=""></picture>
+                        <ul class="product-card__colors">
+                           <li class="product-card__color grey"></li>
+                           <li class="product-card__color orange"></li>
+                           <li class="product-card__color green"></li>
+                           <li class="product-card__color black"></li>
+                        </ul>
+                     </div>
+                     <div class="product-card__content">
+                        <div class="product-card__title body-text">Пуховик Grey</div>
+                        <div class="product-card__price">
+                           <span>5 000 ₽</span>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="header-cart__arrow header-cart__arrow_prev">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
+                     <path d="M7 1L1 7L7 13" stroke="#1B1A19" />
+                  </svg>
+               </div>
+               <div class="header-cart__arrow header-cart__arrow_next">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
+                     <path d="M1 1L7 7L1 13" stroke="#1B1A19" />
+                  </svg>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="header-sign header-popup">
+      <div class="header-sign__wrapper header-popup__wrapper">
+         <div class="header-sign__header header-popup__header">
+            <div class="header-sign__name body-text">
+               Вход
+            </div>
+            <div class="header-sign__close close-btn header-popup__close">
+               <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <rect x="1.85303" y="0.903809" width="13" height="1" rx="0.5" transform="rotate(45 1.85303 0.903809)"
+                     fill="#1B1A19" />
+                  <rect x="10.854" y="1.90381" width="13" height="1" rx="0.5" transform="rotate(135 10.854 1.90381)"
+                     fill="#1B1A19" />
+               </svg>
+            </div>
+            <div class="header-sign__close header-sign__close_mobile header-popup__close">
+               <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+                  <g clip-path="url(#clip0_462_5057)">
+                     <line x1="11" y1="6.05225" x2="1" y2="6.05225" stroke="#1B1A19" />
+                     <path d="M5.24264 1.55179L1 5.79443L5.24264 10.0371" stroke="#1B1A19" />
+                  </g>
+                  <defs>
+                     <clipPath id="clip0_462_5057">
+                        <rect width="11" height="10" fill="white" transform="translate(0 0.552246)" />
+                     </clipPath>
+                  </defs>
+               </svg>
+            </div>
+         </div>
+         <div class="header-sign__main">
+            <div class="header-sign__title title">Войдите в аккаунт или продолжите как гость</div>
+            <div class="header-sign__subtitle body-text">Зарегистрируйтесь или войдите в свой аккаунт, чтобы
+               воспользоваться программой лояльности</div>
+            <div class="header-sign__btns">
+               <button class="header-sign__btn green body-text header-popup__open" data-popup="header-register">Войти /
+                  Зарегистрироваться</button>
+               <a href="account.html" class="header-sign__btn white body-text">Продолжить как гость</a>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="header-register header-popup">
+      <div class="header-register__wrapper header-popup__wrapper">
+         <div class="header-register__header header-popup__header">
+            <div class="header-register__name body-text">
+               Вход в аккаунт
+            </div>
+            <div class="header-register__close close-btn header-popup__close">
+               <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <rect x="1.85303" y="0.903809" width="13" height="1" rx="0.5" transform="rotate(45 1.85303 0.903809)"
+                     fill="#1B1A19" />
+                  <rect x="10.854" y="1.90381" width="13" height="1" rx="0.5" transform="rotate(135 10.854 1.90381)"
+                     fill="#1B1A19" />
+               </svg>
+            </div>
+         </div>
+         <div class="header-register__main">
+            <div class="header-register__title title">Войти или зарегистрироваться</div>
+            <div class="header-register__subtitle body-text">Мы отправим на номер SMS-сообщение с кодом подтверждения.
+            </div>
+            <div class="header-register__input order-input">
+               <div class="header-register__span order-input__span body-text">Ваш номер телефона</div>
+               <input type="number" class="header-register__input order-input__item body-text" placeholder="+7 (___)"
+                  id="input19">
+               <label for="input19">Caption</label>
+            </div>
+         </div>
+         <div class="header-register__footer">
+            <button class="header-register__btn order__btn body-text header-popup__open"
+               data-popup="header-submit">Получить код</button>
+         </div>
+      </div>
+   </div>
+   <div class="header-submit header-popup">
+      <div class="header-register__wrapper header-popup__wrapper">
+         <div class="header-register__header header-popup__header">
+            <div class="header-submit__back">
+               <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none">
+                  <g clip-path="url(#clip0_483_750)">
+                     <line x1="11" y1="5.5" x2="1" y2="5.5" stroke="#1B1A19" />
+                     <path d="M5.24264 0.999547L1 5.24219L5.24264 9.48483" stroke="#1B1A19" />
+                  </g>
+                  <defs>
+                     <clipPath id="clip0_483_750">
+                        <rect width="11" height="10" fill="white" />
+                     </clipPath>
+                  </defs>
+               </svg>
+               <span class="body-text">Назад</span>
+            </div>
+            <div class="header-register__close close-btn header-popup__close">
+               <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <rect x="1.85303" y="0.903809" width="13" height="1" rx="0.5" transform="rotate(45 1.85303 0.903809)"
+                     fill="#1B1A19" />
+                  <rect x="10.854" y="1.90381" width="13" height="1" rx="0.5" transform="rotate(135 10.854 1.90381)"
+                     fill="#1B1A19" />
+               </svg>
+            </div>
+         </div>
+         <div class="header-register__main header-submit__main">
+            <div class="header-register__title title">Подтвердите номер</div>
+            <div class="header-register__subtitle body-text">Мы отправили код на номер <span class="body-text">+7(977)
+                  184-20-72</span>
+            </div>
+            <div class="header-register__input order-input order-submit__input">
+               <div class="header-register__span order-input__span body-text">Код из смс</div>
+               <input type="number" class="order-input__item body-text" placeholder="- - - -">
+               <span class="header-submit__error boxy-text error">Неверный код</span>
+            </div>
+            <div class="header-submit__remind body-text">
+               Код отправлен, запросить повторный код можно через <span></span> сек.
+            </div>
+            <div class="header-submit__repeat body-text">
+               Отправить еще раз
+            </div>
+         </div>
+         <div class="header-register__footer header-submit__footer">
+            <a href="account.html" class="header-register__btn order__btn body-text">Подтвердить телефон</a>
+            <button class="header-register__btn order__btn body-text header-submit__btn_error error">Получить код
+               повторно</button>
+         </div>
+      </div>
+   </div>
+</header>
+      <main class="main">
+         <section class="catalog-hero">
+            <div class="catalog-hero__image">
+               <picture><source srcset="img/HomeView/hero-men.webp" type="image/webp"><img src="img/HomeView/hero-men.png" alt=""></picture>
+            </div>
+         </section>
+         <section class="catalog-content">
+            <div class="catalog-content__header">
+               <div class="container">
+                  <ul class="broadcrumbs">
+                     <li>
+                        <a href="index.html" class="broadcrumbs__link body-text">Главная</a>
+                     </li>
+                     <li>
+                        <a href="catalog.html" class="broadcrumbs__link body-text">Каталог</a>
+                     </li>
+                     <li>
+                        <a href="catalog.html" class="broadcrumbs__link body-text">Мужское</a>
+                     </li>
+                     <li>
+                        <a href="catalog.html" class="broadcrumbs__link body-text">Мужская верхняя одежда</a>
+                     </li>
+                  </ul>
+                  <div class="catalog-content__row">
+                     <h1 class="catalog-content__title">
+                        <span class="catalog-content__title_big">Мужская верхняя одежда</span>
+                        <span class="catalog-content__title_small">25</span>
+                     </h1>
+                     <ul class="catalog-content__list">
+                        <li class="active">Все</li>
+                        <li>Пуховики</li>
+                        <li>Жилеты</li>
+                        <li>Пальто</li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="catalog-content__subtitle">
+                  Новые поступления
+               </div>
+            </div>
+            <div class="catalog-content__main">
+               <a href="product.html" class="swiper-slide arrival-slide product-card">
+                  <div class="arrival-slide__image">
+                     <picture><source srcset="img/HomeView/arrival1.webp" type="image/webp"><img src="img/HomeView/arrival1.png" alt=""></picture>
+                     <div class="product-card__header">
+                        <ul class="product-card__colors">
+                           <li class="product-card__color grey"></li>
+                           <li class="product-card__color orange"></li>
+                           <li class="product-card__color green"></li>
+                           <li class="product-card__color black"></li>
+                        </ul>
+                        <div class="product-card__like">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21"
+                              fill="none">
+                              <path
+                                 d="M20.3807 2.67974C19.8676 2.14721 19.2583 1.72477 18.5878 1.43656C17.9172 1.14834 17.1985 1 16.4727 1C15.7468 1 15.0281 1.14834 14.3576 1.43656C13.687 1.72477 13.0778 2.14721 12.5646 2.67974L11.4997 3.7844L10.4348 2.67974C9.39834 1.60458 7.99258 1.00056 6.52679 1.00056C5.06099 1.00056 3.65523 1.60458 2.61876 2.67974C1.58229 3.7549 1 5.21313 1 6.73364C1 8.25415 1.58229 9.71238 2.61876 10.7875L3.68367 11.8922L11.4997 20L19.3158 11.8922L20.3807 10.7875C20.8941 10.2553 21.3013 9.62328 21.5791 8.9277C21.857 8.23212 22 7.48657 22 6.73364C22 5.98071 21.857 5.23516 21.5791 4.53958C21.3013 3.84399 20.8941 3.21201 20.3807 2.67974Z"
+                                 fill="#F5F5F5" stroke="#1B1A19" stroke-width="1.5" stroke-linecap="round"
+                                 stroke-linejoin="round" />
+                           </svg>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="arrival-slide__content">
+                     <div class="arrival-slide__title body-text">Пуховик Grey</div>
+                     <div class="arrival-slide__price">5 000 ₽</div>
+                  </div>
+               </a>
+               <a href="product.html" class="swiper-slide arrival-slide product-card">
+                  <div class="arrival-slide__image">
+                     <picture><source srcset="img/HomeView/arrival1.webp" type="image/webp"><img src="img/HomeView/arrival1.png" alt=""></picture>
+                     <div class="product-card__header">
+                        <ul class="product-card__colors">
+                           <li class="product-card__color grey"></li>
+                           <li class="product-card__color orange"></li>
+                           <li class="product-card__color green"></li>
+                           <li class="product-card__color black"></li>
+                        </ul>
+                        <div class="product-card__like">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21"
+                              fill="none">
+                              <path
+                                 d="M20.3807 2.67974C19.8676 2.14721 19.2583 1.72477 18.5878 1.43656C17.9172 1.14834 17.1985 1 16.4727 1C15.7468 1 15.0281 1.14834 14.3576 1.43656C13.687 1.72477 13.0778 2.14721 12.5646 2.67974L11.4997 3.7844L10.4348 2.67974C9.39834 1.60458 7.99258 1.00056 6.52679 1.00056C5.06099 1.00056 3.65523 1.60458 2.61876 2.67974C1.58229 3.7549 1 5.21313 1 6.73364C1 8.25415 1.58229 9.71238 2.61876 10.7875L3.68367 11.8922L11.4997 20L19.3158 11.8922L20.3807 10.7875C20.8941 10.2553 21.3013 9.62328 21.5791 8.9277C21.857 8.23212 22 7.48657 22 6.73364C22 5.98071 21.857 5.23516 21.5791 4.53958C21.3013 3.84399 20.8941 3.21201 20.3807 2.67974Z"
+                                 fill="#F5F5F5" stroke="#1B1A19" stroke-width="1.5" stroke-linecap="round"
+                                 stroke-linejoin="round" />
+                           </svg>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="arrival-slide__content">
+                     <div class="arrival-slide__title body-text">Пуховик Grey</div>
+                     <div class="arrival-slide__price">5 000 ₽</div>
+                  </div>
+               </a>
+               <a href="product.html" class="swiper-slide arrival-slide product-card">
+                  <div class="arrival-slide__image">
+                     <picture><source srcset="img/HomeView/arrival1.webp" type="image/webp"><img src="img/HomeView/arrival1.png" alt=""></picture>
+                     <div class="product-card__header">
+                        <ul class="product-card__colors">
+                           <li class="product-card__color grey"></li>
+                           <li class="product-card__color orange"></li>
+                           <li class="product-card__color green"></li>
+                           <li class="product-card__color black"></li>
+                        </ul>
+                        <div class="product-card__like">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21"
+                              fill="none">
+                              <path
+                                 d="M20.3807 2.67974C19.8676 2.14721 19.2583 1.72477 18.5878 1.43656C17.9172 1.14834 17.1985 1 16.4727 1C15.7468 1 15.0281 1.14834 14.3576 1.43656C13.687 1.72477 13.0778 2.14721 12.5646 2.67974L11.4997 3.7844L10.4348 2.67974C9.39834 1.60458 7.99258 1.00056 6.52679 1.00056C5.06099 1.00056 3.65523 1.60458 2.61876 2.67974C1.58229 3.7549 1 5.21313 1 6.73364C1 8.25415 1.58229 9.71238 2.61876 10.7875L3.68367 11.8922L11.4997 20L19.3158 11.8922L20.3807 10.7875C20.8941 10.2553 21.3013 9.62328 21.5791 8.9277C21.857 8.23212 22 7.48657 22 6.73364C22 5.98071 21.857 5.23516 21.5791 4.53958C21.3013 3.84399 20.8941 3.21201 20.3807 2.67974Z"
+                                 fill="#F5F5F5" stroke="#1B1A19" stroke-width="1.5" stroke-linecap="round"
+                                 stroke-linejoin="round" />
+                           </svg>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="arrival-slide__content">
+                     <div class="arrival-slide__title body-text">Пуховик Grey</div>
+                     <div class="arrival-slide__price">5 000 ₽</div>
+                  </div>
+               </a>
+               <a href="product.html" class="swiper-slide arrival-slide product-card">
+                  <div class="arrival-slide__image">
+                     <picture><source srcset="img/HomeView/arrival1.webp" type="image/webp"><img src="img/HomeView/arrival1.png" alt=""></picture>
+                     <div class="product-card__header">
+                        <ul class="product-card__colors">
+                           <li class="product-card__color grey"></li>
+                           <li class="product-card__color orange"></li>
+                           <li class="product-card__color green"></li>
+                           <li class="product-card__color black"></li>
+                        </ul>
+                        <div class="product-card__like">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21"
+                              fill="none">
+                              <path
+                                 d="M20.3807 2.67974C19.8676 2.14721 19.2583 1.72477 18.5878 1.43656C17.9172 1.14834 17.1985 1 16.4727 1C15.7468 1 15.0281 1.14834 14.3576 1.43656C13.687 1.72477 13.0778 2.14721 12.5646 2.67974L11.4997 3.7844L10.4348 2.67974C9.39834 1.60458 7.99258 1.00056 6.52679 1.00056C5.06099 1.00056 3.65523 1.60458 2.61876 2.67974C1.58229 3.7549 1 5.21313 1 6.73364C1 8.25415 1.58229 9.71238 2.61876 10.7875L3.68367 11.8922L11.4997 20L19.3158 11.8922L20.3807 10.7875C20.8941 10.2553 21.3013 9.62328 21.5791 8.9277C21.857 8.23212 22 7.48657 22 6.73364C22 5.98071 21.857 5.23516 21.5791 4.53958C21.3013 3.84399 20.8941 3.21201 20.3807 2.67974Z"
+                                 fill="#F5F5F5" stroke="#1B1A19" stroke-width="1.5" stroke-linecap="round"
+                                 stroke-linejoin="round" />
+                           </svg>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="arrival-slide__content">
+                     <div class="arrival-slide__title body-text">Пуховик Grey</div>
+                     <div class="arrival-slide__price">5 000 ₽</div>
+                  </div>
+               </a>
+               <a href="product.html" class="swiper-slide arrival-slide product-card">
+                  <div class="arrival-slide__image">
+                     <picture><source srcset="img/HomeView/arrival1.webp" type="image/webp"><img src="img/HomeView/arrival1.png" alt=""></picture>
+                     <div class="product-card__header">
+                        <ul class="product-card__colors">
+                           <li class="product-card__color grey"></li>
+                           <li class="product-card__color orange"></li>
+                           <li class="product-card__color green"></li>
+                           <li class="product-card__color black"></li>
+                        </ul>
+                        <div class="product-card__like">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21"
+                              fill="none">
+                              <path
+                                 d="M20.3807 2.67974C19.8676 2.14721 19.2583 1.72477 18.5878 1.43656C17.9172 1.14834 17.1985 1 16.4727 1C15.7468 1 15.0281 1.14834 14.3576 1.43656C13.687 1.72477 13.0778 2.14721 12.5646 2.67974L11.4997 3.7844L10.4348 2.67974C9.39834 1.60458 7.99258 1.00056 6.52679 1.00056C5.06099 1.00056 3.65523 1.60458 2.61876 2.67974C1.58229 3.7549 1 5.21313 1 6.73364C1 8.25415 1.58229 9.71238 2.61876 10.7875L3.68367 11.8922L11.4997 20L19.3158 11.8922L20.3807 10.7875C20.8941 10.2553 21.3013 9.62328 21.5791 8.9277C21.857 8.23212 22 7.48657 22 6.73364C22 5.98071 21.857 5.23516 21.5791 4.53958C21.3013 3.84399 20.8941 3.21201 20.3807 2.67974Z"
+                                 fill="#F5F5F5" stroke="#1B1A19" stroke-width="1.5" stroke-linecap="round"
+                                 stroke-linejoin="round" />
+                           </svg>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="arrival-slide__content">
+                     <div class="arrival-slide__title body-text">Пуховик Grey</div>
+                     <div class="arrival-slide__price">5 000 ₽</div>
+                  </div>
+               </a>
+               <a href="product.html" class="swiper-slide arrival-slide product-card">
+                  <div class="arrival-slide__image">
+                     <picture><source srcset="img/HomeView/arrival1.webp" type="image/webp"><img src="img/HomeView/arrival1.png" alt=""></picture>
+                     <div class="product-card__header">
+                        <ul class="product-card__colors">
+                           <li class="product-card__color grey"></li>
+                           <li class="product-card__color orange"></li>
+                           <li class="product-card__color green"></li>
+                           <li class="product-card__color black"></li>
+                        </ul>
+                        <div class="product-card__like">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21"
+                              fill="none">
+                              <path
+                                 d="M20.3807 2.67974C19.8676 2.14721 19.2583 1.72477 18.5878 1.43656C17.9172 1.14834 17.1985 1 16.4727 1C15.7468 1 15.0281 1.14834 14.3576 1.43656C13.687 1.72477 13.0778 2.14721 12.5646 2.67974L11.4997 3.7844L10.4348 2.67974C9.39834 1.60458 7.99258 1.00056 6.52679 1.00056C5.06099 1.00056 3.65523 1.60458 2.61876 2.67974C1.58229 3.7549 1 5.21313 1 6.73364C1 8.25415 1.58229 9.71238 2.61876 10.7875L3.68367 11.8922L11.4997 20L19.3158 11.8922L20.3807 10.7875C20.8941 10.2553 21.3013 9.62328 21.5791 8.9277C21.857 8.23212 22 7.48657 22 6.73364C22 5.98071 21.857 5.23516 21.5791 4.53958C21.3013 3.84399 20.8941 3.21201 20.3807 2.67974Z"
+                                 fill="#F5F5F5" stroke="#1B1A19" stroke-width="1.5" stroke-linecap="round"
+                                 stroke-linejoin="round" />
+                           </svg>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="arrival-slide__content">
+                     <div class="arrival-slide__title body-text">Пуховик Grey</div>
+                     <div class="arrival-slide__price">5 000 ₽</div>
+                  </div>
+               </a>
+               <a href="product.html" class="swiper-slide arrival-slide product-card">
+                  <div class="arrival-slide__image">
+                     <picture><source srcset="img/HomeView/arrival1.webp" type="image/webp"><img src="img/HomeView/arrival1.png" alt=""></picture>
+                     <div class="product-card__header">
+                        <ul class="product-card__colors">
+                           <li class="product-card__color grey"></li>
+                           <li class="product-card__color orange"></li>
+                           <li class="product-card__color green"></li>
+                           <li class="product-card__color black"></li>
+                        </ul>
+                        <div class="product-card__like">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21"
+                              fill="none">
+                              <path
+                                 d="M20.3807 2.67974C19.8676 2.14721 19.2583 1.72477 18.5878 1.43656C17.9172 1.14834 17.1985 1 16.4727 1C15.7468 1 15.0281 1.14834 14.3576 1.43656C13.687 1.72477 13.0778 2.14721 12.5646 2.67974L11.4997 3.7844L10.4348 2.67974C9.39834 1.60458 7.99258 1.00056 6.52679 1.00056C5.06099 1.00056 3.65523 1.60458 2.61876 2.67974C1.58229 3.7549 1 5.21313 1 6.73364C1 8.25415 1.58229 9.71238 2.61876 10.7875L3.68367 11.8922L11.4997 20L19.3158 11.8922L20.3807 10.7875C20.8941 10.2553 21.3013 9.62328 21.5791 8.9277C21.857 8.23212 22 7.48657 22 6.73364C22 5.98071 21.857 5.23516 21.5791 4.53958C21.3013 3.84399 20.8941 3.21201 20.3807 2.67974Z"
+                                 fill="#F5F5F5" stroke="#1B1A19" stroke-width="1.5" stroke-linecap="round"
+                                 stroke-linejoin="round" />
+                           </svg>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="arrival-slide__content">
+                     <div class="arrival-slide__title body-text">Пуховик Grey</div>
+                     <div class="arrival-slide__price">5 000 ₽</div>
+                  </div>
+               </a>
+            </div>
+         </section>
+      </main>
+      <footer class="footer">
+   <div class="container">
+      <div class="footer__wrapper">
+         <div class="footer__body">
+            <div class="footer__row">
+               <ul class="footer__list">
+                  <li>
+                     <a href="collections.html" class="footer__link body-text">Коллекции</a>
+                  </li>
+                  <li>
+                     <a href="contacts.html" class="footer__link body-text">Контакты</a>
+                  </li>
+                  <li>
+                     <a href="help.html" class="footer__link body-text">Доставка</a>
+                  </li>
+                  <li>
+                     <a href="help.html" class="footer__link body-text">Оплата</a>
+                  </li>
+                  <li>
+                     <a href="help.html" class="footer__link body-text">Обмен и возврат</a>
+                  </li>
+                  <li>
+                     <a href="help.html" class="footer__link body-text">Уход за одеждой</a>
+                  </li>
+                  <li>
+                     <a href="help.html" class="footer__link body-text">Политика конфиденциальности</a>
+                  </li>
+               </ul>
+               <ul class="footer__social">
+                  <li>
+                     <a href="#" class="footer__media">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20" viewBox="0 0 12 20" fill="none">
+                           <path
+                              d="M10.6401 11.1645L11.1924 7.57249H7.74407V5.24165C7.74407 4.25849 8.22644 3.30111 9.76928 3.30111H11.3379V0.241185C10.4177 0.0935404 9.48791 0.0129336 8.556 0C5.71703 0 3.8612 1.7196 3.8612 4.83476V7.57249H0.705566V11.1645H3.8612V19.849C4.50375 19.9497 5.15317 20.0002 5.80356 20C6.45334 20.0002 7.10215 19.9498 7.74407 19.849V11.1645H10.6401Z"
+                              fill="white" />
+                        </svg>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" class="footer__media">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                           <path
+                              d="M10.908 1.80129C13.577 1.80129 13.8921 1.80129 14.9456 1.86008C15.5792 1.8674 16.2068 1.98354 16.801 2.20341C17.2356 2.36316 17.6286 2.61875 17.9509 2.9512C18.2834 3.27349 18.539 3.66652 18.6987 4.10112C18.9186 4.69534 19.0347 5.32294 19.0421 5.9565C19.0914 7.00999 19.1008 7.3251 19.1008 9.99412C19.1008 12.6631 19.1008 12.9782 19.0421 14.0317C19.0344 14.666 18.9182 15.2943 18.6987 15.8895C18.539 16.3234 18.2833 16.7156 17.9509 17.037C17.6286 17.3695 17.2356 17.6251 16.801 17.7848C16.207 18.0058 15.5794 18.1228 14.9456 18.1305C13.8921 18.1775 13.577 18.1869 10.908 18.1869C8.23899 18.1869 7.92388 18.1869 6.86803 18.1305C6.23436 18.1222 5.6068 18.0053 5.01265 17.7848C4.57875 17.6251 4.18649 17.3694 3.86509 17.037C3.53268 16.7156 3.27707 16.3234 3.11729 15.8895C2.89549 15.2949 2.77853 14.6663 2.77161 14.0317C2.72458 12.9782 2.71518 12.6631 2.71518 9.99412C2.71518 7.3251 2.71518 7.00999 2.77161 5.9565C2.77818 5.32265 2.89516 4.6948 3.11729 4.10112C3.27704 3.66652 3.53263 3.27349 3.86509 2.9512C4.18649 2.61879 4.57875 2.36318 5.01265 2.20341C5.60703 1.98408 6.23453 1.86796 6.86803 1.86008C7.92388 1.8107 8.23899 1.80129 10.908 1.80129ZM10.908 0C8.19431 0 7.85098 -1.28951e-06 6.78808 0.0611392C5.95827 0.0786125 5.13753 0.237669 4.36127 0.531451C3.69431 0.782302 3.09004 1.17551 2.59055 1.68371C2.08322 2.18392 1.69014 2.78799 1.43828 3.45444C1.14591 4.2311 0.986898 5.05159 0.967969 5.88125C0.920937 6.9465 0.90918 7.29218 0.90918 10.0012C0.90918 12.7102 0.920937 13.0582 0.967969 14.1211C0.986627 14.9508 1.14565 15.7713 1.43828 16.5479C1.68974 17.2146 2.08287 17.8187 2.59055 18.3186C3.09004 18.8268 3.69431 19.22 4.36127 19.4709C5.13786 19.7635 5.95839 19.9226 6.78808 19.9412C7.85333 19.9882 8.19901 20 10.908 20C13.617 20 13.965 19.9882 15.0279 19.9412C15.8576 19.9221 16.678 19.7631 17.4548 19.4709C18.1207 19.2194 18.7241 18.8263 19.2231 18.3186C19.7322 17.8194 20.1263 17.2151 20.3777 16.5479C20.6715 15.7716 20.8306 14.9509 20.8481 14.1211C20.8974 13.0558 20.9092 12.7102 20.9092 10.0012C20.9092 7.29218 20.8974 6.94415 20.8481 5.88125C20.8302 5.05148 20.6711 4.23081 20.3777 3.45444C20.1257 2.7875 19.7318 2.18331 19.2231 1.68371C18.7241 1.17609 18.1207 0.782941 17.4548 0.531451C16.6783 0.238289 15.8577 0.0792531 15.0279 0.0611392C13.9627 0.0117565 13.617 0 10.908 0Z"
+                              fill="white" />
+                           <path
+                              d="M10.9079 4.86279C10.2338 4.86248 9.56636 4.99498 8.94356 5.2527C8.32075 5.51042 7.75483 5.88833 7.27811 6.36483C6.8014 6.84132 6.42323 7.40708 6.16522 8.02976C5.90721 8.65245 5.77441 9.31987 5.77441 9.99389C5.77441 11.3554 6.31526 12.6611 7.27797 13.6238C8.24068 14.5865 9.54639 15.1273 10.9079 15.1273C12.2689 15.1267 13.574 14.5856 14.5362 13.623C15.4984 12.6603 16.039 11.355 16.039 9.99389C16.039 9.32007 15.9063 8.65284 15.6484 8.03031C15.3905 7.40777 15.0126 6.84212 14.5361 6.36566C14.0596 5.88919 13.494 5.51124 12.8715 5.25338C12.2489 4.99551 11.5817 4.86279 10.9079 4.86279ZM10.9079 13.3284C10.4702 13.3287 10.0368 13.2427 9.63234 13.0754C9.22792 12.908 8.86047 12.6626 8.55099 12.3531C8.24151 12.0436 7.99607 11.6762 7.82872 11.2718C7.66138 10.8674 7.5754 10.4339 7.57571 9.99624C7.57571 9.1125 7.92678 8.26496 8.55168 7.64005C9.17658 7.01515 10.0241 6.66409 10.9079 6.66409C11.7912 6.66471 12.6381 7.01605 13.2625 7.64089C13.8869 8.26572 14.2377 9.11291 14.2377 9.99624C14.2377 10.8794 13.8869 11.7263 13.2624 12.3508C12.6379 12.9752 11.791 13.3261 10.9079 13.3261V13.3284Z"
+                              fill="white" />
+                           <path
+                              d="M16.2413 5.86002C16.9036 5.86002 17.4406 5.32307 17.4406 4.66072C17.4406 3.99837 16.9036 3.46143 16.2413 3.46143C15.5789 3.46143 15.042 3.99837 15.042 4.66072C15.042 5.32307 15.5789 5.86002 16.2413 5.86002Z"
+                              fill="white" />
+                        </svg>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" class="footer__media">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="29" height="20" viewBox="0 0 29 20" fill="none">
+                           <path
+                              d="M28.4169 3.13253C28.2566 2.52559 27.9392 1.97159 27.4967 1.52631C27.0542 1.08103 26.5022 0.760184 25.8963 0.59607C23.6769 1.54965e-06 14.7485 0 14.7485 0C14.7485 0 5.82337 1.54965e-06 3.59763 0.59607C2.9917 0.760184 2.4397 1.08103 1.99721 1.52631C1.55471 1.97159 1.23733 2.52559 1.07702 3.13253C0.480949 5.35194 0.480957 10 0.480957 10C0.480957 10 0.480949 14.6449 1.07702 16.8675C1.23644 17.4748 1.55353 18.0293 1.99616 18.4747C2.4388 18.9202 2.99126 19.2407 3.59763 19.4039C5.81703 20 14.7485 20 14.7485 20C14.7485 20 23.661 19.9873 25.8804 19.3786C26.4868 19.2153 27.0393 18.8948 27.4819 18.4494C27.9245 18.004 28.2416 17.4495 28.401 16.8421C29.0003 14.6227 29.0003 9.97464 29.0003 9.97464C29.0003 9.97464 29.0003 5.35828 28.4169 3.13253ZM11.8792 14.2803V5.71972L19.292 10L11.8792 14.2803Z"
+                              fill="white" />
+                        </svg>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+            <div class="footer__row">
+               <div class="footer__logo">
+                  <!-- <svg xmlns="http://www.w3.org/2000/svg" width="79" height="32" viewBox="0 0 79 32" fill="none">
+                     <path d="M20.1256 8.39112V13.9107H78.6824V22.2115H20.1256V32H0V0H78.6824V8.39112H20.1256Z"
+                        fill="white" />
+                  </svg> -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="200" height="23" viewBox="0 0 200 23" fill="none">
+                     <g clip-path="url(#clip0_597_8220)">
+                        <mask id="mask0_597_8220" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0"
+                           width="200" height="23">
+                           <path d="M199.415 0.0609131H0V23H199.415V0.0609131Z" fill="white" />
+                        </mask>
+                        <g mask="url(#mask0_597_8220)">
+                           <path
+                              d="M0 0.0609131V23H7.16255V13.8811H23.2862V8.64335H7.16255V5.26716H23.6963V0.0609131H0Z"
+                              fill="#1B1A19" />
+                           <path
+                              d="M62.3805 23H70.111L57.8368 0.0609131H48.5287L36.9487 23H44.2375L46.2884 18.8034H60.1717L62.3805 23ZM57.5844 13.6287H48.9073L53.1669 5.0463L57.5844 13.6287Z"
+                              fill="#1B1A19" />
+                           <path
+                              d="M105.797 13.5025C108.164 13.5025 108.637 14.6384 108.637 15.6165V15.7428C108.637 16.6578 108.164 17.9831 105.797 17.9831H93.9648V13.5025H105.797ZM105.166 4.88853C107.186 4.88853 107.659 5.74046 107.659 6.71861V6.78172C107.659 7.69675 107.154 8.64335 105.166 8.64335H93.9648V4.88853H105.166ZM86.7705 23H106.586C114.001 23 116.084 20.0024 116.084 16.4054V15.9636C116.084 11.9249 112.739 10.5996 111.161 10.1894C112.266 9.84235 114.79 8.70643 114.79 5.70891V5.26716C114.79 2.58516 112.96 0.0609131 106.397 0.0609131H86.7705V23Z"
+                              fill="#1B1A19" />
+                           <path d="M133.785 0.0609131V23H156.882V17.2889H140.979V0.0609131H133.785Z" fill="#1B1A19" />
+                           <path
+                              d="M174.961 0.0609131V23H199.415V17.6675H182.03V13.8811H198.69V8.64335H182.03V5.26716H199.1V0.0609131H174.961Z"
+                              fill="#1B1A19" />
+                        </g>
+                     </g>
+                     <defs>
+                        <clipPath id="clip0_597_8220">
+                           <rect width="200" height="22.9391" fill="white" transform="translate(0 0.0609131)" />
+                        </clipPath>
+                     </defs>
+                  </svg>
+               </div>
+               <span class="footer__year body-text">©2023</span>
+            </div>
+         </div>
+      </div>
+   </div>
+</footer>
+<footer class="footer-mobile">
+   <ul class="footer-mobile__list">
+      <li>
+         <a href="contacts.html" class="footer-mobile__link body-text">
+            <span>Контакты</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="13" viewBox="0 0 8 13" fill="none">
+               <path d="M1 0.552246L7 6.55225L1 12.5522" stroke="#1B1A19" />
+            </svg>
+         </a>
+      </li>
+      <li>
+         <a href="help.html" class="footer-mobile__link body-text">
+            <span>Помощь покупателю</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="13" viewBox="0 0 8 13" fill="none">
+               <path d="M1 0.552246L7 6.55225L1 12.5522" stroke="#1B1A19" />
+            </svg>
+         </a>
+      </li>
+      <li>
+         <span class="footer-mobile__link body-text header-popup__open" data-popup="header-sign">
+            <span>Вход в аккаунт</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="13" viewBox="0 0 8 13" fill="none">
+               <path d="M1 0.552246L7 6.55225L1 12.5522" stroke="#1B1A19" />
+            </svg>
+         </span>
+      </li>
+      <li>
+         <a href="collections.html" class="footer-mobile__link body-text">
+            <span>Коллекции</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="13" viewBox="0 0 8 13" fill="none">
+               <path d="M1 0.552246L7 6.55225L1 12.5522" stroke="#1B1A19" />
+            </svg>
+         </a>
+      </li>
+      <li class="footer-mobile__row">
+         <div class="footer-mobile__logo">
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="50" height="21" viewBox="0 0 50 21" fill="none">
+               <path d="M12.7891 5.88452V9.39206H50V14.6669H12.7891V20.8872H0V0.552246H50V5.88452H12.7891Z"
+                  fill="#1B1A19" />
+            </svg> -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="134" height="23" viewBox="0 0 200 23" fill="none">
+               <g clip-path="url(#clip0_597_8220)">
+                  <mask id="mask0_597_8220" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0"
+                     width="200" height="23">
+                     <path d="M199.415 0.0609131H0V23H199.415V0.0609131Z" fill="white" />
+                  </mask>
+                  <g mask="url(#mask0_597_8220)">
+                     <path d="M0 0.0609131V23H7.16255V13.8811H23.2862V8.64335H7.16255V5.26716H23.6963V0.0609131H0Z"
+                        fill="#1B1A19" />
+                     <path
+                        d="M62.3805 23H70.111L57.8368 0.0609131H48.5287L36.9487 23H44.2375L46.2884 18.8034H60.1717L62.3805 23ZM57.5844 13.6287H48.9073L53.1669 5.0463L57.5844 13.6287Z"
+                        fill="#1B1A19" />
+                     <path
+                        d="M105.797 13.5025C108.164 13.5025 108.637 14.6384 108.637 15.6165V15.7428C108.637 16.6578 108.164 17.9831 105.797 17.9831H93.9648V13.5025H105.797ZM105.166 4.88853C107.186 4.88853 107.659 5.74046 107.659 6.71861V6.78172C107.659 7.69675 107.154 8.64335 105.166 8.64335H93.9648V4.88853H105.166ZM86.7705 23H106.586C114.001 23 116.084 20.0024 116.084 16.4054V15.9636C116.084 11.9249 112.739 10.5996 111.161 10.1894C112.266 9.84235 114.79 8.70643 114.79 5.70891V5.26716C114.79 2.58516 112.96 0.0609131 106.397 0.0609131H86.7705V23Z"
+                        fill="#1B1A19" />
+                     <path d="M133.785 0.0609131V23H156.882V17.2889H140.979V0.0609131H133.785Z" fill="#1B1A19" />
+                     <path
+                        d="M174.961 0.0609131V23H199.415V17.6675H182.03V13.8811H198.69V8.64335H182.03V5.26716H199.1V0.0609131H174.961Z"
+                        fill="#1B1A19" />
+                  </g>
+               </g>
+               <defs>
+                  <clipPath id="clip0_597_8220">
+                     <rect width="200" height="22.9391" fill="white" transform="translate(0 0.0609131)" />
+                  </clipPath>
+               </defs>
+            </svg>
+         </div>
+         <div class="footer-mobile__year body-text">©2023</div>
+      </li>
+   </ul>
+</footer>
+   </div>
+
+   <script src="js/app.min.js?_v=20231023152138"></script>
+</body>
+
+</html>

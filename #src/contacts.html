@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html', {
+"title": "Contacts",
+})
+
+<body>
+   <div class="wrapper">
+      @@include('html/header.html', {})
+      <main class="main">
+         <div class="account-page">
+            <div class="account-nav help-nav">
+               <div class="account__broadcrumbs">
+                  <ul class="broadcrumbs">
+                     <li>
+                        <a href="index.html" class="broadcrumbs__link body-text">Главная</a>
+                     </li>
+                     <li>
+                        <a href="contacts.html" class="broadcrumbs__link body-text">Контакты</a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="account-nav__main">
+                  <ul class="contacts-nav__menu">
+                     <li class="contacts-nav__item body-text active" data-tab="contacts-callback">
+                        Связаться с нами
+                     </li>
+                     <li class="contacts-nav__item body-text" data-tab="contacts-address">
+                        Адреса магазинов
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="account__content">
+               <div class="account__wrapper help__wrapper">
+                  <div class="contacts-tab contacts-callback active" data-tab-content="contacts-callback">
+                     <div class="contacts-tab__wrapper">
+                        <h2 class="contacts-tab__title title account-history__title">Контакты</h2>
+                        <ul class="contacts-callback__list">
+                           <li class="contacts-callback__item">
+                              <span class="body-text contacts-callback__item_first">Пресса и связи с
+                                 общественностью</span>
+                              <a href="mailto:pr@fable.com"
+                                 class="body-text contacts-callback__item_last">pr@fable.com</a>
+                           </li>
+                           <li class="contacts-callback__item">
+                              <span class="body-text contacts-callback__item_first">Байерам и партнерам</span>
+                              <a href="mailto:sale@fable.com"
+                                 class="body-text contacts-callback__item_last">sale@fable.com</a>
+                           </li>
+                           <li class="contacts-callback__item">
+                              <span class="body-text contacts-callback__item_first">Помощь покупателям и вопросы по
+                                 интернет-магазину</span>
+                              <a href="mailto:store@fable.com"
+                                 class="body-text contacts-callback__item_last">store@fable.com</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="contacts-tab contacts-address" data-tab-content="contacts-address">
+                     <div class="contacts-tab__wrapper contacts-address__wrapper">
+                        <div class="contacts-address__item">
+                           <h2 class="contacts-tab__title title account-history__title">Магазин Fable, дизайн-завод
+                              Flacon</h2>
+                           <ul class="contacts-callback__list">
+                              <li class="contacts-callback__item">
+                                 <span class="body-text contacts-callback__item_first">Москва, Большая Новодмитровская
+                                    ул., 36</span>
+                                 <span class="body-text contacts-callback__item_last">Часы работы: с 10:00 до
+                                    21:00</span>
+                              </li>
+                              <li class="contacts-callback__item">
+                                 <span class="body-text contacts-callback__item_first">Телефон</span>
+                                 <a href="tel:+79971872102" class="body-text contacts-callback__item_last">+7 (997)
+                                    187-21-02</a>
+                              </li>
+                           </ul>
+                           <div class="contacts-address__image">
+                              <img src="img/ContactsView/address.jpg" alt="">
+                           </div>
+                        </div>
+                        <div class="contacts-address__item">
+                           <h2 class="contacts-tab__title title account-history__title">Магазин Fable, ТЦ Авиапарк
+                           </h2>
+                           <ul class="contacts-callback__list">
+                              <li class="contacts-callback__item">
+                                 <span class="body-text contacts-callback__item_first">Москва, Большая Новодмитровская
+                                    ул., 36</span>
+                                 <span class="body-text contacts-callback__item_last">Часы работы: с 10:00 до
+                                    21:00</span>
+                              </li>
+                              <li class="contacts-callback__item">
+                                 <span class="body-text contacts-callback__item_first">Телефон</span>
+                                 <a href="tel:+79971872102" class="body-text contacts-callback__item_last">+7 (997)
+                                    187-21-02</a>
+                              </li>
+                           </ul>
+                           <div class="contacts-address__image">
+                              <img src="img/ContactsView/address.jpg" alt="">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
+   </div>
+
+   <script src="js/app.min.js"></script>
+</body>
+
+</html>

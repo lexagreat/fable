@@ -1,0 +1,135 @@
+.contacts-nav {
+   flex: 0 0 30%;
+
+   &__menu {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+   }
+
+   &__item {
+      color: $grey !important;
+      transition: 0.3s;
+      cursor: pointer;
+
+      &:hover {
+         color: $black !important;
+      }
+
+      &.active {
+         color: $black !important;
+      }
+   }
+
+   @media(max-width: 768px) {
+      &__menu {
+         flex-direction: row;
+         position: relative;
+         padding-left: 16px;
+         gap: 24px;
+
+         &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background-color: $grey3;
+         }
+      }
+
+      &__item {
+         padding: 16px 0;
+         position: relative;
+         white-space: nowrap;
+
+         &::after {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: transparent;
+            transition: 0.3s;
+            z-index: 1;
+         }
+
+         &.active {
+            &::after {
+               background-color: $black;
+            }
+         }
+      }
+   }
+}
+
+.contacts-tab {
+   display: none;
+
+   &.active {
+      display: block;
+   }
+}
+
+.contacts-tab {
+
+   &__wrapper {
+      max-width: 802px;
+   }
+
+   &__title {
+      margin-bottom: 16px;
+   }
+}
+
+.contacts-callback {
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+   }
+
+   &__item {
+      padding-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid $grey3;
+      gap: 32px;
+
+      &_first {
+         text-align: left;
+      }
+
+      &_last {
+         text-align: right;
+      }
+   }
+}
+
+.contacts-address {
+   &__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 112px;
+   }
+
+   &__item {}
+
+   &__image {
+      margin-top: 16px;
+
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__wrapper {
+      gap: 44px;
+   }
+}

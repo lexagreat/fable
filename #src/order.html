@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html', {
+"title": "order",
+})
+
+<body>
+   <div class="wrapper">
+      @@include('html/header.html', {})
+      <main class="main">
+         <section class="order-content">
+            <div class="container">
+               <div class="order-content__row">
+                  <div class="order__item order-details">
+                     <div class="order-broadcrumbs">
+                        <ul class="broadcrumbs">
+                           <li>
+                              <a href="index.html" class="broadcrumbs__link body-text">Главная</a>
+                           </li>
+                           <li>
+                              <a href="#" class="broadcrumbs__link body-text">Корзина</a>
+                           </li>
+                           <li>
+                              <a href="order.html" class="broadcrumbs__link body-text">Оформление заказа</a>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="order-details__wrapper">
+                        <ul class="order-details__list">
+                           <li class="order-details__item order-detail order-address">
+                              <div class="order-detail__header">
+                                 <span class="order-detail__title title">Адрес и доставка</span>
+                                 <div class="order-detail__status"></div>
+                              </div>
+                              <div class="order-detail__content collapse">
+                                 <form action="" id="orderAddress">
+                                    <div class="order-detail__wrapper">
+                                       <!-- <div class="order-detail__input order-input not-pickup">
+                                          <span class="body-text order-input__title">Город</span>
+                                          <div id="selectCity"></div>
+                                       </div> -->
+                                       <div class="order-detail__input order-input">
+                                          <div class="order-input__title body-text">Город</div>
+                                          <input class="order-input__item" id="input0">
+                                          <label for="input0">Caption</label>
+                                       </div>
+                                       <div class="order-detail__radios">
+                                          <div class="order-detail__way delivery-way">
+                                             <input type="radio" name="deliveryWay" id="sdekPVZ" value="sdekPVZ">
+                                             <label for="sdekPVZ" class="delivery-way__item first">
+                                                <div class="delivery-way__title body-text">СДЭК ПВЗ</div>
+                                                <div class="delivery-way__subtitle">Доставка до пункта выдачи по России
+                                                </div>
+                                                <div class="delivery-way__price body-text">500 ₽</div>
+                                             </label>
+                                             <input type="radio" name="deliveryWay" id="sdekCourier"
+                                                value="sdekCourier">
+                                             <label for="sdekCourier" class="delivery-way__item second">
+                                                <div class="delivery-way__title body-text">СДЭК Курьер</div>
+                                                <div class="delivery-way__subtitle">Доставка до двери по России</div>
+                                                <div class="delivery-way__price body-text">1000 ₽</div>
+                                             </label>
+                                          </div>
+                                          <div class="order-detail__way delivery-way">
+                                             <input type="radio" name="deliveryWay" id="deliveryWay1" value="courier"
+                                                checked>
+                                             <label for="deliveryWay1" class="delivery-way__item first">
+                                                <div class="delivery-way__title body-text">Курьер по Москве</div>
+                                                <div class="delivery-way__subtitle">Доставка до двери по Москве</div>
+                                                <div class="delivery-way__price body-text">500 ₽</div>
+                                             </label>
+                                             <input type="radio" name="deliveryWay" id="deliveryWay2" value="pickup">
+                                             <label for="deliveryWay2" class="delivery-way__item second">
+                                                <div class="delivery-way__title body-text">Самовывоз</div>
+                                                <div class="delivery-way__subtitle">Дизайн-завод Флакон</div>
+                                                <div class="delivery-way__price body-text">Бесплатно</div>
+                                             </label>
+                                          </div>
+                                       </div>
+                                       <div class="order-detail__intervals not-pickup">
+                                          <input type="radio" name="interval" id="interval1" value="interval1" checked>
+                                          <label for="interval1">
+                                             с 13:00 до 16:00
+                                          </label>
+                                          <input type="radio" name="interval" id="interval2" value="interval2">
+                                          <label for="interval2">
+                                             с 16:00 до 19:00
+                                          </label>
+                                          <input type="radio" name="interval" id="interval3" value="interval3">
+                                          <label for="interval3">
+                                             с 19:00 до 22:00
+                                          </label>
+                                       </div>
+                                       <div class="order-detail__pickup pickup-detail pickup hidden">
+                                          <div class="pickup-detail__row">
+                                             <div class="pickup-detail__name body-text">СДЭК</div>
+                                             <div class="pickup-detail__info body-text">Шоу-рум Fable, Дизайн-завод
+                                                Флакон, Большая Новодмитровская ул., 36</div>
+                                          </div>
+                                          <div class="pickup-detail__btn order__btn body-text" id="changeAddressBtn">
+                                             Изменить адрес
+                                          </div>
+                                          <div class="order-pickup__when body-text">
+                                             Забрать заказ можно через 2 дня
+                                          </div>
+                                       </div>
+                                       <div class="order-detail__input order-input not-pickup">
+                                          <div class="order-input__title body-text">Адрес</div>
+                                          <input class="order-input__item" id="input1">
+                                          <label for="input1">Caption</label>
+                                       </div>
+                                       <div class="order-detail__input order-input not-pickup">
+                                          <div class="order-input__title body-text">Комментарий к заказу</div>
+                                          <input class="order-input__item comment" id="input2">
+                                          <label for="input2">Caption</label>
+                                       </div>
+                                       <div class="order-detail__checkbox order-checkbox not-pickup">
+                                          <input type="checkbox" name="saveAddress" id="saveAddress">
+                                          <label for="saveAddress" class="order-checkbox__label">
+                                             <div class="order-checkbox__box">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="8"
+                                                   viewBox="0 0 12 8" fill="none">
+                                                   <path d="M1.5 4L4.5 7L10.5 1" stroke="#067960" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                             </div>
+                                             <span class="order-checkbox__span">Сохранить адрес</span>
+                                          </label>
+                                       </div>
+                                       <div class="order-detail__input order-input not-pickup">
+                                          <div class="order-input__title body-text">Название адреса</div>
+                                          <input class="order-input__item" placeholder="Дом, работа..." id="input3">
+                                          <label for="input3">Caption</label>
+                                       </div>
+                                       <button
+                                          class="order-detail__btn order__btn body-text not-pickup">Сохранить</button>
+                                    </div>
+                                 </form>
+                              </div>
+                           </li>
+                           <li class="order-details__item order-detail order-client">
+                              <div class="order-detail__header">
+                                 <span class="order-detail__title title">Получатель</span>
+                                 <div class="order-detail__status"></div>
+                              </div>
+                              <div class="order-detail__content collapse">
+                                 <form action="" id="orderCilent">
+                                    <div class="order-detail__wrapper">
+                                       <div class="order-detail__input order-input">
+                                          <div class="order-input__title body-text">Имя</div>
+                                          <input type="text" class="order-input__item" id="input4">
+                                          <label for="input4">Caption</label>
+                                       </div>
+                                       <div class="order-detail__input order-input">
+                                          <div class="order-input__title body-text">Фамилия</div>
+                                          <input type="text" class="order-input__item" id="input5">
+                                          <label for="input5">Caption</label>
+                                       </div>
+                                       <div class="order-detail__input order-input">
+                                          <div class="order-input__title body-text">Эл. почта</div>
+                                          <input type="text" class="order-input__item" id="input6">
+                                          <label for="input6">Caption</label>
+                                       </div>
+                                       <div class="order-detail__input order-input">
+                                          <div class="order-input__title body-text">Телефон</div>
+                                          <input type="number" class="order-input__item" placeholder="+7 (___)"
+                                             id="input7">
+                                          <label for="input7">Caption</label>
+                                       </div>
+                                       <div class="order-detail__checkbox order-checkbox">
+                                          <input type="checkbox" name="saveAddress" id="agreePersonal">
+                                          <label for="agreePersonal" class="order-checkbox__label">
+                                             <div class="order-checkbox__box">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="8"
+                                                   viewBox="0 0 12 8" fill="none">
+                                                   <path d="M1.5 4L4.5 7L10.5 1" stroke="#067960" stroke-width="2"
+                                                      stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                             </div>
+                                             <span class="order-checkbox__span">Я даю согласие на обработку персональных
+                                                данных</span>
+                                          </label>
+                                       </div>
+                                    </div>
+                                 </form>
+
+                              </div>
+                           </li>
+                           <li class="order-details__item order-detail order-payment">
+                              <div class="order-detail__header">
+                                 <span class="order-detail__title title">Оплата</span>
+                                 <div class="order-detail__status"></div>
+                              </div>
+                              <div class="order-detail__content collapse">
+                                 <form action="" id="orderPayment">
+                                    <div class="order-detail__wrapper">
+                                       <div class="order-payment__main">
+                                          <div class="order-detail__radio order-radio">
+                                             <input type="radio" name="paymentWay" id="payment1">
+                                             <label for="payment1" class="order-radio__label">
+                                                <div class="order-radio__circle"></div>
+                                                <div class="order-radio__span">Оплата картой на сайте</div>
+                                             </label>
+                                          </div>
+                                          <div class="order-detail__radio order-radio">
+                                             <input type="radio" name="paymentWay" id="payment2">
+                                             <label for="payment2" class="order-radio__label">
+                                                <div class="order-radio__circle"></div>
+                                                <div class="order-radio__span">Оплата наличными курьеру</div>
+                                             </label>
+                                          </div>
+                                          <div class="order-detail__radio order-radio">
+                                             <input type="radio" name="paymentWay" id="payment3">
+                                             <label for="payment3" class="order-radio__label">
+                                                <div class="order-radio__circle"></div>
+                                                <div class="order-radio__span">Оплата Долями (от Tinkoff)</div>
+                                             </label>
+                                          </div>
+                                       </div>
+                                       <div class="order-payment__promos">
+                                          <div class="order-payment__promo">
+                                             <input type="text" class="order-input__item" placeholder="Промокод">
+                                             <button class="order-payment__btn body-text">Применить</button>
+                                          </div>
+                                          <div class="order-payment__promo">
+                                             <input type="text" class="order-input__item"
+                                                placeholder="Карта лояльности">
+                                             <button class="order-payment__btn body-text">Применить</button>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </form>
+
+                              </div>
+                           </li>
+                        </ul>
+                        <div class="order-details__footer order-footer">
+                           <div class="order-checkbox order-footer__checkbox">
+                              <input type="checkbox" name="" id="agreeConditions">
+                              <label for="agreeConditions" class="order-checkbox__label">
+                                 <div class="order-checkbox__box">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8"
+                                       fill="none">
+                                       <path d="M1.5 4L4.5 7L10.5 1" stroke="#067960" stroke-width="2"
+                                          stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                 </div>
+                                 <div class="order-checkbox__span">Я согласен с <a href="#">условиями</a>
+                                    интернет-магазина
+                                    FABLE
+                                 </div>
+                              </label>
+                           </div>
+                           <a href="order-status.html" class="order-footer__btn order__btn body-text"
+                              id="confirmOrderBtn">Подтвердить
+                              заказ</a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="order__item order-result">
+                     <div class="order-result__wrapper">
+                        <div class="order-result__title title">Ваш заказ</div>
+                        <div class="order-result__products">
+                           <div class="cart-item">
+                              <div class="cart-item__main">
+                                 <div class="cart-item__image">
+                                    <img src="img/ProductView/product-main.png" alt="">
+                                 </div>
+                                 <div class="cart-item__activities">
+                                    <div class="cart-item__title body-text">
+                                       Пуховик Grey
+                                    </div>
+                                    <div class="cart-item__selects">
+                                       <div class="cart-item__select">
+                                          <div>
+                                             <button id="cartItemCount1Decr">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                   viewBox="0 0 14 14" fill="none">
+                                                   <path d="M2.9165 7H11.0832" stroke="#1B1A19" stroke-linecap="round"
+                                                      stroke-linejoin="round" />
+                                                </svg>
+                                             </button>
+                                             <span id="cartItemCount1">1</span>
+                                             <button id="cartItemCount1Incr">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                   viewBox="0 0 14 14" fill="none">
+                                                   <path d="M2.9165 7H11.0832" stroke="#1B1A19" stroke-linecap="round"
+                                                      stroke-linejoin="round" />
+                                                   <path d="M7 2.91675V11.0834" stroke="#1B1A19" stroke-linecap="round"
+                                                      stroke-linejoin="round" />
+                                                </svg>
+                                             </button>
+
+                                          </div>
+                                       </div>
+                                       <div class="cart-item__select">
+                                          <span>M</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="cart-item__info">
+                                 <div class="cart-item__price body-text">
+                                    <div class="cart-item__price_old">50 570 ₽</div>
+                                    <div class="cart-item__price_actual">46 990 ₽</div>
+                                 </div>
+                                 <button class="cart-item__remove">удалить</button>
+                              </div>
+                           </div>
+                           <div class="cart-item">
+                              <div class="cart-item__main">
+                                 <div class="cart-item__image">
+                                    <img src="img/ProductView/product-main.png" alt="">
+                                 </div>
+                                 <div class="cart-item__activities">
+                                    <div class="cart-item__title body-text">
+                                       Пуховик Grey
+                                    </div>
+                                    <div class="cart-item__selects">
+                                       <div class="cart-item__select">
+                                          <div>
+                                             <button id="cartItemCount2Decr">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                   viewBox="0 0 14 14" fill="none">
+                                                   <path d="M2.9165 7H11.0832" stroke="#1B1A19" stroke-linecap="round"
+                                                      stroke-linejoin="round" />
+                                                </svg>
+                                             </button>
+                                             <span id="cartItemCount2">1</span>
+                                             <button id="cartItemCount2Incr">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                   viewBox="0 0 14 14" fill="none">
+                                                   <path d="M2.9165 7H11.0832" stroke="#1B1A19" stroke-linecap="round"
+                                                      stroke-linejoin="round" />
+                                                   <path d="M7 2.91675V11.0834" stroke="#1B1A19" stroke-linecap="round"
+                                                      stroke-linejoin="round" />
+                                                </svg>
+                                             </button>
+                                          </div>
+                                       </div>
+                                       <div class="cart-item__select">
+                                          <span>M</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="cart-item__info">
+                                 <div class="cart-item__price body-text">
+                                    <div class="cart-item__price_old">50 570 ₽</div>
+                                    <div class="cart-item__price_actual">46 990 ₽</div>
+                                 </div>
+                                 <button class="cart-item__remove">удалить</button>
+                              </div>
+                           </div>
+                        </div>
+                        <ul class="order-result__list">
+                           <li class="order-result__item body-text">
+                              <span>Скидка Fable</span>
+                              <span class="orange">50 000 ₽</span>
+                           </li>
+                           <li class="order-result__item body-text">
+                              <span>Программа лояльности</span>
+                              <span class="orange">570 ₽</span>
+                           </li>
+                           <li class="order-result__item body-text">
+                              <span>Промокод</span>
+                              <span class="orange">50 570 ₽</span>
+                           </li>
+                           <li class="order-result__item body-text">
+                              <span>Общая скидка</span>
+                              <span class="orange">50 000 ₽</span>
+                           </li>
+                           <li class="order-result__item body-text">
+                              <span>Доставка</span>
+                              <span class="orange">570 ₽</span>
+                           </li>
+                           <li class="order-result__item body-text">
+                              <span>Итого</span>
+                              <span>50 570 ₽</span>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="order-pickup">
+                  <div class="order-pickup__wrapper">
+                     <div class="order-pickup__row">
+                        <div class="order-pickup__image">
+                           <img src="img/OrderView/pickup-map.jpg" alt="">
+                        </div>
+                        <div class="order-pickup__content">
+                           <div class="order-pickup__header">
+                              <div class="order-pickup__name body-text">
+                                 Пункты самовывоза
+                              </div>
+                              <div class="order-pickup__close close-btn">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
+                                    fill="none">
+                                    <rect x="1.85303" y="0.903809" width="13" height="1" rx="0.5"
+                                       transform="rotate(45 1.85303 0.903809)" fill="#1B1A19" />
+                                    <rect x="10.8541" y="1.90381" width="13" height="1" rx="0.5"
+                                       transform="rotate(135 10.8541 1.90381)" fill="#1B1A19" />
+                                 </svg>
+                              </div>
+                           </div>
+                           <section class="order-pickup__section order-pickup__delivery">
+                              <div class="order-pickup__title title">Выберите службу выдачи</div>
+                              <div class="order-input order-pickup__select">
+                                 <div id="selectPickupService"></div>
+                              </div>
+                           </section>
+                           <section class="order-pickup__section order-pickup__address">
+                              <div class="order-pickup__title title">Адреса пунктов</div>
+                              <div class="order-pickup__input order-input">
+                                 <input type="text" placeholder="Поиск по адресу" class="order-input__item">
+                                 <button class="order-pickup__arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="21" viewBox="0 0 28 21"
+                                       fill="none">
+                                       <line x1="1" y1="10" x2="26" y2="10" stroke="#8C8C8C" />
+                                       <path d="M17.5435 18.5014L26.0293 10.0156L17.5435 1.52984" stroke="#8C8C8C" />
+                                    </svg>
+                                 </button>
+                              </div>
+                              <ul class="order-pickup__list">
+                                 <li class="order-detail__pickup pickup-detail order-pickup__item">
+                                    <div class="pickup-detail__row">
+                                       <div class="pickup-detail__name body-text">СДЭК</div>
+                                       <div class="pickup-detail__info body-text">Шоу-рум Fable, Дизайн-завод
+                                          Флакон, Большая Новодмитровская ул., 36</div>
+                                    </div>
+                                    <button class="order-pickup__btn body-text order-pickup__close">
+                                       Привезти сюда
+                                    </button>
+                                 </li>
+                                 <li class="order-detail__pickup pickup-detail order-pickup__item">
+                                    <div class="pickup-detail__row">
+                                       <div class="pickup-detail__name body-text">СДЭК</div>
+                                       <div class="pickup-detail__info body-text">Шоу-рум Fable, Дизайн-завод
+                                          Флакон, Большая Новодмитровская ул., 36</div>
+                                    </div>
+                                    <button class="order-pickup__btn body-text order-pickup__close">
+                                       Привезти сюда
+                                    </button>
+                                 </li>
+                                 <li class="order-detail__pickup pickup-detail order-pickup__item">
+                                    <div class="pickup-detail__row">
+                                       <div class="pickup-detail__name body-text">СДЭК</div>
+                                       <div class="pickup-detail__info body-text">Шоу-рум Fable, Дизайн-завод
+                                          Флакон, Большая Новодмитровская ул., 36</div>
+                                    </div>
+                                    <button class="order-pickup__btn body-text order-pickup__close">
+                                       Привезти сюда
+                                    </button>
+                                 </li>
+                                 <li class="order-detail__pickup pickup-detail order-pickup__item">
+                                    <div class="pickup-detail__row">
+                                       <div class="pickup-detail__name body-text">СДЭК</div>
+                                       <div class="pickup-detail__info body-text">Шоу-рум Fable, Дизайн-завод
+                                          Флакон, Большая Новодмитровская ул., 36</div>
+                                    </div>
+                                    <button class="order-pickup__btn body-text order-pickup__close">
+                                       Привезти сюда
+                                    </button>
+                                 </li>
+                                 <li class="order-detail__pickup pickup-detail order-pickup__item">
+                                    <div class="pickup-detail__row">
+                                       <div class="pickup-detail__name body-text">СДЭК</div>
+                                       <div class="pickup-detail__info body-text">Шоу-рум Fable, Дизайн-завод
+                                          Флакон, Большая Новодмитровская ул., 36</div>
+                                    </div>
+                                    <button class="order-pickup__btn body-text order-pickup__close">
+                                       Привезти сюда
+                                    </button>
+                                 </li>
+                                 <li class="order-detail__pickup pickup-detail order-pickup__item">
+                                    <div class="pickup-detail__row">
+                                       <div class="pickup-detail__name body-text">СДЭК</div>
+                                       <div class="pickup-detail__info body-text">Шоу-рум Fable, Дизайн-завод
+                                          Флакон, Большая Новодмитровская ул., 36</div>
+                                    </div>
+                                    <button class="order-pickup__btn body-text order-pickup__close">
+                                       Привезти сюда
+                                    </button>
+                                 </li>
+                                 <li class="order-detail__pickup pickup-detail order-pickup__item">
+                                    <div class="pickup-detail__row">
+                                       <div class="pickup-detail__name body-text">СДЭК</div>
+                                       <div class="pickup-detail__info body-text">Шоу-рум Fable, Дизайн-завод
+                                          Флакон, Большая Новодмитровская ул., 36</div>
+                                    </div>
+                                    <button class="order-pickup__btn body-text order-pickup__close">
+                                       Привезти сюда
+                                    </button>
+                                 </li>
+                                 <li class="order-detail__pickup pickup-detail order-pickup__item">
+                                    <div class="pickup-detail__row">
+                                       <div class="pickup-detail__name body-text">СДЭК</div>
+                                       <div class="pickup-detail__info body-text">Шоу-рум Fable, Дизайн-завод
+                                          Флакон, Большая Новодмитровская ул., 36</div>
+                                    </div>
+                                    <button class="order-pickup__btn body-text order-pickup__close">
+                                       Привезти сюда
+                                    </button>
+                                 </li>
+                                 <li class="order-detail__pickup pickup-detail order-pickup__item">
+                                    <div class="pickup-detail__row">
+                                       <div class="pickup-detail__name body-text">СДЭК</div>
+                                       <div class="pickup-detail__info body-text">Шоу-рум Fable, Дизайн-завод
+                                          Флакон, Большая Новодмитровская ул., 36</div>
+                                    </div>
+                                    <button class="order-pickup__btn body-text order-pickup__close">
+                                       Привезти сюда
+                                    </button>
+                                 </li>
+                              </ul>
+                           </section>
+                        </div>
+                     </div>
+                     <div class="order-pickup__mobile pickup-mobile">
+                        <div class="pickup-mobile__close order-pickup__close">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"
+                              fill="none">
+                              <g clip-path="url(#clip0_353_5048)">
+                                 <line x1="11" y1="6.05225" x2="1" y2="6.05225" stroke="#1B1A19" />
+                                 <path d="M5.24264 1.55179L1 5.79443L5.24264 10.0371" stroke="#1B1A19" />
+                              </g>
+                              <defs>
+                                 <clipPath id="clip0_353_5048">
+                                    <rect width="11" height="10" fill="white" transform="translate(0 0.552246)" />
+                                 </clipPath>
+                              </defs>
+                           </svg>
+                        </div>
+                        <div class="pickup-mobile__header">
+                           <div class="pickup-mobile__tab title" data-tab="map">
+                              На карте
+                           </div>
+                           <div class="pickup-mobile__tab title" data-tab="list">
+                              Списком
+                           </div>
+                        </div>
+                        <div class="pickup-mobile__main">
+                           <div class="pickup-mobile__shared">
+                              <div class="order-input order-pickup__select">
+                                 <div id="selectPickupServiceMobile"></div>
+                              </div>
+                              <div class="order-pickup__input order-input">
+                                 <input type="text" placeholder="Поиск по адресу" class="order-input__item">
+                                 <button class="order-pickup__arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="21" viewBox="0 0 28 21"
+                                       fill="none">
+                                       <line x1="1" y1="10" x2="26" y2="10" stroke="#8C8C8C" />
+                                       <path d="M17.5435 18.5014L26.0293 10.0156L17.5435 1.52984" stroke="#8C8C8C" />
+                                    </svg>
+                                 </button>
+                              </div>
+                           </div>
+                           <div class="pickup-mobile__map pickup-mobile__content" data-tab-content="map">
+                              <div class="pickup-mobile__image">
+                                 <img src="img/OrderView/pickup-map.jpg" alt="">
+                              </div>
+                           </div>
+                           <div class="pickup-mobile__list pickup-mobile__content" data-tab-content="list">
+                              <ul class="order-pickup__list">
+                                 <li class="order-detail__pickup pickup-detail order-pickup__item">
+                                    <div class="pickup-detail__row">
+                                       <div class="pickup-detail__name body-text">СДЭК</div>
+                                       <div class="pickup-detail__info body-text">Шоу-рум Fable, Дизайн-завод
+                                          Флакон, Большая Новодмитровская ул., 36</div>
+                                    </div>
+                                    <button class="order-pickup__btn body-text order-pickup__close">
+                                       Привезти сюда
+                                    </button>
+                                 </li>
+                                 <li class="order-detail__pickup pickup-detail order-pickup__item">
+                                    <div class="pickup-detail__row">
+                                       <div class="pickup-detail__name body-text">СДЭК</div>
+                                       <div class="pickup-detail__info body-text">Шоу-рум Fable, Дизайн-завод
+                                          Флакон, Большая Новодмитровская ул., 36</div>
+                                    </div>
+                                    <button class="order-pickup__btn body-text order-pickup__close">
+                                       Привезти сюда
+                                    </button>
+                                 </li>
+                                 <li class="order-detail__pickup pickup-detail order-pickup__item">
+                                    <div class="pickup-detail__row">
+                                       <div class="pickup-detail__name body-text">СДЭК</div>
+                                       <div class="pickup-detail__info body-text">Шоу-рум Fable, Дизайн-завод
+                                          Флакон, Большая Новодмитровская ул., 36</div>
+                                    </div>
+                                    <button class="order-pickup__btn body-text order-pickup__close">
+                                       Привезти сюда
+                                    </button>
+                                 </li>
+                                 <li class="order-detail__pickup pickup-detail order-pickup__item">
+                                    <div class="pickup-detail__row">
+                                       <div class="pickup-detail__name body-text">СДЭК</div>
+                                       <div class="pickup-detail__info body-text">Шоу-рум Fable, Дизайн-завод
+                                          Флакон, Большая Новодмитровская ул., 36</div>
+                                    </div>
+                                    <button class="order-pickup__btn body-text order-pickup__close">
+                                       Привезти сюда
+                                    </button>
+                                 </li>
+                                 <li class="order-detail__pickup pickup-detail order-pickup__item">
+                                    <div class="pickup-detail__row">
+                                       <div class="pickup-detail__name body-text">СДЭК</div>
+                                       <div class="pickup-detail__info body-text">Шоу-рум Fable, Дизайн-завод
+                                          Флакон, Большая Новодмитровская ул., 36</div>
+                                    </div>
+                                    <button class="order-pickup__btn body-text order-pickup__close">
+                                       Привезти сюда
+                                    </button>
+                                 </li>
+                                 <li class="order-detail__pickup pickup-detail order-pickup__item">
+                                    <div class="pickup-detail__row">
+                                       <div class="pickup-detail__name body-text">СДЭК</div>
+                                       <div class="pickup-detail__info body-text">Шоу-рум Fable, Дизайн-завод
+                                          Флакон, Большая Новодмитровская ул., 36</div>
+                                    </div>
+                                    <button class="order-pickup__btn body-text order-pickup__close">
+                                       Привезти сюда
+                                    </button>
+                                 </li>
+                                 <li class="order-detail__pickup pickup-detail order-pickup__item">
+                                    <div class="pickup-detail__row">
+                                       <div class="pickup-detail__name body-text">СДЭК</div>
+                                       <div class="pickup-detail__info body-text">Шоу-рум Fable, Дизайн-завод
+                                          Флакон, Большая Новодмитровская ул., 36</div>
+                                    </div>
+                                    <button class="order-pickup__btn body-text order-pickup__close">
+                                       Привезти сюда
+                                    </button>
+                                 </li>
+                                 <li class="order-detail__pickup pickup-detail order-pickup__item">
+                                    <div class="pickup-detail__row">
+                                       <div class="pickup-detail__name body-text">СДЭК</div>
+                                       <div class="pickup-detail__info body-text">Шоу-рум Fable, Дизайн-завод
+                                          Флакон, Большая Новодмитровская ул., 36</div>
+                                    </div>
+                                    <button class="order-pickup__btn body-text order-pickup__close">
+                                       Привезти сюда
+                                    </button>
+                                 </li>
+                                 <li class="order-detail__pickup pickup-detail order-pickup__item">
+                                    <div class="pickup-detail__row">
+                                       <div class="pickup-detail__name body-text">СДЭК</div>
+                                       <div class="pickup-detail__info body-text">Шоу-рум Fable, Дизайн-завод
+                                          Флакон, Большая Новодмитровская ул., 36</div>
+                                    </div>
+                                    <button class="order-pickup__btn body-text order-pickup__close">
+                                       Привезти сюда
+                                    </button>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="order-pickup__backdrop"></div>
+            </div>
+         </section>
+         <section class="order-products">
+            <a href="product.html" class="catalog-content__item product-card">
+               <div class="product-card__image">
+                  <img src="img/HomeView/arrival1.png" alt="">
+                  <ul class="product-card__colors">
+                     <li class="product-card__color grey"></li>
+                     <li class="product-card__color orange"></li>
+                     <li class="product-card__color green"></li>
+                     <li class="product-card__color black"></li>
+                  </ul>
+               </div>
+               <div class="product-card__content">
+                  <div class="product-card__title body-text">Пуховик Grey</div>
+                  <div class="product-card__price">
+                     <span>5 000 ₽</span>
+                  </div>
+               </div>
+            </a>
+            <a href="product.html" class="catalog-content__item product-card">
+               <div class="product-card__image">
+                  <img src="img/HomeView/arrival2.png" alt="">
+                  <ul class="product-card__colors">
+                     <li class="product-card__color grey"></li>
+                     <li class="product-card__color orange"></li>
+                     <li class="product-card__color green"></li>
+                     <li class="product-card__color black"></li>
+                  </ul>
+               </div>
+               <div class="product-card__content">
+                  <div class="product-card__title body-text">Пуховик Grey</div>
+                  <div class="product-card__price">
+                     <span class="actual">2 500 ₽</span>
+                     <span class="old">5 000 ₽</span>
+                  </div>
+               </div>
+            </a>
+         </section>
+      </main>
+      <!-- @@include('html/footer.html', {}) -->
+   </div>
+
+   <script src="js/app.min.js"></script>
+</body>
+
+</html>

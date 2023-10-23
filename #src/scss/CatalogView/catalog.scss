@@ -1,0 +1,265 @@
+.catalog-hero {
+
+   &__image {
+      height: 350px;
+
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+}
+
+.catalog-content {
+
+   &__header {
+      padding: 24px 0;
+   }
+
+   &__row {
+      margin-top: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 16px;
+   }
+
+   &__title {
+      color: $black;
+      display: flex;
+      gap: 8px;
+      font-weight: 300;
+
+      &_big {
+         font-size: 28px;
+         align-self: flex-end;
+      }
+
+      &_small {
+         font-size: 12px;
+         align-self: flex-start;
+      }
+   }
+
+   &__subtitle {
+      display: none;
+   }
+
+   &__list {
+      display: flex;
+
+      li {
+         cursor: pointer;
+         padding: 16px;
+         border-radius: 8px;
+         border: 1px solid $grey3;
+         font-size: 12px;
+         color: $black;
+         transition: 0.3s;
+
+         &:hover {
+            border: 1px solid $black;
+         }
+
+         &.active {
+            border: 1px solid $black;
+
+         }
+      }
+   }
+
+   &__main {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+   }
+
+   @media(max-width: 992px) {
+      &__main {
+         grid-template-columns: repeat(3, 1fr);
+      }
+
+      &__header {
+         padding: 16px 0;
+      }
+   }
+
+   @media(max-width: 768px) {
+      &__row {
+         flex-direction: column;
+         align-items: flex-start;
+         gap: 16px;
+         margin-top: 24px;
+      }
+
+      &__title {
+         gap: 4px;
+
+         &_big {
+            font-size: 18px;
+         }
+
+         &_small {
+            font-size: 8px;
+         }
+      }
+
+      &__subtitle {
+         display: block;
+         padding-top: 16px;
+         padding-left: 16px;
+         color: $black;
+         font-size: 16px;
+         font-weight: 300;
+         border-top: 1px solid $grey3;
+      }
+
+      &__list {
+         gap: 4px;
+
+         li {
+            padding: 8px;
+         }
+      }
+   }
+
+   @media(max-width: 650px) {
+      &__main {
+         grid-template-columns: repeat(2, 1fr);
+      }
+
+   }
+}
+
+
+
+.product-card {
+   border: 1px solid $grey3;
+   border-left: 0;
+   border-bottom: 0;
+   transition: 0.3s;
+   position: relative;
+
+   &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1px;
+      height: 100%;
+      background-color: transparent;
+      transition: 0.3s;
+      z-index: 2;
+   }
+
+   &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: transparent;
+      transition: 0.3s;
+      z-index: 2;
+   }
+
+   &:hover {
+      border: 1px solid $black;
+      border-left: 0;
+      border-bottom: 0;
+
+      &::before,
+      &::after {
+         background-color: $black;
+      }
+
+      .product-card__colors {
+         opacity: 1;
+      }
+   }
+
+   &__image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__colors {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      display: flex;
+      gap: 6px;
+      opacity: 0;
+      transition: 0.3s;
+   }
+
+   &__color {
+      width: 14px;
+      height: 14px;
+      flex: 0 0 14px;
+
+      &.grey {
+         background: #D5D5D9;
+      }
+
+      &.orange {
+         background: #D6AD91;
+      }
+
+      &.green {
+         background: #067960;
+      }
+
+      &.black {
+         background: #101012;
+      }
+   }
+
+   &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 32px;
+      padding-top: 0;
+   }
+
+   &__title {}
+
+   &__price {
+      color: $grey;
+      font-size: 12px;
+      display: flex;
+      gap: 8px;
+
+      .old {
+         text-decoration: line-through;
+      }
+
+      .actual {
+         color: $errorOrange;
+      }
+   }
+
+   @media(max-width: 450px) {
+      &__content {
+         gap: 4px;
+         padding: 16px;
+      }
+
+      &__price {
+         font-size: 8px;
+      }
+   }
+}

@@ -1,0 +1,1095 @@
+// Стили инпутов
+.order-checkbox {
+   input {
+      display: none;
+   }
+
+   input:checked+label {
+      .order-checkbox {
+         &__box {
+            border: 2px solid $green3;
+
+            svg {
+               opacity: 1;
+            }
+         }
+      }
+   }
+
+   &__label {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      cursor: pointer;
+   }
+
+   &__span {
+      font-size: 12px;
+      font-weight: 300;
+   }
+
+   &__box {
+      width: 24px;
+      height: 24px;
+      flex: 0 0 24px;
+      border-radius: 4px;
+      border: 2px solid $grey3;
+      background: #FFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.3s;
+
+      svg {
+         opacity: 0;
+         transition: 0.3s;
+      }
+   }
+
+   &__span {
+      a {
+         color: $green1;
+         text-decoration: underline;
+      }
+   }
+}
+
+.order-input {
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+
+   &__title {}
+
+   &__item {
+      padding: 15px 23px;
+      width: 100%;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 300;
+      color: $black;
+      background-color: transparent;
+      border: 1px solid $green1;
+      transition: 0.3s;
+
+      &+label {
+         display: none;
+      }
+
+      &::placeholder {
+         font-size: 16px;
+         font-weight: 300;
+         color: $grey;
+      }
+
+      &.filled {
+         background-color: $green3;
+         border: 1px solid $green3;
+      }
+
+      &.error {
+         background-color: $errorOrange;
+         border: 1px solid $errorOrange;
+
+         &+label {
+            display: block;
+            color: $errorRed;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 130%;
+         }
+      }
+
+      &:focus {
+         background-color: transparent;
+         border: 1px solid $green1;
+      }
+
+      @media(max-width: 768px) {
+         font-size: 12px;
+
+         &::placeholder {
+            font-size: 12px;
+         }
+      }
+   }
+
+   .select {
+      position: relative;
+
+      &.open {
+         .select {
+            &__header {
+               background-color: transparent;
+               border-radius: 8px 8px 0 0;
+               border: 1px solid $green1;
+
+            }
+
+            &__title {}
+
+            &__content {
+               opacity: 1;
+               pointer-events: all;
+            }
+
+            &__back {
+               transform: rotate(180deg);
+            }
+
+         }
+
+      }
+
+      &__header {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         cursor: pointer;
+         padding: 15px 23px;
+         width: 100%;
+         border-radius: 8px;
+         font-size: 16px;
+         font-weight: 300;
+         color: $black;
+         background-color: $green3;
+         border: 1px solid $green3;
+         transition: 0.3s;
+      }
+
+      &__back {
+         background: url(../img/icons/order-select-back.svg) center / auto no-repeat;
+         width: 14px;
+         height: 20px;
+         flex: 0 0 14px;
+         transition: 0.3s;
+      }
+
+      &__title {}
+
+      &__content {
+         position: absolute;
+         top: 100%;
+         left: 0;
+         width: 100%;
+         opacity: 0;
+         pointer-events: none;
+         transition: 0.3s;
+         z-index: 1;
+      }
+
+      &__list {
+         display: flex;
+         flex-direction: column;
+         border: 1px solid $green1;
+         border-top: 0;
+         border-radius: 0 0 8px 8px;
+      }
+
+      &__item {
+         padding: 15px 23px;
+         width: 100%;
+         font-size: 16px;
+         font-weight: 300;
+         color: $black;
+         background-color: $grey1;
+         border-bottom: 1px solid $green1;
+         cursor: pointer;
+
+         &.selected {
+            background-color: $green3;
+         }
+
+         &:last-child {
+            border-bottom: 0;
+            border-radius: 0 0 8px 8px;
+         }
+      }
+
+      @media(max-width: 768px) {
+         &__header {
+            height: 47px;
+         }
+
+         &__title {
+            font-size: 12px;
+         }
+
+         &__item {
+            font-size: 12px;
+         }
+      }
+   }
+}
+
+.order-radio {
+   input {
+      display: none;
+   }
+
+   input:checked+label {
+      .order-radio {
+         &__circle {
+            border: 2px solid $green3;
+
+            &::after {
+               opacity: 1;
+            }
+         }
+      }
+   }
+
+   &__label {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      cursor: pointer;
+   }
+
+   &__circle {
+      border: 2px solid $grey3;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      flex: 0 0 24px;
+      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &::after {
+         content: "";
+         display: block;
+         width: 16px;
+         height: 16px;
+         flex: 0 0 16px;
+         background-color: $green1;
+         transition: 0.3s;
+         opacity: 0;
+         border-radius: 50%;
+      }
+   }
+
+   &__span {}
+}
+
+.order {
+   &__item {
+      flex: 0 0 50%;
+   }
+
+   &__btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 0;
+      border-radius: 8px;
+      background: $grey2;
+      border: 1px solid $grey2;
+      transition: 0.3s;
+
+      &.work {
+         background-color: $green1;
+         border: 1px solid $green1;
+
+      }
+
+      &:hover {
+         background-color: transparent;
+         border: 1px solid $green1;
+      }
+   }
+
+   @media(max-width: 768px) {
+      &__item {
+         flex: unset;
+      }
+
+      &__btn {
+         padding: 11px;
+      }
+   }
+}
+
+// Другое
+
+// Путь
+.order-broadcrumbs {
+   padding: 24px 0;
+
+   @media(max-width: 768px) {
+      padding: 16px 0;
+   }
+}
+
+// Контент
+.order-content {
+   padding-bottom: 20px;
+
+   &__row {
+      display: flex;
+   }
+
+   @media(max-width: 768px) {
+      &__row {
+         flex-direction: column;
+         gap: 48px;
+      }
+
+   }
+}
+
+// Основная часть
+.order-details {
+   border-right: 1px solid $grey3;
+   padding-bottom: 88px;
+   min-height: calc(100vh - 80px);
+
+   &__wrapper {
+      padding: 0 90px;
+      padding-top: 113px;
+   }
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 88px;
+      margin-bottom: 88px;
+   }
+
+   &__footer {}
+
+   @media(max-width: 1512px) {
+      &__wrapper {
+         padding: 0 calc(16px + 74 * ((100vw - 992px) / (1512 - 992)));
+         padding-top: calc(0px + 113 * ((100vw - 992px) / (1512 - 992)));
+      }
+   }
+
+   @media(max-width: 992px) {
+      &__wrapper {
+         padding-top: 0;
+         padding-left: 0;
+         padding-right: 16px;
+      }
+   }
+
+   @media(max-width: 768px) {
+      min-height: unset;
+      border: 0;
+      padding-bottom: 0;
+
+      &__wrapper {
+         padding: 0;
+      }
+
+      &__list {
+         gap: 32px;
+         margin-bottom: 32px;
+      }
+   }
+}
+
+// Отдельная деталь
+.order-detail {
+
+   &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid $grey3;
+      padding-bottom: 20px;
+      cursor: pointer;
+
+      &.active {
+         .order-detail__status {
+            border: 2px solid $green1;
+            background-color: transparent;
+         }
+      }
+
+      &.activated {
+         .order-detail__status {
+            border: 2px solid $green1;
+            background-color: $green1;
+         }
+      }
+   }
+
+   &__title {}
+
+   &__status {
+      width: 14px;
+      height: 14px;
+      flex: 0 0 14px;
+      background-color: $grey4;
+      border: 2px solid $grey4;
+      border-radius: 50%;
+      transition: 0.3s;
+   }
+
+   &__content {}
+
+   &__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding-top: 16px;
+   }
+
+   &__radios {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+   }
+
+   &__intervals {
+      border-radius: 16px;
+      border: 1px solid #BEE7D8;
+      overflow: hidden;
+      height: auto;
+      display: flex;
+
+      input {
+         display: none;
+      }
+
+      label {
+         padding: 16px 8px;
+         transition: 0.3s;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         color: $black;
+         font-size: 16px;
+         line-height: 130%;
+         background-color: #F0F9F6;
+         flex: 0 0 33.3333%;
+         cursor: pointer;
+      }
+
+      input:checked+label {
+         background-color: #BEE7D8;
+      }
+
+   }
+
+   &__input {}
+
+   &__way {}
+
+   &__checkbox {}
+
+   &__btn {}
+
+   &__radio {}
+
+   @media(max-width: 992px) {
+      &__intervals {
+         label {
+            font-size: calc(12px + 2 * ((100vw - 768px) / (992 - 768)));
+         }
+      }
+   }
+
+   @media(max-width: 768px) {
+      &__header {
+         padding-bottom: 8px;
+      }
+
+      &__intervals {
+         label {
+            font-size: 16px;
+         }
+      }
+   }
+
+   @media(max-width: 500px) {
+      &__intervals {
+         label {
+            padding: calc(10px + 6 * ((100vw - 320px) / (500 - 320))) 8px;
+            font-size: calc(10px + 4 * ((100vw - 320px) / (500 - 320)));
+         }
+      }
+   }
+}
+
+// Радио кнопки способа доставки
+.delivery-way {
+   display: flex;
+   width: 100%;
+
+   input {
+      display: none;
+   }
+
+   input:checked+label {
+      background-color: $green3;
+   }
+
+   &__item {
+      flex: 0 0 50%;
+      transition: 0.3s;
+      padding: 16px 24px;
+      border: 1px solid $green3;
+      background-color: $green4;
+      cursor: pointer;
+
+      &.first {
+         border-radius: 8px 0 0 8px;
+      }
+
+      &.second {
+         border-radius: 0 8px 8px 0;
+      }
+   }
+
+   &__title {}
+
+   &__subtitle {
+      font-size: 12px;
+      color: $black;
+      font-weight: 300;
+      opacity: 0.8;
+      margin-top: 3px;
+      margin-bottom: 10px;
+   }
+
+   &__price {}
+}
+
+.pickup-detail {
+   padding: 24px;
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+   border-radius: 16px;
+   border: 1px solid $grey2;
+   background: $grey1;
+
+   &__row {
+      display: flex;
+      gap: 32px;
+      justify-content: space-between;
+   }
+
+   &__name {}
+
+   &__info {
+      text-align: right;
+      color: $grey;
+   }
+
+   &__btn {
+      cursor: pointer;
+   }
+
+   @media(max-width: 768px) {
+      padding: 12px;
+      border-radius: 8px;
+   }
+}
+
+.order-address {
+   .not-pickup.hidden {
+      display: none;
+   }
+
+   .pickup.hidden {
+      display: none;
+   }
+}
+
+// Деталь оплаты
+.order-payment {
+
+   &__main {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+   }
+
+   &__promos {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+   }
+
+   &__promo {
+      display: flex;
+      gap: 16px;
+   }
+
+   &__btn {
+      flex: 0 1 160px;
+      padding: 16px;
+      border-radius: 8px;
+   }
+
+   .order-detail__wrapper {
+      padding-top: 24px;
+      gap: 48px;
+   }
+
+}
+
+// Футер 
+.order-footer {
+   display: flex;
+   flex-direction: column;
+   gap: 24px;
+
+   &__checkbox {}
+
+   &__btn {}
+
+   @media(max-width: 768px) {
+      gap: 16px;
+   }
+}
+
+// Правая часть
+.order-result {
+   padding: 0 90px;
+   padding-top: 69px;
+
+   &__wrapper {
+      padding-top: 113px;
+   }
+
+   &__title {
+      padding-bottom: 20px;
+      border-bottom: 1px solid $grey3;
+   }
+
+   &__products {
+      .cart-item {
+         max-height: 97px;
+         padding-top: 10px;
+         padding-bottom: 10px;
+
+         &__image {
+            flex: unset;
+            // max-height: 77px;
+         }
+
+         &__activities {
+            // padding-top: 0;
+         }
+
+         &__info {
+            // padding-top: 0;
+         }
+      }
+   }
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+   }
+
+   &__item {
+      padding-top: 20px;
+      padding-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid $grey3;
+
+      .orange {
+         color: $errorOrange;
+      }
+   }
+
+   @media(max-width: 1512px) {
+      padding: 0 calc(16px + 74 * ((100vw - 992px) / (1512 - 992)));
+      padding-top: 69px;
+
+      &__wrapper {
+         padding-top: calc(0px + 113 * ((100vw - 992px) / (1512 - 992)));
+      }
+   }
+
+   @media(max-width: 992px) {
+      padding: 0 16px;
+      padding-top: 64px;
+
+      &__wrapper {
+         // padding-top: 30px;
+         padding-top: 0;
+      }
+   }
+
+   @media(max-width: 768px) {
+      padding: 0;
+
+      &__title {
+         padding-bottom: 16px;
+      }
+   }
+}
+
+// Продукты на мобилке
+.order-products {
+   display: none;
+
+   @media(max-width: 768px) {
+      display: none;
+      margin-top: 48px;
+      padding-bottom: 88px;
+
+      .product-card {
+         &::after {
+            background-color: $grey3;
+         }
+
+         &:hover {
+            &::after {
+               background-color: $black;
+            }
+
+         }
+      }
+   }
+}
+
+// Выплывашка самовывоз
+.order-pickup {
+   position: fixed;
+   top: 80px;
+   left: 100%;
+   height: calc(100vh - 80px);
+   background-color: #F5F5F5;
+   transition: 0.3s;
+   z-index: 4;
+   width: calc(1298 / 1512 * 100%);
+   overflow-y: auto;
+   -ms-overflow-style: none;
+   overflow: -moz-scrollbars-none;
+
+   &::-webkit-scrollbar {
+      width: 0;
+   }
+
+   &.show {
+      transform: translateX(-100%);
+   }
+
+   &__wrapper {
+      padding: 40px;
+   }
+
+   &__row {
+      display: flex;
+      gap: 48px;
+      justify-content: space-between;
+   }
+
+   &__image {
+      max-height: calc(100vh - 120px);
+
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+   }
+
+   &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   &__name {}
+
+   &__close {}
+
+   &__section {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+   }
+
+   &__delivery {}
+
+   &__title {
+      padding-bottom: 16px;
+      border-bottom: 1px solid $grey3;
+   }
+
+   &__select {}
+
+   &__address {}
+
+   &__input {
+      position: relative;
+   }
+
+   &__arrow {
+      position: absolute;
+      top: 0;
+      right: 16px;
+      height: 100%;
+      border-radius: 8px;
+      background-color: transparent;
+      transition: 0.3s;
+
+      &:hover {
+         right: 11px;
+      }
+   }
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+   }
+
+   &__item {
+      gap: 0;
+      transition: 0.3s;
+
+      .order-pickup__btn {
+         overflow: hidden;
+         max-height: 0;
+         transition: 0.3s;
+         border: 0;
+      }
+
+      @media(min-width: 769px) {
+         &:hover {
+            gap: 16px;
+            border: 1px solid $green1;
+
+            .order-pickup__btn {
+               max-height: 53px;
+            }
+         }
+      }
+
+      &.active {
+         gap: 16px;
+         border: 1px solid $green1;
+
+         .order-pickup__btn {
+            max-height: 53px;
+         }
+      }
+   }
+
+   &__btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      background: $grey2;
+      // border: 1px solid $grey2;
+      transition: 0.3s;
+      height: 52px;
+      cursor: pointer;
+
+      &.work {
+         background-color: $green1;
+         border: 1px solid $green1;
+      }
+
+      &:hover {
+         background-color: transparent;
+         border: 1px solid $green1;
+      }
+   }
+
+   &__when {
+      color: rgba($color: #000, $alpha: 0.4);
+      text-align: center;
+   }
+
+   @media(max-width: 992px) {
+      width: 100%;
+
+      &__wrapper {
+         padding: 24px;
+      }
+
+      &__row {
+         gap: 24px;
+      }
+   }
+
+   @media(max-width: 768px) {
+      top: 52px;
+      height: calc(100dvh - 52px);
+
+      &__wrapper {
+         padding: 0;
+      }
+
+      &__row {
+         display: none;
+      }
+
+      &__btn {
+         height: 39px;
+      }
+   }
+}
+
+.pickup-mobile {
+   display: none;
+
+   @media(max-width: 768px) {
+      display: block;
+   }
+
+   &__close {
+      padding: 16px;
+      border-bottom: 1px solid $grey2;
+   }
+
+   &__header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 66px;
+      border-bottom: 1px solid $grey2;
+   }
+
+   &__tab {
+      padding: 12px 0;
+      transition: 0.3s;
+      position: relative;
+      color: $grey !important;
+      transition: 0.3s;
+
+      &::after {
+         content: "";
+         display: block;
+         width: 100%;
+         height: 1px;
+         position: absolute;
+         bottom: -1px;
+         left: 0;
+         background-color: transparent;
+         transition: 0.3s;
+      }
+
+      &.active {
+         color: $black !important;
+
+         &::after {
+            background-color: $black;
+         }
+      }
+   }
+
+   &__main {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding-top: 16px;
+   }
+
+   &__shared {
+      padding: 0 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+   }
+
+   &__content {
+      display: none;
+
+      &.active {
+         display: block;
+      }
+   }
+
+   &__map {
+      // height: ;
+   }
+
+   &__image {
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__list {
+      padding: 0 16px;
+      padding-bottom: 16px;
+   }
+}
+
+
+.order-status {
+
+   &__broadcrumbs {
+      padding: 24px 0;
+   }
+
+   &__content {
+      height: calc(100vh - 149px);
+      max-width: 900px;
+      margin: 0 auto;
+      padding-top: 167px;
+   }
+
+   &__title {
+      padding-bottom: 16px;
+      border-bottom: 1px solid $grey3;
+   }
+
+   &__subtitle {
+      margin-top: 16px;
+      margin-bottom: 32px;
+   }
+
+   &__btn {
+      max-width: 350px;
+   }
+
+   &.success {
+      .error {
+         display: none;
+      }
+   }
+
+   &.error {
+      .success {
+         display: none;
+      }
+   }
+
+   @media(max-width: 992px) {
+
+      &__content {
+         padding-top: 48px;
+      }
+   }
+
+   @media(max-width: 768px) {
+      &__broadcrumbs {
+         padding: 16px 0;
+      }
+
+      &__content {
+         height: calc(100dvh - 100px);
+      }
+   }
+
+   @media(max-width: 650px) {
+      &__btn {
+         max-width: unset;
+      }
+   }
+
+}

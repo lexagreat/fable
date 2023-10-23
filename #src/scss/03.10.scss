@@ -1,0 +1,352 @@
+.arrival-slider_desktop {
+   @media(max-width: 768px) {
+      display: none;
+   }
+}
+
+.footer {
+   &__logo {
+      path {
+         fill: $white;
+      }
+   }
+}
+
+.header {
+   &__sublink {
+      &.disabled {
+         .header__link {
+            pointer-events: none !important;
+         }
+      }
+   }
+}
+
+.product-card {
+   display: flex;
+   flex-direction: column;
+
+   &__image {
+      flex: 1 0 auto;
+   }
+
+   &:hover {
+      .product-card__like {
+         opacity: 1;
+         pointer-events: all;
+      }
+   }
+
+   &__like {
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.3s;
+      width: 24px;
+      height: 24px;
+      transition: 0.3s;
+
+      &:hover {
+         transform: scale(1.2);
+      }
+
+      &.checked {
+         svg {
+
+            path {
+               fill: $green1;
+               stroke: $green1;
+            }
+         }
+      }
+
+      svg {
+         width: 100%;
+         height: 100%;
+
+         path {
+            transition: 0.3s;
+            // fill: $black
+         }
+      }
+
+      @media(max-width: 768px) {
+         opacity: 1;
+         width: 24px;
+         height: 24px;
+      }
+   }
+}
+
+.product-color {
+   &__list {
+      gap: 0;
+   }
+
+   &__item {
+      padding: 0 8px;
+
+      &:first-child {
+         padding-left: 0;
+      }
+
+      &:last-child {
+         padding-right: 0;
+      }
+   }
+}
+
+.product-color__title {
+   // overflow-y: hidden;
+   position: relative;
+   height: 20px;
+
+   span {
+      display: block;
+      transform: translateY(100%);
+      opacity: 0;
+      position: absolute;
+
+      &.active {
+         opacity: 1;
+         transform: translate(0) !important;
+         transition: 0.3s;
+      }
+   }
+}
+
+.arrival-slider {
+   &__wrapper {
+      @media(min-width: 992px) {
+         display: grid;
+         grid-template-columns: repeat(4, 1fr);
+      }
+
+      @media(min-width: 768px) {
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+      }
+   }
+}
+
+// ВОт тут если что указать в каких продуктах
+
+.product-card {
+   border: 0 !important;
+   margin-left: -1px;
+   margin-top: -1px;
+
+   &:nth-child(4n+ 1) {
+      margin-left: 0;
+   }
+
+   &:nth-child(-n + 4) {
+      margin-top: 0;
+   }
+
+   @media(max-width: 992px) {
+      &:nth-child(4n+ 1) {
+         margin-left: -1px;
+      }
+
+      &:nth-child(-n + 4) {
+         margin-top: -1px;
+      }
+
+      &:nth-child(3n+ 1) {
+         margin-left: 0;
+      }
+
+      &:nth-child(-n + 3) {
+         margin-top: 0;
+      }
+   }
+
+   @media(max-width: 650px) {
+      &:nth-child(3n+ 1) {
+         margin-left: -1px;
+      }
+
+      &:nth-child(-n + 3) {
+         margin-top: -1px;
+      }
+
+      &:nth-child(2n+ 1) {
+         margin-left: 0;
+      }
+
+      &:nth-child(-n + 2) {
+         margin-top: 0;
+      }
+   }
+
+   @media(min-width: 768px) {
+      &.swiper-slide {
+         width: unset !important;
+      }
+   }
+
+   @media(max-width: 768px) {
+      &.swiper-slide {
+         margin: 0 !important;
+         margin-left: 0 !important;
+      }
+   }
+
+   &:hover {
+      &::after {
+         background-color: transparent !important;
+         border: 1px solid $black !important;
+         z-index: 2;
+      }
+   }
+
+   &::before {
+      display: none !important;
+   }
+
+   &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      border: 1px solid $grey3 !important;
+      pointer-events: none;
+      z-index: 1;
+   }
+}
+
+.header-cart {
+   &__footer {
+      @media(min-width: 769px) {
+         .product-card.swiper-slide {
+            width: 226.5px !important;
+         }
+      }
+
+      @media(max-width: 768px) {
+         .product-card.swiper-slide {
+            margin-left: 0;
+            max-width: unset;
+         }
+      }
+   }
+}
+
+.header-search {
+   &__products {
+      display: flex;
+      flex-direction: column;
+      max-width: 300px;
+
+      .product-card {
+         margin-top: -1px !important;
+         margin-left: 0 !important;
+
+         &:first-child {
+            margin-top: 0 !important;
+         }
+      }
+
+      @media(max-width: 768px) {
+         display: grid;
+         max-width: unset;
+         grid-template-columns: repeat(2, 1fr);
+
+         .product-card {
+            margin-left: -1px !important;
+
+            &:nth-child(2n+ 1) {
+               margin-left: 0 !important;
+            }
+
+            &:nth-child(-n + 2) {
+               margin-top: 0 !important;
+            }
+         }
+      }
+   }
+}
+
+.account-wishlist {
+   &__wrapper {
+      .catalog-content__item {
+         position: relative;
+         transition: 0.3s;
+         border: 1px solid $grey3 !important;
+
+         &:hover {
+            z-index: 10;
+            border: 1px solid $black !important;
+         }
+
+         @media(max-width: 992px) {
+            margin-top: 0 !important;
+            margin-left: -1px !important;
+
+            &:first-child {
+               margin-left: 0 !important;
+            }
+         }
+
+         @media(max-width: 768px) {
+            &:hover {
+               border: 1px solid $grey3 !important;
+
+            }
+         }
+      }
+   }
+}
+
+
+.constructor-checkbox {
+   .order-checkbox__label {
+      gap: 15px;
+      padding: 10px 0;
+
+      @media(max-width: 768px) {
+         padding: 0;
+      }
+   }
+
+   .order-checkbox__span {
+      color: $black;
+      font-size: 16px;
+      font-weight: 400;
+
+      /* 20.8px */
+      @media(max-width: 768px) {
+         font-size: 12px;
+      }
+   }
+}
+
+
+
+.header-submit {
+   &__remind {
+      &.hidden {
+         display: none;
+      }
+   }
+
+   &__repeat {
+      display: none;
+      color: $green1 !important;
+      cursor: pointer;
+
+      &.active {
+         display: block;
+      }
+
+      &:hover {
+         text-decoration: underline;
+      }
+   }
+}

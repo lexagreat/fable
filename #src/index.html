@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html', {
+"title": "Home",
+})
+
+<body>
+   <div class="wrapper">
+      @@include('html/header.html', {})
+      <main class="main">
+         <div class="backdrop-main"></div>
+         <section class="main-hero">
+            <div class="main-hero__men main-hero__block">
+               <div class="main-hero__image">
+                  <img src="img/HomeView/hero-men.png" alt="">
+               </div>
+               <a href="catalog.html" class="main-hero__link body-text home__link">
+                  <span>Мужское</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="8" height="13" viewBox="0 0 8 13" fill="none">
+                     <path d="M0.75 0.5L6.75 6.5L0.75 12.5" stroke="white" />
+                  </svg>
+               </a>
+            </div>
+            <div class="main-hero__women main-hero__block">
+               <div class="main-hero__image">
+                  <img src="img/HomeView/hero-women.png" alt="">
+               </div>
+               <a href="catalog.html" class="main-hero__link body-text home__link">
+                  <span>Женское</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="8" height="13" viewBox="0 0 8 13" fill="none">
+                     <path d="M0.75 0.5L6.75 6.5L0.75 12.5" stroke="white" />
+                  </svg>
+               </a>
+
+            </div>
+         </section>
+         <section class="home-arrival">
+            <div class="home-arrival__header">
+               <h2 class="home-arrival__title title">Новые поступления</h2>
+               <button class="home-arrival__btn">
+                  Посмотреть всё
+                  </butt>
+            </div>
+            <div class="swiper home-arrival__slider arrival-slider">
+               <div class="swiper-wrapper arrival-slider__wrapper">
+                  <a href="product.html" class="swiper-slide arrival-slide product-card">
+                     <div class="arrival-slide__image">
+                        <img src="img/HomeView/arrival1.png" alt="">
+                        <div class="product-card__header">
+                           <ul class="product-card__colors">
+                              <li class="product-card__color grey"></li>
+                              <li class="product-card__color orange"></li>
+                              <li class="product-card__color green"></li>
+                              <li class="product-card__color black"></li>
+                           </ul>
+                           <div class="product-card__like">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21"
+                                 fill="none">
+                                 <path
+                                    d="M20.3807 2.67974C19.8676 2.14721 19.2583 1.72477 18.5878 1.43656C17.9172 1.14834 17.1985 1 16.4727 1C15.7468 1 15.0281 1.14834 14.3576 1.43656C13.687 1.72477 13.0778 2.14721 12.5646 2.67974L11.4997 3.7844L10.4348 2.67974C9.39834 1.60458 7.99258 1.00056 6.52679 1.00056C5.06099 1.00056 3.65523 1.60458 2.61876 2.67974C1.58229 3.7549 1 5.21313 1 6.73364C1 8.25415 1.58229 9.71238 2.61876 10.7875L3.68367 11.8922L11.4997 20L19.3158 11.8922L20.3807 10.7875C20.8941 10.2553 21.3013 9.62328 21.5791 8.9277C21.857 8.23212 22 7.48657 22 6.73364C22 5.98071 21.857 5.23516 21.5791 4.53958C21.3013 3.84399 20.8941 3.21201 20.3807 2.67974Z"
+                                    fill="#F5F5F5" stroke="#1B1A19" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                              </svg>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="arrival-slide__content">
+                        <div class="arrival-slide__title body-text">Пуховик Grey</div>
+                        <div class="arrival-slide__price">5 000 ₽</div>
+                     </div>
+                  </a>
+                  <a href="product.html" class="swiper-slide arrival-slide product-card">
+                     <div class="arrival-slide__image">
+                        <img src="img/HomeView/arrival1.png" alt="">
+                        <div class="product-card__header">
+                           <ul class="product-card__colors">
+                              <li class="product-card__color grey"></li>
+                              <li class="product-card__color orange"></li>
+                              <li class="product-card__color green"></li>
+                              <li class="product-card__color black"></li>
+                           </ul>
+                           <div class="product-card__like">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21"
+                                 fill="none">
+                                 <path
+                                    d="M20.3807 2.67974C19.8676 2.14721 19.2583 1.72477 18.5878 1.43656C17.9172 1.14834 17.1985 1 16.4727 1C15.7468 1 15.0281 1.14834 14.3576 1.43656C13.687 1.72477 13.0778 2.14721 12.5646 2.67974L11.4997 3.7844L10.4348 2.67974C9.39834 1.60458 7.99258 1.00056 6.52679 1.00056C5.06099 1.00056 3.65523 1.60458 2.61876 2.67974C1.58229 3.7549 1 5.21313 1 6.73364C1 8.25415 1.58229 9.71238 2.61876 10.7875L3.68367 11.8922L11.4997 20L19.3158 11.8922L20.3807 10.7875C20.8941 10.2553 21.3013 9.62328 21.5791 8.9277C21.857 8.23212 22 7.48657 22 6.73364C22 5.98071 21.857 5.23516 21.5791 4.53958C21.3013 3.84399 20.8941 3.21201 20.3807 2.67974Z"
+                                    fill="#F5F5F5" stroke="#1B1A19" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                              </svg>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="arrival-slide__content">
+                        <div class="arrival-slide__title body-text">Пуховик Grey</div>
+                        <div class="arrival-slide__price">5 000 ₽</div>
+                     </div>
+                  </a>
+                  <a href="product.html" class="swiper-slide arrival-slide product-card">
+                     <div class="arrival-slide__image">
+                        <img src="img/HomeView/arrival1.png" alt="">
+                        <div class="product-card__header">
+                           <ul class="product-card__colors">
+                              <li class="product-card__color grey"></li>
+                              <li class="product-card__color orange"></li>
+                              <li class="product-card__color green"></li>
+                              <li class="product-card__color black"></li>
+                           </ul>
+                           <div class="product-card__like">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21"
+                                 fill="none">
+                                 <path
+                                    d="M20.3807 2.67974C19.8676 2.14721 19.2583 1.72477 18.5878 1.43656C17.9172 1.14834 17.1985 1 16.4727 1C15.7468 1 15.0281 1.14834 14.3576 1.43656C13.687 1.72477 13.0778 2.14721 12.5646 2.67974L11.4997 3.7844L10.4348 2.67974C9.39834 1.60458 7.99258 1.00056 6.52679 1.00056C5.06099 1.00056 3.65523 1.60458 2.61876 2.67974C1.58229 3.7549 1 5.21313 1 6.73364C1 8.25415 1.58229 9.71238 2.61876 10.7875L3.68367 11.8922L11.4997 20L19.3158 11.8922L20.3807 10.7875C20.8941 10.2553 21.3013 9.62328 21.5791 8.9277C21.857 8.23212 22 7.48657 22 6.73364C22 5.98071 21.857 5.23516 21.5791 4.53958C21.3013 3.84399 20.8941 3.21201 20.3807 2.67974Z"
+                                    fill="#F5F5F5" stroke="#1B1A19" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                              </svg>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="arrival-slide__content">
+                        <div class="arrival-slide__title body-text">Пуховик Grey</div>
+                        <div class="arrival-slide__price">5 000 ₽</div>
+                     </div>
+                  </a>
+                  <a href="product.html" class="swiper-slide arrival-slide product-card">
+                     <div class="arrival-slide__image">
+                        <img src="img/HomeView/arrival1.png" alt="">
+                        <div class="product-card__header">
+                           <ul class="product-card__colors">
+                              <li class="product-card__color grey"></li>
+                              <li class="product-card__color orange"></li>
+                              <li class="product-card__color green"></li>
+                              <li class="product-card__color black"></li>
+                           </ul>
+                           <div class="product-card__like">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21"
+                                 fill="none">
+                                 <path
+                                    d="M20.3807 2.67974C19.8676 2.14721 19.2583 1.72477 18.5878 1.43656C17.9172 1.14834 17.1985 1 16.4727 1C15.7468 1 15.0281 1.14834 14.3576 1.43656C13.687 1.72477 13.0778 2.14721 12.5646 2.67974L11.4997 3.7844L10.4348 2.67974C9.39834 1.60458 7.99258 1.00056 6.52679 1.00056C5.06099 1.00056 3.65523 1.60458 2.61876 2.67974C1.58229 3.7549 1 5.21313 1 6.73364C1 8.25415 1.58229 9.71238 2.61876 10.7875L3.68367 11.8922L11.4997 20L19.3158 11.8922L20.3807 10.7875C20.8941 10.2553 21.3013 9.62328 21.5791 8.9277C21.857 8.23212 22 7.48657 22 6.73364C22 5.98071 21.857 5.23516 21.5791 4.53958C21.3013 3.84399 20.8941 3.21201 20.3807 2.67974Z"
+                                    fill="#F5F5F5" stroke="#1B1A19" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                              </svg>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="arrival-slide__content">
+                        <div class="arrival-slide__title body-text">Пуховик Grey</div>
+                        <div class="arrival-slide__price">5 000 ₽</div>
+                     </div>
+                  </a>
+                  <a href="product.html" class="swiper-slide arrival-slide product-card">
+                     <div class="arrival-slide__image">
+                        <img src="img/HomeView/arrival1.png" alt="">
+                        <div class="product-card__header">
+                           <ul class="product-card__colors">
+                              <li class="product-card__color grey"></li>
+                              <li class="product-card__color orange"></li>
+                              <li class="product-card__color green"></li>
+                              <li class="product-card__color black"></li>
+                           </ul>
+                           <div class="product-card__like">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21"
+                                 fill="none">
+                                 <path
+                                    d="M20.3807 2.67974C19.8676 2.14721 19.2583 1.72477 18.5878 1.43656C17.9172 1.14834 17.1985 1 16.4727 1C15.7468 1 15.0281 1.14834 14.3576 1.43656C13.687 1.72477 13.0778 2.14721 12.5646 2.67974L11.4997 3.7844L10.4348 2.67974C9.39834 1.60458 7.99258 1.00056 6.52679 1.00056C5.06099 1.00056 3.65523 1.60458 2.61876 2.67974C1.58229 3.7549 1 5.21313 1 6.73364C1 8.25415 1.58229 9.71238 2.61876 10.7875L3.68367 11.8922L11.4997 20L19.3158 11.8922L20.3807 10.7875C20.8941 10.2553 21.3013 9.62328 21.5791 8.9277C21.857 8.23212 22 7.48657 22 6.73364C22 5.98071 21.857 5.23516 21.5791 4.53958C21.3013 3.84399 20.8941 3.21201 20.3807 2.67974Z"
+                                    fill="#F5F5F5" stroke="#1B1A19" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                              </svg>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="arrival-slide__content">
+                        <div class="arrival-slide__title body-text">Пуховик Grey</div>
+                        <div class="arrival-slide__price">5 000 ₽</div>
+                     </div>
+                  </a>
+                  <a href="product.html" class="swiper-slide arrival-slide product-card">
+                     <div class="arrival-slide__image">
+                        <img src="img/HomeView/arrival1.png" alt="">
+                        <div class="product-card__header">
+                           <ul class="product-card__colors">
+                              <li class="product-card__color grey"></li>
+                              <li class="product-card__color orange"></li>
+                              <li class="product-card__color green"></li>
+                              <li class="product-card__color black"></li>
+                           </ul>
+                           <div class="product-card__like">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21"
+                                 fill="none">
+                                 <path
+                                    d="M20.3807 2.67974C19.8676 2.14721 19.2583 1.72477 18.5878 1.43656C17.9172 1.14834 17.1985 1 16.4727 1C15.7468 1 15.0281 1.14834 14.3576 1.43656C13.687 1.72477 13.0778 2.14721 12.5646 2.67974L11.4997 3.7844L10.4348 2.67974C9.39834 1.60458 7.99258 1.00056 6.52679 1.00056C5.06099 1.00056 3.65523 1.60458 2.61876 2.67974C1.58229 3.7549 1 5.21313 1 6.73364C1 8.25415 1.58229 9.71238 2.61876 10.7875L3.68367 11.8922L11.4997 20L19.3158 11.8922L20.3807 10.7875C20.8941 10.2553 21.3013 9.62328 21.5791 8.9277C21.857 8.23212 22 7.48657 22 6.73364C22 5.98071 21.857 5.23516 21.5791 4.53958C21.3013 3.84399 20.8941 3.21201 20.3807 2.67974Z"
+                                    fill="#F5F5F5" stroke="#1B1A19" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                              </svg>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="arrival-slide__content">
+                        <div class="arrival-slide__title body-text">Пуховик Grey</div>
+                        <div class="arrival-slide__price">5 000 ₽</div>
+                     </div>
+                  </a>
+               </div>
+               <div class="swiper-button-prev arrival-slider__btn_prev">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
+                     <path d="M7 1L1 7L7 13" stroke="#1B1A19" />
+                  </svg>
+               </div>
+               <div class="swiper-button-next arrival-slider__btn_next">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
+                     <path d="M1 1L7 7L1 13" stroke="#1B1A19" />
+                  </svg>
+               </div>
+            </div>
+         </section>
+         <section class="home-capsul">
+            <div class="home-capsul__header">
+               <h2 class="home-capsul__title title">Капсульные коллекции</h2>
+            </div>
+            <div class="home-capsul__content">
+               <div class="home-capsul__image">
+                  <img src="img/HomeView/capsul.png" alt="">
+               </div>
+               <a href="collections.html" class="home-capsul__link home__link">
+                  <span>Fable of Dirty</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="8" height="13" viewBox="0 0 8 13" fill="none">
+                     <path d="M0.75 0.5L6.75 6.5L0.75 12.5" stroke="white" />
+                  </svg>
+               </a>
+            </div>
+         </section>
+      </main>
+      @@include('html/footer.html', {})
+   </div>
+
+   <script src="js/app.min.js"></script>
+</body>
+
+</html>
+
+<!-- <a href="product.html" class="swiper-slide arrival-slide">
+   <div class="arrival-slide__image">
+      <img src="img/HomeView/arrival1.png" alt="">
+      <div class="product-card__header">
+         <ul class="product-card__colors">
+            <li class="product-card__color grey"></li>
+            <li class="product-card__color orange"></li>
+            <li class="product-card__color green"></li>
+            <li class="product-card__color black"></li>
+         </ul>
+         <div class="product-card__like">
+            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17"
+               fill="none">
+               <path
+                  d="M16.1301 2.9574C15.747 2.57416 15.2922 2.27014 14.7916 2.06272C14.291 1.8553 13.7545 1.74854 13.2126 1.74854C12.6707 1.74854 12.1342 1.8553 11.6336 2.06272C11.133 2.27014 10.6782 2.57416 10.2951 2.9574L9.50009 3.7524L8.70509 2.9574C7.93132 2.18364 6.88186 1.74894 5.78759 1.74894C4.69331 1.74894 3.64386 2.18364 2.87009 2.9574C2.09632 3.73117 1.66162 4.78063 1.66162 5.8749C1.66162 6.96918 2.09632 8.01864 2.87009 8.7924L3.66509 9.5874L9.50009 15.4224L15.3351 9.5874L16.1301 8.7924C16.5133 8.40934 16.8174 7.95451 17.0248 7.45392C17.2322 6.95333 17.339 6.41677 17.339 5.8749C17.339 5.33304 17.2322 4.79648 17.0248 4.29589C16.8174 3.79529 16.5133 3.34047 16.1301 2.9574Z"
+                  fill="transparent" stroke="transparent" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+            </svg>
+         </div>
+      </div>
+   </div>
+   <div class="arrival-slide__content">
+      <div class="arrival-slide__title body-text">Пуховик Grey</div>
+      <div class="arrival-slide__price">5 000 ₽</div>
+   </div>
+</a> -->
