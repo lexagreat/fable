@@ -1,0 +1,241 @@
+.checkout-page {
+   // .checkout-page__wrapper
+
+   &__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding: 30px;
+      padding-bottom: 80px;
+   }
+
+   // .checkout-page__title
+
+   &__title {
+      @include subtitle;
+   }
+
+   // .checkout-page__layout
+
+   &__layout {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+   }
+
+   // .checkout-page__main
+
+   &__main {
+      padding-right: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+   }
+
+   // .checkout-page__block
+
+   &__block {
+   }
+
+   // .checkout-page__res
+
+   &__res {
+      padding-left: 50px;
+   }
+}
+.checkout-block {
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+   // .checkout-block__title
+
+   &__title {
+      @include subtitle-2;
+   }
+
+   // .checkout-block__main
+
+   &__main {
+   }
+
+   // .checkout-block__list
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+   }
+   &__items {
+      display: flex;
+      flex-direction: column;
+   }
+}
+.checkout-res {
+   display: flex;
+   flex-direction: column;
+   gap: 40px;
+   &__main {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+   }
+   &__sales {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      li {
+         padding-bottom: 8px;
+      }
+      li:first-child {
+         border-bottom: 1px dashed $light-grey;
+      }
+      li:has(input:checked) .checkout-res__input {
+         display: flex;
+      }
+   }
+   &__input {
+      display: none;
+      margin-top: 8px;
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: 8px;
+      input {
+         flex: 1;
+      }
+      button {
+         height: 28px;
+         background-color: $black;
+         color: $white;
+         @include button;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         padding: 0 20px;
+      }
+      p {
+         display: flex;
+         align-items: center;
+         gap: 2px;
+         @include overline;
+      }
+   }
+   &__list {
+      display: flex;
+      flex-direction: column;
+      border-top: 1px solid $light-grey;
+      li {
+         padding: 4px 8px;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         @include p;
+         border-bottom: 1px dashed $light-grey;
+         p {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+         }
+      }
+      li:nth-last-child(2) {
+         border-bottom: 0;
+      }
+      li:last-child {
+         padding: 8px;
+         @include subtitle-2;
+         border-top: 1px solid $light-grey;
+         border-bottom: 1px solid $light-grey;
+      }
+   }
+   &__footer {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .app-checkbox {
+         color: $black;
+         a {
+            color: $black;
+            border-bottom: 1px solid $black;
+         }
+      }
+      button {
+         height: 28px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         @include button;
+         border: 1px solid $dark-grey;
+         color: $dark-grey;
+         transition: $transition;
+         pointer-events: none;
+      }
+      &:has(input:checked) button {
+         color: $white;
+         background-color: $black;
+         border-color: $black;
+         pointer-events: all;
+      }
+   }
+}
+@media (max-width: $tablet) {
+   .checkout-page {
+      &__wrapper {
+         padding: 0;
+         gap: 0;
+      }
+      &__title {
+         @include h1;
+         padding: 10px 0;
+      }
+      &__layout {
+         grid-template-columns: 1fr;
+         gap: 24px;
+      }
+      &__main {
+         padding-right: 0;
+         padding-top: 16px;
+         gap: 20px;
+         padding-bottom: 16px;
+         position: relative;
+         &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100vw;
+            left: -8px;
+            background-color: $light-grey;
+            height: 1px;
+            top: 100%;
+         }
+      }
+      &__res {
+         padding-left: 0;
+      }
+   }
+   .checkout-block {
+      &__title {
+         @include subtitle-2-mobile;
+      }
+   }
+   .checkout-res {
+      gap: 20px;
+      &__input {
+         button {
+            @include button-mobile;
+            padding-left: 24px;
+            padding-right: 24px;
+         }
+      }
+      &__list {
+         li {
+            @include p-mobile;
+            &:last-child {
+               @include subtitle-2-mobile;
+               padding-top: 10px;
+               padding-bottom: 10px;
+            }
+         }
+      }
+      &__footer {
+         gap: 16px;
+      }
+   }
+}

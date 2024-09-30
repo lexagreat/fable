@@ -1,0 +1,101 @@
+.collapse:not(.collapse_show) {
+   display: none;
+}
+.wrapper {
+   font-family: $font-kitetika;
+}
+.container {
+   max-width: 1512px;
+   padding: 0 20px;
+   margin: 0 auto;
+   @media (max-width: $tablet) {
+      padding: 0 8px;
+   }
+}
+.app-input {
+   display: flex;
+   flex-direction: column;
+   @include p;
+   input {
+      height: 28px;
+      border: 1px solid $light-grey;
+      padding-left: 8px;
+      transition: $transition;
+      &:focus {
+         border-color: $dark-grey;
+      }
+   }
+   &:has(input:focus) ul {
+      opacity: 1;
+   }
+   &.autocomplete {
+      position: relative;
+      z-index: 1;
+
+      ul {
+         opacity: 0;
+         border: 1px solid $dark-grey;
+         border-top: none;
+         position: absolute;
+         top: 100%;
+         translate: 0 -1px;
+         left: 0;
+         width: 100%;
+         z-index: 2;
+         background-color: $white;
+         transition: $transition;
+
+         li {
+            cursor: pointer;
+            height: 24px;
+            padding-left: 8px;
+            display: flex;
+            align-items: center;
+         }
+      }
+   }
+   @media (max-width: $tablet) {
+      @include p-mobile;
+   }
+}
+
+.app-checkbox {
+   input {
+      display: none;
+   }
+   label {
+      display: flex;
+      gap: 8px;
+      @include p-mobile;
+      cursor: pointer;
+      align-items: center;
+      div {
+         width: 20px;
+         height: 20px;
+         flex: 0 0 20px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         border: 1px solid $light-grey;
+         transition: 0.4s;
+         &::before {
+            content: "";
+            display: block;
+            width: 12px;
+            height: 12px;
+            flex: 0 0 12px;
+            background-color: $black;
+            transition: $transition;
+            opacity: 0;
+         }
+      }
+   }
+   input:checked + label {
+      div {
+         border-color: $black;
+         &::before {
+            opacity: 1;
+         }
+      }
+   }
+}

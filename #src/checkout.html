@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html', {
+"title": "Оформление заказа",
+})
+
+<body>
+   <div class="wrapper">
+      @@include('html/header.html', {})
+      <main class="main">
+         <section class="breadcrumbs">
+            <div class="container">
+               <ul class="breadcrumbs__list scrollbar-none">
+                  <li>
+                     <a href="#">ГЛАВНАЯ</a>
+                  </li>
+                  <li>
+                     <a href="#">корзина</a>
+                  </li>
+                  <li>
+                     <a href="#">оформление заказа</a>
+                  </li>
+               </ul>
+            </div>
+         </section>
+         <section class="checkout-page">
+            <div class="container">
+               <div class="checkout-page__wrapper">
+                  <h1 class="checkout-page__title">Оформление заказа</h1>
+                  <div class="checkout-page__layout">
+                     <div class="checkout-page__main">
+                        <div class="checkout-page__block checkout-block">
+                           <h2 class="checkout-block__title">адрес и доставка</h2>
+                           <div class="checkout-block__main">
+                              <ul class="checkout-block__list">
+                                 <li class="app-input autocomplete">
+                                    <span>город
+                                    </span>
+                                    <input type="text" autocomplete="none">
+                                    <ul>
+                                       <li>москва, россия</li>
+                                       <li>московская область, россия</li>
+                                       <li>москвоский, москва, россия</li>
+                                    </ul>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="checkout-page__block checkout-block">
+                           <h2 class="checkout-block__title">получатель</h2>
+                           <div class="checkout-block__main">
+                              <ul class="checkout-block__list">
+                                 <li class="app-input">
+                                    <span>имя и фамилия</span>
+                                    <input type="text">
+                                 </li>
+                                 <li class="app-input">
+                                    <span>дата рождения</span>
+                                    <input type="text">
+                                 </li>
+                                 <li class="app-input">
+                                    <span>электронная почта</span>
+                                    <input type="text">
+                                 </li>
+                                 <li class="app-input">
+                                    <span>телефон</span>
+                                    <input type="text" data-phone>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="checkout-page__block checkout-block">
+                           <h2 class="checkout-block__title">оплата</h2>
+                           <div class="checkout-block__main">
+                              <ul class="checkout-block__list">
+                                 <li class="app-checkbox">
+                                    <input type="radio" name="checkoutPaymentWay" value="0" id="checkoutPaymentWay0">
+                                    <label for="checkoutPaymentWay0">
+                                       <div></div>
+                                       <span>оплата картой на сайте</span>
+                                    </label>
+                                 </li>
+                                 <li class="app-checkbox">
+                                    <input type="radio" name="checkoutPaymentWay" value="1" id="checkoutPaymentWay1">
+                                    <label for="checkoutPaymentWay1">
+                                       <div></div>
+                                       <span>оплата яндекс сплит</span>
+                                    </label>
+                                 </li>
+                                 <li class="app-checkbox">
+                                    <input type="radio" name="checkoutPaymentWay" value="2" id="checkoutPaymentWay2">
+                                    <label for="checkoutPaymentWay2">
+                                       <div></div>
+                                       <span>оплата долями (от т-банка)</span>
+                                    </label>
+                                 </li>
+                                 <li class="app-checkbox">
+                                    <input type="radio" name="checkoutPaymentWay" value="3" id="checkoutPaymentWay3">
+                                    <label for="checkoutPaymentWay3">
+                                       <div></div>
+                                       <span>оплата подели</span>
+                                    </label>
+                                 </li>
+                                 <li class="app-checkbox">
+                                    <input type="radio" name="checkoutPaymentWay" value="4" id="checkoutPaymentWay4">
+                                    <label for="checkoutPaymentWay4">
+                                       <div></div>
+                                       <span>оплата по ссылке после звонка оператора</span>
+                                    </label>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="checkout-page__res checkout-res">
+                        <div class="checkout-block">
+                           <h2 class="checkout-block__title">ваш заказ</h2>
+                           <ul class="checkout-block__items">
+                              <li class="cart-item">
+                                 <div class="cart-item__image">
+                                    <img src="img/products/cart-item.png" alt="">
+                                 </div>
+                                 <div class="cart-item__main">
+                                    <div class="cart-item__left">
+                                       <div class="cart-item__info">
+                                          <h4 class="cart-item__name">Рубашка Office Blue striped</h4>
+                                          <span class="cart-item__size">размер: XS</span>
+                                       </div>
+                                       <div class="cart-item__count">
+                                          <button class="minus">
+                                             <svg width="6" height="2" viewBox="0 0 6 2" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0 1L6 1" stroke="black" />
+                                             </svg>
+                                          </button>
+                                          <span>6</span>
+                                          <button class="plus">
+                                             <svg width="6" height="6" viewBox="0 0 6 6" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3 6V0" stroke="black" />
+                                                <path d="M0 3L6 3" stroke="black" />
+                                             </svg>
+                                          </button>
+                                       </div>
+                                    </div>
+                                    <div class="cart-item__right">
+                                       <div class="cart-item__price">
+                                          <span class="old">22 300 ₽</span>
+                                          <span class="actual">10 900 ₽</span>
+                                       </div>
+                                       <button class="cart-item__remove">удалить</button>
+                                    </div>
+
+                                 </div>
+                              </li>
+                              <li class="cart-item">
+                                 <div class="cart-item__image">
+                                    <img src="img/products/cart-item.png" alt="">
+                                 </div>
+                                 <div class="cart-item__main">
+                                    <div class="cart-item__left">
+                                       <div class="cart-item__info">
+                                          <h4 class="cart-item__name">Рубашка Office Blue striped</h4>
+                                          <span class="cart-item__size">размер: XS</span>
+                                       </div>
+                                       <div class="cart-item__count">
+                                          <button class="minus">
+                                             <svg width="6" height="2" viewBox="0 0 6 2" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0 1L6 1" stroke="black" />
+                                             </svg>
+                                          </button>
+                                          <span>6</span>
+                                          <button class="plus">
+                                             <svg width="6" height="6" viewBox="0 0 6 6" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3 6V0" stroke="black" />
+                                                <path d="M0 3L6 3" stroke="black" />
+                                             </svg>
+                                          </button>
+                                       </div>
+                                    </div>
+                                    <div class="cart-item__right">
+                                       <div class="cart-item__price">
+                                          <span class="old">22 300 ₽</span>
+                                          <span class="actual">10 900 ₽</span>
+                                       </div>
+                                       <button class="cart-item__remove">удалить</button>
+                                    </div>
+
+                                 </div>
+                              </li>
+                              <li class="cart-item">
+                                 <div class="cart-item__image">
+                                    <img src="img/products/cart-item.png" alt="">
+                                 </div>
+                                 <div class="cart-item__main">
+                                    <div class="cart-item__left">
+                                       <div class="cart-item__info">
+                                          <h4 class="cart-item__name">Рубашка Office Blue striped</h4>
+                                          <span class="cart-item__size">размер: XS</span>
+                                       </div>
+                                       <div class="cart-item__count">
+                                          <button class="minus">
+                                             <svg width="6" height="2" viewBox="0 0 6 2" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0 1L6 1" stroke="black" />
+                                             </svg>
+                                          </button>
+                                          <span>6</span>
+                                          <button class="plus">
+                                             <svg width="6" height="6" viewBox="0 0 6 6" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3 6V0" stroke="black" />
+                                                <path d="M0 3L6 3" stroke="black" />
+                                             </svg>
+                                          </button>
+                                       </div>
+                                    </div>
+                                    <div class="cart-item__right">
+                                       <div class="cart-item__price">
+                                          <span class="old">22 300 ₽</span>
+                                          <span class="actual">10 900 ₽</span>
+                                       </div>
+                                       <button class="cart-item__remove">удалить</button>
+                                    </div>
+
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                        <div class="checkout-res__main">
+                           <ul class="checkout-res__sales app-checkbox">
+                              <li>
+                                 <input type="radio" name="checkoutSales" value="checkoutSales0" id="checkoutSales0">
+                                 <label for="checkoutSales0">
+                                    <div></div>
+                                    <span>промокод</span>
+                                 </label>
+
+                                 <div class="checkout-res__input app-input">
+                                    <input type="text" style="display: block !important;">
+                                    <button>применить</button>
+
+                                 </div>
+                              </li>
+                              <li>
+                                 <input type="radio" name="checkoutSales" value="checkoutSales1" id="checkoutSales1">
+                                 <label for="checkoutSales1">
+                                    <div></div>
+                                    <span>карта лояльности</span>
+                                 </label>
+                                 <div class="checkout-res__input app-input">
+                                    <input type="text" style="display: block !important;">
+                                    <button>применить</button>
+                                    <p style="flex: 0 0 100%;">
+                                       <img src="img/icons/bonuses-loyalty.svg" alt="">
+                                       <span>Можно списать 100 баллов</span>
+                                    </p>
+                                 </div>
+                              </li>
+                           </ul>
+                           <ul class="checkout-res__list">
+                              <li>
+                                 <p>
+                                    <span>Начислим бонусов</span>
+                                    <img src="img/icons/hint.svg" alt="">
+                                 </p>
+                                 <span style="color: #0B9B39;">1 660 </span>
+                              </li>
+                              <li>
+                                 <p><span>Товары</span> <span>(18)</span></p>
+                                 <span>66 900 ₽</span>
+                              </li>
+                              <li>
+                                 <p>Доставка</p>
+                                 <span>500 ₽</span>
+                              </li>
+                              <li>
+                                 <p>Промокод</p>
+                                 <span style="color: #D7058E;">- 200 ₽</span>
+                              </li>
+                              <li>
+                                 <p>Скидка</p>
+                                 <span style="color: #D7058E;">- 34 200 ₽</span>
+                              </li>
+                              <li>
+                                 <p>Итого:</p>
+                                 <span>
+                                    33 200 ₽
+                                 </span>
+                              </li>
+                           </ul>
+                        </div>
+                        <div class="checkout-res__footer">
+                           <div class="app-checkbox">
+                              <input type="checkbox" name="agreement" id="agreement" value="1">
+                              <label for="agreement">
+                                 <div></div>
+                                 <span>я согласен с <a href="#" target="_blank">условиями интернет-магазина
+                                       fable</a></span>
+                              </label>
+                           </div>
+                           <button>подтвердить заказ</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+      @@include('html/footer.html', {})
+   </div>
+   <script src="https://unpkg.com/imask"></script>
+   <script src="js/app.js"></script>
+</body>
+
+</html>

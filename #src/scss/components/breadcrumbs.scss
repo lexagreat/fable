@@ -1,0 +1,31 @@
+.breadcrumbs {
+   // .breadcrumbs__list
+
+   &__list {
+      display: flex;
+      align-items: center;
+      height: 54px;
+      a {
+         @include h2;
+         white-space: nowrap;
+         &::after {
+            content: "/";
+         }
+      }
+      li:last-child a::after {
+         display: none;
+      }
+      @media (max-width: $tablet) {
+         height: 28px;
+         width: 100vw;
+         margin-left: -8px;
+         margin-right: -8px;
+         padding-left: 8px;
+         padding-right: 8px;
+         overflow: auto;
+         a {
+            @include h2-mobile;
+         }
+      }
+   }
+}

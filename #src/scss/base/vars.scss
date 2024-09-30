@@ -1,0 +1,178 @@
+//breakpoints
+$tablet: 1024px;
+$mobile: 568px;
+
+//fonts
+$font-play: "Play", sans-serif;
+$font-kitetika: "Kinetika", sans-serif;
+
+//colors
+$white: #fff;
+$black: #000;
+$light-grey: rgba(217, 217, 217, 1);
+$dark-grey: rgba(142, 142, 142, 1);
+
+//animation
+$transition: 0.4s;
+
+// typography
+@mixin h1 {
+   //styleName: d-h1;
+   font-family: $font-play;
+   font-size: 14px;
+   font-weight: 400;
+   line-height: 14px;
+   text-transform: uppercase;
+   color: $black;
+}
+@mixin h2 {
+   //styleName: d-h2;
+   font-family: $font-play;
+   font-size: 14px;
+   font-weight: 700;
+   line-height: 14px;
+   text-transform: uppercase;
+   color: $black;
+}
+@mixin h2-mobile {
+   //styleName: d-h2;
+   font-family: $font-play;
+   font-size: 10px;
+   font-weight: 700;
+   line-height: 12px;
+   text-transform: uppercase;
+   color: $black;
+}
+@mixin h3 {
+   //styleName: d-h3;
+   font-family: $font-kitetika;
+   font-size: 12px;
+   font-weight: 400;
+   line-height: 12px;
+   text-transform: uppercase;
+   color: $black;
+}
+@mixin h3-mobile {
+   //styleName: d-h3;
+   font-family: $font-kitetika;
+   font-size: 10px;
+   font-weight: 400;
+   line-height: 10px;
+   text-transform: uppercase;
+   color: $black;
+}
+@mixin p {
+   //styleName: d-p;
+   font-family: $font-kitetika;
+   font-size: 12px;
+   font-weight: 400;
+   line-height: 20px;
+   text-transform: uppercase;
+   color: $black;
+}
+@mixin p-mobile {
+   //styleName: d-p;
+   font-family: $font-kitetika;
+   font-size: 8px;
+   font-weight: 400;
+   line-height: 12px;
+   text-transform: uppercase;
+   color: $black;
+   letter-spacing: 0.04em;
+}
+
+@mixin strike-p {
+   @include p;
+   color: $dark-grey;
+   text-decoration: line-through;
+}
+@mixin strike-p-mobile {
+   @include p-mobile;
+   color: $dark-grey;
+   text-decoration: line-through;
+}
+@mixin subtitle {
+   //styleName: d-st1;
+   font-family: $font-play;
+   font-size: 20px;
+   font-weight: 400;
+   line-height: 24px;
+   text-align: left;
+   text-transform: uppercase;
+}
+@mixin subtitle-mobile {
+   //styleName: d-st1;
+   font-family: $font-play;
+   font-size: 10px;
+   font-weight: 400;
+   line-height: 12px;
+   text-align: left;
+   text-transform: uppercase;
+}
+@mixin subtitle-2 {
+   //styleName: d-st2;
+   font-family: $font-play;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 16px;
+   text-transform: uppercase;
+}
+@mixin subtitle-2-mobile {
+   //styleName: d-st2;
+   font-family: $font-play;
+   font-size: 12px;
+   font-weight: 400;
+   line-height: 12px;
+   text-transform: uppercase;
+}
+
+@mixin button {
+   //styleName: d-button;
+   font-family: $font-play;
+   font-size: 14px;
+   font-weight: 400;
+   line-height: 16px;
+   text-transform: uppercase;
+}
+@mixin button-mobile {
+   //styleName: d-button;
+   font-family: $font-play;
+   font-size: 10px;
+   font-weight: 400;
+   line-height: 12px;
+   text-transform: uppercase;
+}
+@mixin count {
+   //styleName: d-count;
+   font-family: $font-kitetika;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 20px;
+   text-transform: uppercase;
+}
+@mixin count-mobile {
+   //styleName: d-count;
+   font-family: $font-kitetika;
+   font-size: 10px;
+   font-weight: 400;
+   line-height: 12px;
+   text-transform: uppercase;
+}
+@mixin overline {
+   //styleName: d-overline;
+   font-family: $font-kitetika;
+   font-size: 8px;
+   font-weight: 400;
+   line-height: 12px;
+   letter-spacing: 0.08em;
+   text-transform: uppercase;
+}
+@mixin overline-mobile {
+   //styleName: d-overline;
+   font-family: $font-kitetika;
+   font-size: 6px;
+   font-weight: 400;
+   line-height: 10px;
+   letter-spacing: 0.06em;
+   text-transform: uppercase;
+}
