@@ -1,0 +1,205 @@
+.header {
+   // .header__wrapper
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 100;
+   background-color: $white;
+   &__wrapper {
+      display: flex;
+      align-items: flex-end;
+      gap: 40px;
+      padding: 20px 0;
+      height: 70px;
+   }
+
+   // .header__logo
+
+   &__logo {
+      flex: 0 0 112px;
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   // .header__links
+   &__menu {
+      flex: 1;
+      .breadcrumbs {
+         display: none;
+      }
+      .header__icons {
+         display: none;
+      }
+   }
+   &__links {
+      display: flex;
+      // gap: 40px;
+      li:first-child a {
+         padding-left: 0;
+      }
+      li:last-child a {
+         padding-right: 0;
+      }
+   }
+   &__link {
+      @include h1;
+      padding: 0 20px;
+      white-space: nowrap;
+   }
+   // .header__icons
+
+   &__icons {
+      transition: $transition;
+      display: flex;
+      gap: 20px;
+   }
+
+   // .header__cart
+
+   &__cart {
+      margin-left: 20px;
+   }
+   &__burger {
+      display: none;
+   }
+   @media (max-width: 1440px) {
+      &__wrapper {
+         gap: calc(24px + 16 * ((100vw - 1024px) / (1440 - 1024)));
+      }
+      &__link {
+         padding: 0 calc(12px + 8 * ((100vw - 1024px) / (1440 - 1024)));
+         font-size: calc(12px + 2 * ((100vw - 1024px) / (1440 - 1024)));
+      }
+   }
+   @media (max-width: $tablet) {
+      &.menu-open {
+         .header {
+            &__menu {
+               translate: 0 0;
+            }
+         }
+         .header__icons {
+            opacity: 0;
+            pointer-events: none;
+         }
+      }
+      &__menu {
+         position: fixed;
+         top: 46px;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         translate: 100%;
+         transition: $transition;
+         padding: 0 8px;
+         background-color: $white;
+         .breadcrumbs {
+            display: block;
+            &__list {
+               padding: 0;
+            }
+         }
+         .header__icons {
+            opacity: 1 !important;
+            pointer-events: all !important;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 20px 0;
+            li a {
+               display: flex;
+               gap: 12px;
+               align-items: center;
+               @include h3-mobile;
+            }
+            li:last-child {
+               display: flex;
+            }
+         }
+      }
+      &__wrapper {
+         padding: 8px 0;
+         gap: 16px;
+         height: 46px;
+      }
+      &__icons {
+         flex: 1;
+         justify-content: flex-end;
+         gap: 16px;
+         li {
+            height: 16px;
+            a {
+               height: 16px;
+            }
+         }
+         li:last-child {
+            display: none;
+         }
+      }
+      &__cart {
+         margin-left: 0;
+         width: 16px;
+         height: 16px;
+         flex: 0 0 16px;
+         svg {
+            width: 100%;
+            height: 100%;
+         }
+      }
+      &__burger {
+         display: block;
+         position: relative;
+         width: 16px;
+         height: 16px;
+         flex: 0 0 16px;
+         &::before,
+         &::after,
+         span {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: $black;
+            position: absolute;
+            left: 0;
+            transition: $transition;
+            transform-origin: center;
+         }
+         &::before {
+            top: 2px;
+         }
+         span {
+            top: 50%;
+            translate: 0 -50%;
+         }
+         &::after {
+            bottom: 2px;
+         }
+         &.active {
+            span {
+               scale: 0;
+            }
+            &::before {
+               rotate: 45deg;
+               translate: 0 6px;
+            }
+            &::after {
+               rotate: -45deg;
+               translate: 0px -5px;
+            }
+         }
+      }
+      &__links {
+         flex-direction: column;
+         gap: 12px;
+      }
+      &__link {
+         padding: 0;
+         @include h3-mobile;
+      }
+   }
+}

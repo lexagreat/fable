@@ -8,11 +8,164 @@
    <div class="wrapper">
       @@include('html/header.html', {})
       <main class="main">
-         <span>hello</span>
+         <section class="breadcrumbs">
+            <div class="container">
+               <ul class="breadcrumbs__list scrollbar-none">
+                  <li>
+                     <a href="#">ГЛАВНАЯ</a>
+                  </li>
+                  <li>
+                     <a href="#">МУЖСКОЕ</a>
+                  </li>
+               </ul>
+            </div>
+         </section>
+         <section class="product-page">
+            <div class="container">
+               <div class="product-page__wrapper">
+                  <div class="product-page__gallery"></div>
+                  <div class="product-page__main">
+                     <a href="#installmentModal" class="modal__link">рассрочка</a>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <div class="modal installment-modal" id="installmentModal">
+            <div class="installment-modal__content modal__content">
+               <div class="installment-modal__close modal__close">
+                  <img src="img/icons/escape-button.svg" alt="">
+               </div>
+               <span class="installment-modal__title">оплата заказа частями</span>
+               <ul class="installment-modal__tabs">
+                  <li>
+                     <input checked type="radio" name="installmentWay" id="installmentWay0" value="installmentWay0">
+                     <label for="installmentWay0">
+                        <img src="img/icons/installment0.svg" alt="">
+                        <span>Долями</span>
+                     </label>
+                  </li>
+                  <li>
+                     <input type="radio" name="installmentWay" id="installmentWay1" value="installmentWay1">
+                     <label for="installmentWay1">
+                        <img src="img/icons/installment1.svg" alt="">
+                        <span>Подели</span>
+                     </label>
+                  </li>
+                  <li>
+                     <input type="radio" name="installmentWay" id="installmentWay2" value="installmentWay2">
+                     <label for="installmentWay2">
+                        <img src="img/icons/installment2.svg" alt="">
+                        <span>Сплит</span>
+                     </label>
+                  </li>
+               </ul>
+               <div class="installment-modal__main">
+                  <span class="installment-modal__subtitle">Предварительный график платежей</span>
+                  <p class="installment-modal__text">
+                     Платежи будут списываться автоматически каждую неделю</p>
+                  <div class="installment-modal__contents">
+                     <div class="installment-modal__tab active" data-tab="installmentWay0">
+                        <div class="installment-tab">
+                           <ul class="installment-tab__list">
+                              <li class="active">
+                                 <p>Сегодня</p>
+                                 <span></span>
+                                 <p>2 385 ₽ </p>
+                              </li>
+                              <li>
+                                 <p>04 сен</p>
+                                 <span></span>
+                                 <p>2 385 ₽ </p>
+                              </li>
+                              <li>
+                                 <p>11 сен</p>
+                                 <span></span>
+                                 <p>2 385 ₽ </p>
+                              </li>
+                              <li>
+                                 <p>18 сен</p>
+                                 <span></span>
+                                 <p>2 385 ₽ </p>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="installment-modal__tab" data-tab="installmentWay1">
+                        <div class="installment-tab">
+                           <ul class="installment-tab__list">
+
+                              <li class="active">
+                                 <p>Сегодня</p>
+                                 <span></span>
+                                 <p>2 385 ₽ </p>
+                              </li>
+                              <li>
+                                 <p>04 сен</p>
+                                 <span></span>
+                                 <p>2 385 ₽ </p>
+                              </li>
+                              <li>
+                                 <p>11 сен</p>
+                                 <span></span>
+                                 <p>2 385 ₽ </p>
+                              </li>
+                              <li>
+                                 <p>18 сен</p>
+                                 <span></span>
+                                 <p>2 385 ₽ </p>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="installment-modal__tab" data-tab="installmentWay2">
+                        <div class="installment-tab">
+                           <ul class="installment-tab__list">
+                              <li class="active">
+                                 <p>Сегодня</p>
+                                 <span></span>
+                                 <p>2 385 ₽ </p>
+                              </li>
+                              <li>
+                                 <p>04 сен</p>
+                                 <span></span>
+                                 <p>2 385 ₽ </p>
+                              </li>
+                              <li>
+                                 <p>11 сен</p>
+                                 <span></span>
+                                 <p>2 385 ₽ </p>
+                              </li>
+                              <li>
+                                 <p>18 сен</p>
+                                 <span></span>
+                                 <p>2 385 ₽ </p>
+                              </li>
+                              <li>
+                                 <p>25 сен</p>
+                                 <span></span>
+                                 <p>2 385 ₽ </p>
+                              </li>
+                              <li>
+                                 <p>02 окт</p>
+                                 <span></span>
+                                 <p>2 385 ₽ </p>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <p class="installment-modal__remind">
+                     Сервис взимает комиссию. <br>  Подробная информация о работе сервиса на <a href="#"
+                        target="_blank">сайте</a>
+                  </p>
+               </div>
+               <div class="installment-modal__btn modal__close btn btn_white">закрыть</div>
+            </div>
+         </div>
       </main>
       @@include('html/footer.html', {})
    </div>
-   <script src="js/app.js"></script>
+   @@include('html/scripts.html', {})
 </body>
 
 </html>

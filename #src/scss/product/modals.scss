@@ -1,0 +1,202 @@
+.installment-modal {
+   // .installment-modal__content
+   &.open {
+      .modal__content {
+         translate: -50% -50%;
+      }
+   }
+   &__content {
+      width: 516px;
+      top: unset;
+      bottom: unset;
+      translate: -50% -50%;
+      top: 50%;
+      left: 50%;
+      right: unset;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+      padding-top: 64px;
+   }
+
+   // .installment-modal__close
+
+   &__close {
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      img {
+         width: 24px;
+         height: 24px;
+      }
+   }
+
+   // .installment-modal__title
+
+   &__title {
+      @include h2;
+   }
+
+   // .installment-modal__tabs
+
+   &__tabs {
+      margin: 32px 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      input {
+         display: none;
+      }
+      label {
+         border-bottom: 1px solid $light-grey;
+         display: flex;
+         align-items: center;
+         gap: 6px;
+         font-size: 14px;
+         color: $dark-grey;
+         transition: $transition;
+         cursor: pointer;
+         padding: 0 25px;
+         padding-bottom: 10px;
+      }
+      input:checked + label {
+         color: $black;
+         border-color: $black;
+      }
+   }
+
+   // .installment-modal__main
+
+   &__main {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+   }
+
+   // .installment-modal__subtitle
+
+   &__subtitle {
+      @include button;
+   }
+
+   // .installment-modal__text
+
+   &__text {
+      margin-top: 8px;
+      margin-bottom: 20px;
+      @include overline;
+   }
+
+   // .installment-modal__contents
+
+   &__contents {
+      width: 100%;
+   }
+
+   // .installment-modal__tab
+
+   &__tab {
+      width: 100%;
+   }
+
+   // .installment-modal__remind
+
+   &__remind {
+      margin-top: 20px;
+      @include overline;
+      a {
+         color: $black;
+         border-bottom: 1px solid $black;
+      }
+   }
+
+   // .installment-modal__btn
+
+   &__btn {
+      margin-top: 32px;
+      width: 100%;
+      height: 28px;
+   }
+   @media (max-width: $tablet) {
+      &__content {
+         top: 50%;
+         width: calc(100% - 16px);
+         max-width: 377px;
+         padding-top: 32px;
+         padding-left: 16px;
+         padding-right: 16px;
+         padding-bottom: 24px;
+      }
+      &__title {
+         @include h2-mobile;
+      }
+      &__tabs {
+         margin: 24px 0;
+         label {
+            font-size: 10px;
+            padding-bottom: 8px;
+            img {
+               width: 15px;
+               height: 15px;
+               flex: 0 0 15px;
+            }
+         }
+      }
+      &__close {
+         top: 16px;
+         right: 16px;
+         img {
+            width: 16px;
+            height: 16px;
+         }
+      }
+      &__text {
+         margin-top: 6px;
+         margin-bottom: 12px;
+         @include overline-mobile;
+      }
+      &__subtitle {
+         @include button-mobile;
+      }
+      &__remind {
+         margin-top: 12px;
+         @include overline-mobile;
+      }
+      &__btn {
+         margin-top: 24px;
+      }
+   }
+}
+.installment-tab {
+   // .installment-tab__list
+
+   &__list {
+      padding: 12px;
+      background-color: #f9f9f9;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+      gap: 8px;
+      @include h3;
+      color: $dark-grey;
+      transition: $transition;
+      span {
+         width: 100%;
+         height: 1px;
+         display: block;
+         margin: 5px 0;
+         background-color: $dark-grey;
+      }
+      li.active {
+         color: $black;
+         span {
+            background-color: $black;
+         }
+      }
+      @media (max-width: $tablet) {
+         font-size: 10px;
+         padding: 6px 12px;
+      }
+   }
+}

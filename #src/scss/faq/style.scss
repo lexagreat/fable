@@ -1,0 +1,147 @@
+.faq-page {
+   // .faq-page__wrapper
+
+   &__wrapper {
+      display: flex;
+      gap: 128px;
+   }
+
+   // .faq-page__aside
+
+   &__aside {
+      flex: 0 0 181px;
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      ul {
+         display: flex;
+         flex-direction: column;
+         gap: 10px;
+         a {
+            @include p;
+            transition: $transition;
+            color: $dark-grey;
+            @media (hover: hover) {
+               &:hover {
+                  color: $black;
+               }
+            }
+            &:active {
+               color: $black;
+            }
+            &.active {
+               color: $black;
+            }
+         }
+      }
+   }
+
+   // .faq-page__title
+
+   &__title {
+      @include subtitle-2;
+   }
+
+   // .faq-page__main
+
+   &__main {
+      flex: 1;
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 1000px;
+   }
+
+   // .faq-page__subtitle
+
+   &__subtitle {
+      @include subtitle-2;
+   }
+
+   // .faq-page__list
+
+   &__list {
+      border-top: 1px solid $light-grey;
+   }
+   @media (max-width: $tablet) {
+      &__wrapper {
+         flex-direction: column;
+         gap: 0;
+      }
+      &__title {
+         display: none;
+      }
+      &__aside {
+         flex: unset;
+         ul {
+            flex-direction: row;
+            white-space: nowrap;
+            gap: 20px;
+            overflow: auto;
+            width: 100vw;
+            margin-left: -8px;
+            margin-right: -8px;
+            padding-left: 8px;
+            padding-right: 8px;
+            a {
+               @include p-mobile;
+            }
+         }
+      }
+      &__subtitle {
+         @include subtitle-2-mobile;
+      }
+   }
+}
+.faq-item {
+   border-bottom: 1px solid $light-grey;
+   // .faq-item__header
+
+   &__header {
+      cursor: pointer;
+      padding: 8px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @include p;
+      svg {
+         transition: $transition;
+      }
+      &.active {
+         svg {
+            rotate: 180deg;
+         }
+      }
+   }
+
+   // .faq-item__title
+
+   &__title {
+   }
+
+   // .faq-item__spoiler
+
+   &__spoiler {
+   }
+
+   // .faq-item__content
+
+   &__content {
+      padding: 4px 0;
+      @include p;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+   }
+   @media (max-width: $tablet) {
+      &__header {
+         padding: 10px 0;
+         @include p-mobile;
+      }
+      &__content {
+         @include p-mobile;
+      }
+   }
+}
