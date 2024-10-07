@@ -21,6 +21,7 @@ body.lock {
 }
 
 .modal__content {
+   overflow: hidden;
    -ms-overflow-style: none; /* IE и Edge */
    scrollbar-width: none; /* Firefox */
    &::-webkit-scrollbar {

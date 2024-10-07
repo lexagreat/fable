@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="format-detection" content="telephone=no">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="css/style.min.css">
+   <title>Каталог</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <header class="header lock-padding">
+   <div class="container">
+      <div class="header__wrapper">
+         <a href="index.html" class="header__logo">
+            <img src="img/LOGO.svg" alt="">
+         </a>
+         <div class="header__menu">
+            <section class="breadcrumbs">
+               <div class="container">
+                  <ul class="breadcrumbs__list scrollbar-none">
+                     <li>
+                        <a href="#">ГЛАВНАЯ</a>
+                     </li>
+                     <li>
+                        <a href="#">меню</a>
+                     </li>
+                  </ul>
+               </div>
+            </section>
+            <ul class="header__links">
+               <li>
+                  <a href="#" class="header__link" data-assort="0">ЖЕНСКОЕ</a>
+               </li>
+               <li>
+                  <a href="#" class="header__link" data-assort="1">Мужское</a>
+               </li>
+               <li>
+                  <a href="#" class="header__link" data-assort="2">КОНСТРУКТОРЫ</a>
+               </li>
+               <li>
+                  <a href="#" class="header__link">КОЛЛЕКЦИИ</a>
+               </li>
+               <li>
+                  <a href="#" class="header__link">СЕРТИФИКАТЫ</a>
+               </li>
+               <li>
+                  <a href="#" class="header__link">О Бренде</a>
+               </li>
+               <li>
+                  <a href="#" class="header__link">summer sale</a>
+               </li>
+            </ul>
+            <ul class="header__icons">
+               <li>
+                  <a href="#">
+                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.5" y="0.5" width="15" height="15" rx="7.5" stroke="black" />
+                        <path d="M15.5 15.5L13.5 13.5" stroke="black" />
+                     </svg>
+                     <span>поиск</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="#">
+                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                           d="M7.61132 1.98586L8 2.46619L8.38868 1.98586C9.12281 1.07863 10.2436 0.5 11.5 0.5C13.6759 0.5 15.5 2.2417 15.5 5C15.5 6.01233 14.9792 7.08548 13.62 8.67506C12.9324 9.47922 11.4326 11.2289 10.1045 12.7779L8.3645 14.807L8 15.232L7.63551 14.807L5.89549 12.7779C4.56739 11.2289 3.06764 9.47922 2.38002 8.67506C1.02081 7.08548 0.5 6.01233 0.5 5C0.5 2.2417 2.32409 0.5 4.5 0.5C5.75635 0.5 6.87719 1.07863 7.61132 1.98586Z"
+                           stroke="black" />
+                     </svg>
+                     <span>избранное</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="#authModal" class="modal__link">
+                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="4" r="3.5" stroke="black" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                           d="M15 16H16C16 11.5817 12.4183 8 8 8C3.58172 8 0 11.5817 0 16H1C1 12.134 4.13401 9 8 9C11.866 9 15 12.134 15 16Z"
+                           fill="black" />
+                     </svg>
+                     <span>профиль</span>
+                  </a>
+               </li>
+            </ul>
+         </div>
+         <ul class="header__icons">
+            <li>
+               <a href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <rect x="0.5" y="0.5" width="15" height="15" rx="7.5" stroke="black" />
+                     <path d="M15.5 15.5L13.5 13.5" stroke="black" />
+                  </svg>
+
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M7.61132 1.98586L8 2.46619L8.38868 1.98586C9.12281 1.07863 10.2436 0.5 11.5 0.5C13.6759 0.5 15.5 2.2417 15.5 5C15.5 6.01233 14.9792 7.08548 13.62 8.67506C12.9324 9.47922 11.4326 11.2289 10.1045 12.7779L8.3645 14.807L8 15.232L7.63551 14.807L5.89549 12.7779C4.56739 11.2289 3.06764 9.47922 2.38002 8.67506C1.02081 7.08548 0.5 6.01233 0.5 5C0.5 2.2417 2.32409 0.5 4.5 0.5C5.75635 0.5 6.87719 1.07863 7.61132 1.98586Z"
+                        stroke="black" />
+                  </svg>
+
+               </a>
+            </li>
+            <li>
+               <a href="#authModal" class="modal__link">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <circle cx="8" cy="4" r="3.5" stroke="black" />
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M15 16H16C16 11.5817 12.4183 8 8 8C3.58172 8 0 11.5817 0 16H1C1 12.134 4.13401 9 8 9C11.866 9 15 12.134 15 16Z"
+                        fill="black" />
+                  </svg>
+
+               </a>
+            </li>
+         </ul>
+         <a class="header__cart modal__link" href="#cartModal">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <rect x="0.5" y="7.5" width="23" height="16" stroke="black" />
+               <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M18.4813 7C18.2259 3.64378 15.4218 1 12.0002 1C8.57858 1 5.77446 3.64378 5.51914 7H4.5166C4.77389 3.09098 8.02608 0 12.0002 0C15.9743 0 19.2265 3.09098 19.4838 7H18.4813Z"
+                  fill="black" />
+               <path
+                  d="M11.9896 19.1C11.6963 19.1 11.4563 19.09 11.2696 19.07C11.0829 19.05 10.8796 19.01 10.6596 18.95C10.4329 18.8833 10.2496 18.79 10.1096 18.67C9.96961 18.5433 9.85294 18.3633 9.75961 18.13C9.65961 17.9033 9.60961 17.63 9.60961 17.31V14.2C9.60961 13.8933 9.65628 13.6233 9.74961 13.39C9.84294 13.1567 9.96294 12.9733 10.1096 12.84C10.2363 12.7267 10.4096 12.6367 10.6296 12.57C10.8496 12.4967 11.0696 12.45 11.2896 12.43C11.5429 12.4167 11.7763 12.41 11.9896 12.41C12.2896 12.41 12.5296 12.42 12.7096 12.44C12.8896 12.4533 13.0896 12.4933 13.3096 12.56C13.5496 12.6333 13.7396 12.73 13.8796 12.85C14.0196 12.97 14.1396 13.1433 14.2396 13.37C14.3396 13.5967 14.3896 13.8733 14.3896 14.2V17.31C14.3896 17.6167 14.3396 17.8867 14.2396 18.12C14.1463 18.3533 14.0263 18.5333 13.8796 18.66C13.7463 18.7733 13.5629 18.8667 13.3296 18.94C13.1029 19.0133 12.8863 19.0567 12.6796 19.07C12.4929 19.09 12.2629 19.1 11.9896 19.1ZM12.0096 18.16C12.2896 18.16 12.4896 18.1433 12.6096 18.11C12.7296 18.07 12.8096 18 12.8496 17.9C12.8896 17.8 12.9096 17.6367 12.9096 17.41V14.1C12.9096 13.8733 12.8896 13.71 12.8496 13.61C12.8096 13.51 12.7296 13.4433 12.6096 13.41C12.4896 13.37 12.2896 13.35 12.0096 13.35C11.7229 13.35 11.5163 13.37 11.3896 13.41C11.2696 13.4433 11.1896 13.51 11.1496 13.61C11.1096 13.71 11.0896 13.8733 11.0896 14.1V17.41C11.0896 17.6367 11.1096 17.8 11.1496 17.9C11.1896 18 11.2696 18.07 11.3896 18.11C11.5163 18.1433 11.7229 18.16 12.0096 18.16Z"
+                  fill="black" />
+            </svg>
+         </a>
+         <button class="header__burger">
+            <span></span>
+         </button>
+      </div>
+   </div>
+</header>
+
+<div class="header__modal">
+   <div class="header-assort" data-assort-id="0">
+      <div class="header-assort__main">
+         <ul class="header-assort__links">
+            <li><a href="#">женские новинки</a></li>
+            <li><a href="#">пуховики</a></li>
+            <li><a href="#">костюмы</a></li>
+            <li><a href="#">пиджаки</a></li>
+            <li> <a href="#">брюки</a></li>
+            <li> <a href="#">спортивные костюмы</a></li>
+            <li><a href="#">шорты</a></li>
+            <li><a href="#">футболки</a></li>
+         </ul>
+         <ul class="header-assort__links">
+            <li> <a href="#">свитшоты и худи</a></li>
+            <li> <a href="#">лонгсливы</a></li>
+            <li><a href="#">трикотаж</a></li>
+            <li><a href="#">рубашки</a></li>
+            <li> <a href="#">верхняя одежда</a></li>
+            <li> <a href="#">жилеты</a></li>
+            <li><a href="#">аксессуары</a></li>
+            <li><a href="#">sale</a></li>
+         </ul>
+      </div>
+      <div class="header-assort__image border">
+         <img src="img/header-assort1.png" alt="">
+      </div>
+      <div class="header-assort__image">
+         <img src="img/header-assort2.png" alt="">
+      </div>
+   </div>
+   <div class="header-assort" data-assort-id="1">
+      <div class="header-assort__main">
+         <ul class="header-assort__links">
+            <li><a href="#">мужские новинки</a></li>
+            <li><a href="#">пуховики</a></li>
+            <li><a href="#">костюмы</a></li>
+            <li><a href="#">пиджаки</a></li>
+            <li> <a href="#">брюки</a></li>
+            <li> <a href="#">спортивные костюмы</a></li>
+            <li><a href="#">шорты</a></li>
+            <li><a href="#">футболки</a></li>
+         </ul>
+         <ul class="header-assort__links">
+            <li> <a href="#">свитшоты и худи</a></li>
+            <li> <a href="#">лонгсливы</a></li>
+            <li><a href="#">трикотаж</a></li>
+            <li><a href="#">рубашки</a></li>
+            <li> <a href="#">верхняя одежда</a></li>
+            <li> <a href="#">жилеты</a></li>
+            <li><a href="#">аксессуары</a></li>
+            <li><a href="#">sale</a></li>
+         </ul>
+      </div>
+      <div class="header-assort__image border">
+         <img src="img/header-assort1.png" alt="">
+      </div>
+      <div class="header-assort__image">
+         <img src="img/header-assort2.png" alt="">
+      </div>
+   </div>
+   <div class="header-assort" data-assort-id="2">
+      <div class="header-assort__main">
+         <ul class="header-assort__links">
+            <li><a href="#">новинки</a></li>
+            <li><a href="#">пуховики</a></li>
+            <li><a href="#">костюмы</a></li>
+            <li><a href="#">пиджаки</a></li>
+            <li> <a href="#">брюки</a></li>
+            <li> <a href="#">спортивные костюмы</a></li>
+            <li><a href="#">шорты</a></li>
+            <li><a href="#">футболки</a></li>
+         </ul>
+         <ul class="header-assort__links">
+            <li> <a href="#">свитшоты и худи</a></li>
+            <li> <a href="#">лонгсливы</a></li>
+            <li><a href="#">трикотаж</a></li>
+            <li><a href="#">рубашки</a></li>
+            <li> <a href="#">верхняя одежда</a></li>
+            <li> <a href="#">жилеты</a></li>
+            <li><a href="#">аксессуары</a></li>
+            <li><a href="#">sale</a></li>
+         </ul>
+      </div>
+      <div class="header-assort__image border">
+         <img src="img/header-assort1.png" alt="">
+      </div>
+      <div class="header-assort__image">
+         <img src="img/header-assort2.png" alt="">
+      </div>
+   </div>
+</div>
+
+<div class="modal cart-modal" id="cartModal">
+   <div class="modal__content cart-modal__content">
+      <div class="cart-modal__header">
+         <h2 class="cart-modal__title">корзина</h2>
+         <button class="filters-modal__close modal__close">
+            <img src="img/icons/escape-button.svg" alt="">
+         </button>
+      </div>
+      <section class="breadcrumbs">
+         <div class="container">
+            <ul class="breadcrumbs__list scrollbar-none">
+               <li>
+                  <a href="#">ГЛАВНАЯ</a>
+               </li>
+               <li>
+                  <a href="#">Корзина</a>
+               </li>
+            </ul>
+         </div>
+      </section>
+      <div class="cart-modal__main">
+         <span class="cart-modal__subtitle">ваш заказ</span>
+         <ul class="cart-modal__items">
+            <li class="cart-item">
+               <div class="cart-item__image">
+                  <img src="img/products/cart-item.png" alt="">
+               </div>
+               <div class="cart-item__main">
+                  <div class="cart-item__left">
+                     <div class="cart-item__info">
+                        <h4 class="cart-item__name">Рубашка Office Blue striped</h4>
+                        <span class="cart-item__size">размер: XS</span>
+                     </div>
+                     <div class="cart-item__count">
+                        <button class="minus">
+                           <svg width="6" height="2" viewBox="0 0 6 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0 1L6 1" stroke="black" />
+                           </svg>
+                        </button>
+                        <span>6</span>
+                        <button class="plus">
+                           <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M3 6V0" stroke="black" />
+                              <path d="M0 3L6 3" stroke="black" />
+                           </svg>
+                        </button>
+                     </div>
+                  </div>
+                  <div class="cart-item__right">
+                     <div class="cart-item__price">
+                        <span class="old">22 300 ₽</span>
+                        <span class="actual">10 900 ₽</span>
+                     </div>
+                     <button class="cart-item__remove">удалить</button>
+                  </div>
+
+               </div>
+            </li>
+            <li class="cart-item">
+               <div class="cart-item__image">
+                  <img src="img/products/cart-item.png" alt="">
+               </div>
+               <div class="cart-item__main">
+                  <div class="cart-item__left">
+                     <div class="cart-item__info">
+                        <h4 class="cart-item__name">Рубашка Office Blue striped</h4>
+                        <span class="cart-item__size">размер: XS</span>
+                     </div>
+                     <div class="cart-item__count">
+                        <button class="minus">
+                           <svg width="6" height="2" viewBox="0 0 6 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0 1L6 1" stroke="black" />
+                           </svg>
+                        </button>
+                        <span>6</span>
+                        <button class="plus">
+                           <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M3 6V0" stroke="black" />
+                              <path d="M0 3L6 3" stroke="black" />
+                           </svg>
+                        </button>
+                     </div>
+                  </div>
+                  <div class="cart-item__right">
+                     <div class="cart-item__price">
+                        <span class="old">22 300 ₽</span>
+                        <span class="actual">10 900 ₽</span>
+                     </div>
+                     <button class="cart-item__remove">удалить</button>
+                  </div>
+
+               </div>
+            </li>
+         </ul>
+         <ul class="cart-modal__list">
+            <li>
+               <span>скидка f|able</span>
+               <span>1 200 ₽</span>
+            </li>
+            <li>
+               <span>итого</span>
+               <span>128 340 ₽</span>
+            </li>
+         </ul>
+      </div>
+      <div class="cart-modal__footer">
+         <button class="btn btn_black cart-modal__btn">оформить заказ</button>
+         <button class="btn btn_white cart-modal__btn ">сохранить</button>
+      </div>
+   </div>
+</div>
+<div class="modal cart-modal auth-modal" id="authModal">
+   <div class="modal__content cart-modal__content">
+      <div class="cart-modal__header">
+         <h2 class="cart-modal__title">ЗАРЕГЕСТРИРОВАТЬСЯ</h2>
+         <button class="filters-modal__close modal__close">
+            <img src="img/icons/escape-button.svg" alt="">
+         </button>
+      </div>
+      <section class="breadcrumbs">
+         <div class="container">
+            <ul class="breadcrumbs__list scrollbar-none">
+               <li>
+                  <a href="#">ЗАРЕГЕСТРИРОВАТЬСЯ</a>
+               </li>
+            </ul>
+         </div>
+      </section>
+      <div class="auth-modal__main">
+         <ul class="auth-modal__form">
+            <li class="app-input">
+               <span>Имя</span>
+               <input type="text">
+            </li>
+            <li class="app-input">
+               <span>фамилия</span>
+               <input type="text">
+            </li>
+            <li class="app-input">
+               <span>дата рождения</span>
+               <input type="text">
+            </li>
+            <li class="app-input">
+               <span>электронная почта</span>
+               <input type="text">
+            </li>
+            <li class="app-input">
+               <span>телефон</span>
+               <input type="text">
+            </li>
+         </ul>
+         <div class="auth-modal__check app-checkbox">
+            <input type="checkbox" id="authCheck" value="0">
+            <label for="authCheck">
+               <div></div>
+               <span>я даю <a href="#" target="_blank">согласие на обработку</a> персональных данных </span>
+            </label>
+         </div>
+         <div class="auth-modal__footer">
+            <button class="btn btn_white cart-modal__btn save">сохранить</button>
+            <button class="btn btn_white cart-modal__btn exit modal__close">Выйти</button>
+         </div>
+      </div>
+
+   </div>
+</div>
+      <main class="main">
+         <section class="breadcrumbs">
+            <div class="container">
+               <ul class="breadcrumbs__list scrollbar-none">
+                  <li>
+                     <a href="#">ГЛАВНАЯ</a>
+                  </li>
+                  <li>
+                     <a href="#">мужское</a>
+                  </li>
+               </ul>
+            </div>
+         </section>
+         <section class="catalog-page">
+            <div class="container">
+               <div class="catalog-page__wrapper">
+                  <div class="catalog-page__header">
+                     <h1 class="catalog-page__title">
+                        <span>мужское</span>
+                        <sup>
+                           148</sup>
+                     </h1>
+                     <a href="#filtersModal" class="modal__link catalog-filters__open btn btn_white">фильтр</a>
+                  </div>
+                  <div class="catalog-page__main">
+                     <ul class="catalog-page__products">
+                        <li>
+                           <a href="#" class="product-card">
+                              <div class="product-card__image">
+                                 <span class="product-card__sale">-35%</span>
+                                 <img src="img/products/catalog1.png" alt="">
+                              </div>
+                              <div class="product-card__main">
+                                 <div class="product-card__info">
+                                    <span class="product-card__name">Рубашка Office Blue striped</span>
+                                    <p class="product-card__price cart-item__price">
+                                       <span class="actual">10 900 ₽</span>
+                                       <span class="old">22 300 ₽</span>
+                                    </p>
+                                 </div>
+                                 <button class="product-card__buy">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <rect x="0.5" y="7.5" width="23" height="16" stroke="black" />
+                                       <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M18.4813 7C18.2259 3.64378 15.4218 1 12.0002 1C8.57858 1 5.77446 3.64378 5.51914 7H4.5166C4.77389 3.09098 8.02608 0 12.0002 0C15.9743 0 19.2265 3.09098 19.4838 7H18.4813Z"
+                                          fill="black" />
+                                       <path d="M8 16H16" stroke="black" />
+                                       <path d="M12 12L12 20" stroke="black" />
+                                    </svg>
+
+                                 </button>
+                              </div>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" class="product-card">
+                              <div class="product-card__image">
+                                 <span class="product-card__sale">-35%</span>
+                                 <img src="img/products/catalog2.png" alt="">
+                              </div>
+                              <div class="product-card__main">
+                                 <div class="product-card__info">
+                                    <span class="product-card__name">Рубашка Office Blue striped</span>
+                                    <p class="product-card__price cart-item__price">
+                                       <span class="actual">10 900 ₽</span>
+                                       <span class="old">22 300 ₽</span>
+                                    </p>
+                                 </div>
+                                 <button class="product-card__buy">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <rect x="0.5" y="7.5" width="23" height="16" stroke="black" />
+                                       <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M18.4813 7C18.2259 3.64378 15.4218 1 12.0002 1C8.57858 1 5.77446 3.64378 5.51914 7H4.5166C4.77389 3.09098 8.02608 0 12.0002 0C15.9743 0 19.2265 3.09098 19.4838 7H18.4813Z"
+                                          fill="black" />
+                                       <path d="M8 16H16" stroke="black" />
+                                       <path d="M12 12L12 20" stroke="black" />
+                                    </svg>
+
+                                 </button>
+                              </div>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" class="product-card">
+                              <div class="product-card__image">
+                                 <span class="product-card__sale">-35%</span>
+                                 <img src="img/products/catalog3.png" alt="">
+                              </div>
+                              <div class="product-card__main">
+                                 <div class="product-card__info">
+                                    <span class="product-card__name">Рубашка Office Blue striped</span>
+                                    <p class="product-card__price cart-item__price">
+                                       <span class="actual">10 900 ₽</span>
+                                       <span class="old">22 300 ₽</span>
+                                    </p>
+                                 </div>
+                                 <button class="product-card__buy">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <rect x="0.5" y="7.5" width="23" height="16" stroke="black" />
+                                       <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M18.4813 7C18.2259 3.64378 15.4218 1 12.0002 1C8.57858 1 5.77446 3.64378 5.51914 7H4.5166C4.77389 3.09098 8.02608 0 12.0002 0C15.9743 0 19.2265 3.09098 19.4838 7H18.4813Z"
+                                          fill="black" />
+                                       <path d="M8 16H16" stroke="black" />
+                                       <path d="M12 12L12 20" stroke="black" />
+                                    </svg>
+
+                                 </button>
+                              </div>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" class="product-card">
+                              <div class="product-card__image">
+                                 <span class="product-card__sale">-35%</span>
+                                 <img src="img/products/catalog4.png" alt="">
+                              </div>
+                              <div class="product-card__main">
+                                 <div class="product-card__info">
+                                    <span class="product-card__name">Рубашка Office Blue striped</span>
+                                    <p class="product-card__price cart-item__price">
+                                       <span class="actual">10 900 ₽</span>
+                                       <span class="old">22 300 ₽</span>
+                                    </p>
+                                 </div>
+                                 <button class="product-card__buy">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <rect x="0.5" y="7.5" width="23" height="16" stroke="black" />
+                                       <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M18.4813 7C18.2259 3.64378 15.4218 1 12.0002 1C8.57858 1 5.77446 3.64378 5.51914 7H4.5166C4.77389 3.09098 8.02608 0 12.0002 0C15.9743 0 19.2265 3.09098 19.4838 7H18.4813Z"
+                                          fill="black" />
+                                       <path d="M8 16H16" stroke="black" />
+                                       <path d="M12 12L12 20" stroke="black" />
+                                    </svg>
+
+                                 </button>
+                              </div>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" class="product-card">
+                              <div class="product-card__image">
+                                 <span class="product-card__sale">-35%</span>
+                                 <img src="img/products/catalog1.png" alt="">
+                              </div>
+                              <div class="product-card__main">
+                                 <div class="product-card__info">
+                                    <span class="product-card__name">Рубашка Office Blue striped</span>
+                                    <p class="product-card__price cart-item__price">
+                                       <span class="actual">10 900 ₽</span>
+                                       <span class="old">22 300 ₽</span>
+                                    </p>
+                                 </div>
+                                 <button class="product-card__buy">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <rect x="0.5" y="7.5" width="23" height="16" stroke="black" />
+                                       <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M18.4813 7C18.2259 3.64378 15.4218 1 12.0002 1C8.57858 1 5.77446 3.64378 5.51914 7H4.5166C4.77389 3.09098 8.02608 0 12.0002 0C15.9743 0 19.2265 3.09098 19.4838 7H18.4813Z"
+                                          fill="black" />
+                                       <path d="M8 16H16" stroke="black" />
+                                       <path d="M12 12L12 20" stroke="black" />
+                                    </svg>
+
+                                 </button>
+                              </div>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" class="product-card">
+                              <div class="product-card__image">
+                                 <span class="product-card__sale">-35%</span>
+                                 <img src="img/products/catalog2.png" alt="">
+                              </div>
+                              <div class="product-card__main">
+                                 <div class="product-card__info">
+                                    <span class="product-card__name">Рубашка Office Blue striped</span>
+                                    <p class="product-card__price cart-item__price">
+                                       <span class="actual">10 900 ₽</span>
+                                       <span class="old">22 300 ₽</span>
+                                    </p>
+                                 </div>
+                                 <button class="product-card__buy">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <rect x="0.5" y="7.5" width="23" height="16" stroke="black" />
+                                       <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M18.4813 7C18.2259 3.64378 15.4218 1 12.0002 1C8.57858 1 5.77446 3.64378 5.51914 7H4.5166C4.77389 3.09098 8.02608 0 12.0002 0C15.9743 0 19.2265 3.09098 19.4838 7H18.4813Z"
+                                          fill="black" />
+                                       <path d="M8 16H16" stroke="black" />
+                                       <path d="M12 12L12 20" stroke="black" />
+                                    </svg>
+
+                                 </button>
+                              </div>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" class="product-card">
+                              <div class="product-card__image">
+                                 <span class="product-card__sale">-35%</span>
+                                 <img src="img/products/catalog3.png" alt="">
+                              </div>
+                              <div class="product-card__main">
+                                 <div class="product-card__info">
+                                    <span class="product-card__name">Рубашка Office Blue striped</span>
+                                    <p class="product-card__price cart-item__price">
+                                       <span class="actual">10 900 ₽</span>
+                                       <span class="old">22 300 ₽</span>
+                                    </p>
+                                 </div>
+                                 <button class="product-card__buy">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <rect x="0.5" y="7.5" width="23" height="16" stroke="black" />
+                                       <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M18.4813 7C18.2259 3.64378 15.4218 1 12.0002 1C8.57858 1 5.77446 3.64378 5.51914 7H4.5166C4.77389 3.09098 8.02608 0 12.0002 0C15.9743 0 19.2265 3.09098 19.4838 7H18.4813Z"
+                                          fill="black" />
+                                       <path d="M8 16H16" stroke="black" />
+                                       <path d="M12 12L12 20" stroke="black" />
+                                    </svg>
+
+                                 </button>
+                              </div>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" class="product-card">
+                              <div class="product-card__image">
+                                 <span class="product-card__sale">-35%</span>
+                                 <img src="img/products/catalog4.png" alt="">
+                              </div>
+                              <div class="product-card__main">
+                                 <div class="product-card__info">
+                                    <span class="product-card__name">Рубашка Office Blue striped</span>
+                                    <p class="product-card__price cart-item__price">
+                                       <span class="actual">10 900 ₽</span>
+                                       <span class="old">22 300 ₽</span>
+                                    </p>
+                                 </div>
+                                 <button class="product-card__buy">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <rect x="0.5" y="7.5" width="23" height="16" stroke="black" />
+                                       <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M18.4813 7C18.2259 3.64378 15.4218 1 12.0002 1C8.57858 1 5.77446 3.64378 5.51914 7H4.5166C4.77389 3.09098 8.02608 0 12.0002 0C15.9743 0 19.2265 3.09098 19.4838 7H18.4813Z"
+                                          fill="black" />
+                                       <path d="M8 16H16" stroke="black" />
+                                       <path d="M12 12L12 20" stroke="black" />
+                                    </svg>
+
+                                 </button>
+                              </div>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" class="product-card">
+                              <div class="product-card__image">
+                                 <span class="product-card__sale">-35%</span>
+                                 <img src="img/products/catalog1.png" alt="">
+                              </div>
+                              <div class="product-card__main">
+                                 <div class="product-card__info">
+                                    <span class="product-card__name">Рубашка Office Blue striped</span>
+                                    <p class="product-card__price cart-item__price">
+                                       <span class="actual">10 900 ₽</span>
+                                       <span class="old">22 300 ₽</span>
+                                    </p>
+                                 </div>
+                                 <button class="product-card__buy">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <rect x="0.5" y="7.5" width="23" height="16" stroke="black" />
+                                       <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M18.4813 7C18.2259 3.64378 15.4218 1 12.0002 1C8.57858 1 5.77446 3.64378 5.51914 7H4.5166C4.77389 3.09098 8.02608 0 12.0002 0C15.9743 0 19.2265 3.09098 19.4838 7H18.4813Z"
+                                          fill="black" />
+                                       <path d="M8 16H16" stroke="black" />
+                                       <path d="M12 12L12 20" stroke="black" />
+                                    </svg>
+
+                                 </button>
+                              </div>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" class="product-card">
+                              <div class="product-card__image">
+                                 <span class="product-card__sale">-35%</span>
+                                 <img src="img/products/catalog2.png" alt="">
+                              </div>
+                              <div class="product-card__main">
+                                 <div class="product-card__info">
+                                    <span class="product-card__name">Рубашка Office Blue striped</span>
+                                    <p class="product-card__price cart-item__price">
+                                       <span class="actual">10 900 ₽</span>
+                                       <span class="old">22 300 ₽</span>
+                                    </p>
+                                 </div>
+                                 <button class="product-card__buy">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <rect x="0.5" y="7.5" width="23" height="16" stroke="black" />
+                                       <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M18.4813 7C18.2259 3.64378 15.4218 1 12.0002 1C8.57858 1 5.77446 3.64378 5.51914 7H4.5166C4.77389 3.09098 8.02608 0 12.0002 0C15.9743 0 19.2265 3.09098 19.4838 7H18.4813Z"
+                                          fill="black" />
+                                       <path d="M8 16H16" stroke="black" />
+                                       <path d="M12 12L12 20" stroke="black" />
+                                    </svg>
+
+                                 </button>
+                              </div>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" class="product-card">
+                              <div class="product-card__image">
+                                 <span class="product-card__sale">-35%</span>
+                                 <img src="img/products/catalog3.png" alt="">
+                              </div>
+                              <div class="product-card__main">
+                                 <div class="product-card__info">
+                                    <span class="product-card__name">Рубашка Office Blue striped</span>
+                                    <p class="product-card__price cart-item__price">
+                                       <span class="actual">10 900 ₽</span>
+                                       <span class="old">22 300 ₽</span>
+                                    </p>
+                                 </div>
+                                 <button class="product-card__buy">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <rect x="0.5" y="7.5" width="23" height="16" stroke="black" />
+                                       <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M18.4813 7C18.2259 3.64378 15.4218 1 12.0002 1C8.57858 1 5.77446 3.64378 5.51914 7H4.5166C4.77389 3.09098 8.02608 0 12.0002 0C15.9743 0 19.2265 3.09098 19.4838 7H18.4813Z"
+                                          fill="black" />
+                                       <path d="M8 16H16" stroke="black" />
+                                       <path d="M12 12L12 20" stroke="black" />
+                                    </svg>
+
+                                 </button>
+                              </div>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" class="product-card">
+                              <div class="product-card__image">
+                                 <span class="product-card__sale">-35%</span>
+                                 <img src="img/products/catalog4.png" alt="">
+                              </div>
+                              <div class="product-card__main">
+                                 <div class="product-card__info">
+                                    <span class="product-card__name">Рубашка Office Blue striped</span>
+                                    <p class="product-card__price cart-item__price">
+                                       <span class="actual">10 900 ₽</span>
+                                       <span class="old">22 300 ₽</span>
+                                    </p>
+                                 </div>
+                                 <button class="product-card__buy">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <rect x="0.5" y="7.5" width="23" height="16" stroke="black" />
+                                       <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M18.4813 7C18.2259 3.64378 15.4218 1 12.0002 1C8.57858 1 5.77446 3.64378 5.51914 7H4.5166C4.77389 3.09098 8.02608 0 12.0002 0C15.9743 0 19.2265 3.09098 19.4838 7H18.4813Z"
+                                          fill="black" />
+                                       <path d="M8 16H16" stroke="black" />
+                                       <path d="M12 12L12 20" stroke="black" />
+                                    </svg>
+
+                                 </button>
+                              </div>
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="catalog-page__footer catalog-pagination">
+                     <button class="catalog-pagination__button btn btn_white">Показать еще</button>
+                     <ul class="catalog-pagination__list">
+                        <li class="active">
+                           <button>1</button>
+                        </li>
+                        <li>
+                           <button>2</button>
+                        </li>
+                        <li>
+                           <button>3</button>
+                        </li>
+                        <li>
+                           <button>4</button>
+                        </li>
+                        <li>
+                           <button>5</button>
+                        </li>
+                        <li>
+                           <button>...</button>
+                        </li>
+                        <li>
+                           <button>13</button>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+      <div class="modal filters-modal" id="filtersModal">
+         <div class="filters-modal__content modal__content">
+            <div class="filters-modal__header">
+               <h4 class="filters-modal__title">ФИЛЬТР</h4>
+               <button class="filters-modal__close modal__close">
+                  <img src="img/icons/escape-button.svg" alt="">
+               </button>
+            </div>
+            <div class="filters-modal__main">
+               <div class="filters-modal__block">
+                  <div class="filters-modal__subtitle">Сортировать</div>
+                  <ul class="filters-modal__sort app-checkbox">
+                     <li>
+                        <input type="radio" name="filterSort" value="0" id="filterSort0">
+                        <label for="filterSort0">
+                           <div></div>
+                           <span>по возрастанию</span>
+                        </label>
+                     </li>
+                     <li>
+                        <input type="radio" name="filterSort" value="1" id="filterSort1">
+                        <label for="filterSort1">
+                           <div></div>
+                           <span>по убыванию</span>
+                        </label>
+                     </li>
+                  </ul>
+               </div>
+               <div class="filters-modal__block">
+                  <div class="filters-modal__subtitle">размер</div>
+                  <ul class="filters-modal__size app-checkbox">
+                     <li>
+                        <input type="checkbox" name="filterSize" value="0" id="filterSize0">
+                        <label for="filterSize0">
+                           <div></div>
+                           <span>xs</span>
+                        </label>
+                     </li>
+                     <li>
+                        <input type="checkbox" name="filterSize" value="1" id="filterSize1">
+                        <label for="filterSize1">
+                           <div></div>
+                           <span>S</span>
+                        </label>
+                     </li>
+                     <li>
+                        <input type="checkbox" name="filterSize" value="2" id="filterSize2">
+                        <label for="filterSize2">
+                           <div></div>
+                           <span>M</span>
+                        </label>
+                     </li>
+                     <li>
+                        <input type="checkbox" name="filterSize" value="3" id="filterSize3">
+                        <label for="filterSize3">
+                           <div></div>
+                           <span>L</span>
+                        </label>
+                     </li>
+                     <li>
+                        <input type="checkbox" name="filterSize" value="4" id="filterSize4">
+                        <label for="filterSize4">
+                           <div></div>
+                           <span>XL</span>
+                        </label>
+                     </li>
+                     <li>
+                        <input type="checkbox" name="filterSize" value="5" id="filterSize5">
+                        <label for="filterSize5">
+                           <div></div>
+                           <span>XXL</span>
+                        </label>
+                     </li>
+                     <li>
+                        <input type="checkbox" name="filterSize" value="6" id="filterSize6">
+                        <label for="filterSize6">
+                           <div></div>
+                           <span>XXXL</span>
+                        </label>
+                     </li>
+                  </ul>
+               </div>
+               <div class="filters-modal__block">
+                  <div class="filters-modal__subtitle">цвет</div>
+                  <ul class="filters-modal__color">
+                     <li>
+                        <input type="checkbox" name="filterColor" value="0" id="filterColor0">
+                        <label for="filterColor0">
+                           <div style="background-color: rgba(142, 142, 142, 1);"></div>
+                           <span>цвет</span>
+                           <button>
+                              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M1 1L11 11" stroke="black" />
+                                 <path d="M1 11L11 1" stroke="black" />
+                              </svg>
+
+                           </button>
+                        </label>
+                     </li>
+                     <li>
+                        <input type="checkbox" name="filterColor" value="1" id="filterColor1">
+                        <label for="filterColor1">
+                           <div style="background-color: rgba(142, 142, 142, 1);"></div>
+                           <span>цвет</span>
+                           <button>
+                              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M1 1L11 11" stroke="black" />
+                                 <path d="M1 11L11 1" stroke="black" />
+                              </svg>
+
+                           </button>
+                        </label>
+                     </li>
+                     <li>
+                        <input type="checkbox" name="filterColor" value="2" id="filterColor2">
+                        <label for="filterColor2">
+                           <div style="background-color: rgba(142, 142, 142, 1);"></div>
+                           <span>цвет</span>
+                           <button>
+                              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M1 1L11 11" stroke="black" />
+                                 <path d="M1 11L11 1" stroke="black" />
+                              </svg>
+
+                           </button>
+                        </label>
+                     </li>
+                     <li>
+                        <input type="checkbox" name="filterColor" value="3" id="filterColor3">
+                        <label for="filterColor3">
+                           <div style="background-color: rgba(142, 142, 142, 1);"></div>
+                           <span>цвет</span>
+                           <button>
+                              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M1 1L11 11" stroke="black" />
+                                 <path d="M1 11L11 1" stroke="black" />
+                              </svg>
+
+                           </button>
+                        </label>
+                     </li>
+                     <li>
+                        <input type="checkbox" name="filterColor" value="4" id="filterColor4">
+                        <label for="filterColor4">
+                           <div style="background-color: rgba(142, 142, 142, 1);"></div>
+                           <span>цвет</span>
+                           <button>
+                              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M1 1L11 11" stroke="black" />
+                                 <path d="M1 11L11 1" stroke="black" />
+                              </svg>
+
+                           </button>
+                        </label>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <button class="filters-modal__reset btn btn_white">сбросить</button>
+         </div>
+      </div>
+      <footer class="footer">
+   <div class="container">
+      <div class="footer__wrapper">
+         <ul class="footer__list">
+            <li><a href="#">магазин</a></li>
+            <li><a href="#">помощь покупателю</a></li>
+            <li><a href="#">контакты</a></li>
+            <li><a href="#">вакансии</a></li>
+            <li><a href="#">стилистам</a></li>
+            <li><a href="#">оферта и политика конфиденциальности</a></li>
+            <li><a href="#">telegram</a></li>
+            <li><a href="#">vkontakte</a></li>
+         </ul>
+         <ul class="footer__copy">
+            <li>f | Able</li>
+            <li>©2024</li>
+         </ul>
+      </div>
+   </div>
+</footer>
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/imask"></script>
+<script src="js/app.js"></script>
+</body>
+
+</html>
