@@ -52,3 +52,7 @@ body.lock {
 .modal.open .modal__content {
    translate: 0 0;
 }
+
+.modal__close {
+   cursor: pointer;
+}

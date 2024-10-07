@@ -23,9 +23,177 @@
          <section class="product-page">
             <div class="container">
                <div class="product-page__wrapper">
-                  <div class="product-page__gallery"></div>
-                  <div class="product-page__main">
-                     <a href="#installmentModal" class="modal__link">рассрочка</a>
+                  <div class="product-page__gallery product-gallery">
+                     <div class="swiper product-gallery__main">
+                        <div class="swiper-wrapper">
+                           <div class="swiper-slide">
+                              <div class="swiper-zoom-container">
+                                 <img src="img/products/product-page.png" alt="">
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="swiper-zoom-container">
+                                 <img src="img/products/product-page.png" alt="">
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="swiper-zoom-container">
+                                 <img src="img/products/product-page.png" alt="">
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="swiper-zoom-container">
+                                 <img src="img/products/product-page.png" alt="">
+                              </div>
+                           </div>
+                        </div>
+                        <div class="home-hero__nav slider-btn slider-btn-prev home-hero__nav_prev">
+                           <svg width="19" height="34" viewBox="0 0 19 34" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M18 1L2 17L18 33" stroke="#8E8E8E" stroke-width="2" />
+                           </svg>
+                        </div>
+                        <div class="home-hero__nav slider-btn slider-btn-next home-hero__nav_next">
+                           <svg width="19" height="34" viewBox="0 0 19 34" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M1 1L17 17L0.999999 33" stroke="#8E8E8E" stroke-width="2" />
+                           </svg>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="product-page__main product-info">
+                     <h1 class="product-info__title">Пиджак Klassik 2.0 Blue heaven</h1>
+                     <div class="product-info__color product-info__block">
+                        <h4 class="product-info__subtitle">цвет</h4>
+                        <ul class="product-info__colors">
+                           <li>
+                              <input type="radio" name="colors" value="color0" id="color0">
+                              <label for="color0" style="background-color:rgba(188, 188, 188, 1) ;"></label>
+                           </li>
+                           <li>
+                              <input type="radio" name="colors" value="color1" id="color1">
+                              <label for="color1" style="background-color: rgba(188, 188, 188, 1);"></label>
+                           </li>
+                           <li>
+                              <input type="radio" name="colors" value="color2" id="color2">
+                              <label for="color2" style="background-color: rgba(90, 90, 90, 1);"></label>
+                           </li>
+                           <li>
+                              <input type="radio" name="colors" value="color3" id="color3">
+                              <label for="color3" style="background-color: rgba(188, 188, 188, 1);"></label>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="product-info__size product-info__block">
+                        <h4 class="product-info__subtitle">размер</h4>
+                        <ul class="product-info__sizes">
+                           <li>
+                              <input type="radio" name="sizes" value="size0" id="size0">
+                              <label for="size0">XS</label>
+                           </li>
+                           <li>
+                              <input type="radio" name="sizes" value="size1" id="size1">
+                              <label for="size1">S</label>
+                           </li>
+                           <li>
+                              <input type="radio" name="sizes" value="size2" id="size2">
+                              <label for="size2">M</label>
+                           </li>
+                           <li>
+                              <input type="radio" name="sizes" value="size3" id="size3">
+                              <label for="size3">L</label>
+                           </li>
+                           <li class="unavailaible">
+                              <input type="radio" name="sizes" value="size4" id="size4">
+                              <label for="size4">XL</label>
+                           </li>
+                           <li class="unavailaible">
+                              <input type="radio" name="sizes" value="size5" id="size5">
+                              <label for="size5">XXL</label>
+                           </li>
+                        </ul>
+                        <a href="#sizesGuideModal" class="modal__link">ГИД ПО РАЗМЕРАМ</a>
+                     </div>
+                     <div class="product-info__buy product-buy">
+                        <div class="product-buy__header">
+                           <span>Пиджак Klassik 2.0 Blue heaven</span><span>13 000 P</span>
+                        </div>
+                        <div class="product-buy__first">
+                           <button class="product-buy__cart btn btn_black"><span>В КОРЗИНУ </span> <span> — 13 000
+                                 р</span></button>
+                           <button class="product-buy__like btn btn_white"><svg width="16" height="16"
+                                 viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M7.61132 1.98586L8 2.46619L8.38868 1.98586C9.12281 1.07863 10.2436 0.5 11.5 0.5C13.6759 0.5 15.5 2.2417 15.5 5C15.5 6.01233 14.9792 7.08548 13.62 8.67506C12.9324 9.47922 11.4326 11.2289 10.1045 12.7779L8.3645 14.807L8 15.232L7.63551 14.807L5.89549 12.7779C4.56739 11.2289 3.06764 9.47922 2.38002 8.67506C1.02081 7.08548 0.5 6.01233 0.5 5C0.5 2.2417 2.32409 0.5 4.5 0.5C5.75635 0.5 6.87719 1.07863 7.61132 1.98586Z"
+                                    stroke="black" />
+                              </svg>
+                           </button>
+                        </div>
+                        <a href="#installmentModal" class="modal__link product-buy__installment btn btn_white">
+                           <img src="img/icons/dolami.svg" alt="">
+                           <span>4 платежа по 1 000 ₽</span>
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <mask id="mask0_597_2548" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                 width="16" height="16">
+                                 <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12.5 8L6.65782 2L5.31564 3.42335L9.81564 8L5.31564 12.5766L6.65782 14L12.5 8Z"
+                                    fill="black" />
+                              </mask>
+                              <g mask="url(#mask0_597_2548)">
+                                 <rect width="16" height="16" fill="#C7C9CC" />
+                              </g>
+                           </svg>
+
+                        </a>
+                     </div>
+                     <div class="product-info__description">
+                        <p>Базовая футболка прямого силуэта в универсальном оттенке.</p>
+
+                        <ul>
+                           <li>• Свободный крой</li>
+                           <li>• Круглый вырез горловины из трикотажной резинки</li>
+                           <li>• Вышитый логотип F|ABLE на груди</li>
+                           <li>• Спущенные плечи</li>
+                           <li>• Плотность 260гр</li>
+                        </ul>
+
+                        <p>Состав: 100% хлопок. </p>
+                        <p>арт. PFFR-FBL-TRCK-GRPHT</p>
+                     </div>
+                     <ul class="product-info__accordeon">
+                        <li class="product-spoiler">
+                           <div class="product-spoiler__header">
+                              <span>уход</span>
+                              <img src="img/icons/chevron-right.svg" alt="">
+                           </div>
+                           <div class="product-spoiler__spoiler collapse">
+                              <div>Ручная или машинная стирка до 30°С. Стирать с аналогичными цветами. Отжим до 600
+                                 оборотов.</div>
+                           </div>
+                        </li>
+                        <li class="product-spoiler">
+                           <div class="product-spoiler__header">
+                              <span>уход</span>
+                              <img src="img/icons/chevron-right.svg" alt="">
+                           </div>
+                           <div class="product-spoiler__spoiler collapse">
+                              <div>Ручная или машинная стирка до 30°С. Стирать с аналогичными цветами. Отжим до 600
+                                 оборотов.</div>
+                           </div>
+                        </li>
+                        <li class="product-spoiler">
+                           <div class="product-spoiler__header">
+                              <span>уход</span>
+                              <img src="img/icons/chevron-right.svg" alt="">
+                           </div>
+                           <div class="product-spoiler__spoiler collapse">
+                              <div>Ручная или машинная стирка до 30°С. Стирать с аналогичными цветами. Отжим до 600
+                                 оборотов.</div>
+                           </div>
+                        </li>
+                     </ul>
+
                   </div>
                </div>
             </div>
@@ -160,6 +328,74 @@
                   </p>
                </div>
                <div class="installment-modal__btn modal__close btn btn_white">закрыть</div>
+            </div>
+         </div>
+         <div class="modal sizes-modal" id="sizesGuideModal">
+            <div class="modal__content sizes-modal__content">
+
+               <div class="cart-modal__header">
+                  <h2 class="cart-modal__title">гид по размерам</h2>
+                  <button class="filters-modal__close modal__close">
+                     <img src="img/icons/escape-button.svg" alt="">
+                  </button>
+               </div>
+               <section class="breadcrumbs">
+                  <div class="container">
+                     <ul class="breadcrumbs__list scrollbar-none">
+                        <li>
+                           <a href="#">ЗАРЕГЕСТРИРОВАТЬСЯ</a>
+                        </li>
+                     </ul>
+                  </div>
+               </section>
+               <div class="sizes-modal__main">
+                  <h4 class="sizes-modal__title">пиджак klassik 2.0</h4>
+                  <div class="sizes-modal__grid sizes-table scrollbar-none">
+                     <div>размер</div>
+                     <div>
+                        размер
+                        российский
+                     </div>
+                     <div>
+                        окружность
+                        по груди изделия
+                     </div>
+                     <div>длина изделия</div>
+                     <div>длина рукава</div>
+                     <div>длина плеча</div>
+                     <div>xs</div>
+                     <div>42-44</div>
+                     <div>120</div>
+                     <div>xs</div>
+                     <div>xs</div>
+                     <div>xs</div>
+                     <div>s</div>
+                     <div>44-46</div>
+                     <div>124</div>
+                     <div>s</div>
+                     <div>s</div>
+                     <div>s</div>
+                     <div>m</div>
+                     <div>46-48</div>
+                     <div>128</div>
+                     <div>m</div>
+                     <div>m</div>
+                     <div>m</div>
+                     <div>l</div>
+                     <div>48-50</div>
+                     <div>132</div>
+                     <div>l</div>
+                     <div>l</div>
+                     <div>l</div>
+                     <div>xl</div>
+                     <div>50-52</div>
+                     <div>136</div>
+                     <div>xl</div>
+                     <div>xl</div>
+                     <div>xl</div>
+                  </div>
+                  <span class="sizes-modal__remind">значения указаны в сантиметрах</span>
+               </div>
             </div>
          </div>
       </main>

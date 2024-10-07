@@ -61,10 +61,33 @@
    // .header__cart
 
    &__cart {
+      svg {
+         width: 16px;
+         height: 16px;
+      }
       margin-left: 20px;
    }
    &__burger {
       display: none;
+   }
+   &__modal {
+      overflow: hidden;
+      position: fixed;
+      z-index: 4;
+      top: 70px;
+      left: 0;
+      right: 0;
+      background-color: $white;
+      border-top: 1px solid $light-grey;
+      transition: $transition;
+      translate: 0 -100%;
+
+      &.show {
+         translate: 0 0;
+      }
+      @media (max-width: $tablet) {
+         display: none;
+      }
    }
    @media (max-width: 1440px) {
       &__wrapper {
@@ -201,5 +224,87 @@
          padding: 0;
          @include h3-mobile;
       }
+   }
+}
+
+.header-assort {
+   width: 100%;
+   display: none;
+   transition: $transition;
+   &.active {
+      display: flex;
+   }
+   &.anim {
+      .header-assort {
+         &__main {
+            opacity: 1;
+            translate: 0;
+         }
+         &__image {
+            translate: 0;
+         }
+      }
+   }
+   &__main {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      opacity: 0;
+      translate: 0 20px;
+      transition: $transition;
+
+      ul {
+         padding-top: 20px;
+         display: flex;
+         flex-direction: column;
+         gap: 10px;
+         padding-left: 40px;
+         a {
+            @include h3;
+            color: $dark-grey !important;
+            transition: $transition;
+            @media (hover: hover) {
+               &:hover {
+                  color: $black !important;
+               }
+            }
+            &:active {
+               color: $black !important;
+            }
+         }
+         &:nth-child(2) {
+            border-left: 1px solid $light-grey;
+         }
+      }
+   }
+   &__image {
+      flex: 0 0 480px;
+      translate: 0 100%;
+      transition: $transition;
+      @media (max-width: 1440px) {
+         flex: 0 0 calc(300px + 180 * ((100vw - 1024px) / (1440 - 1024)));
+      }
+      &.border {
+         border-left: 1px solid $light-grey;
+      }
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+   // display: none;
+}
+
+[data-assort] {
+   position: relative;
+   &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 25px;
+      top: 100%;
+      left: 0;
    }
 }

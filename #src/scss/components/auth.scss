@@ -1,0 +1,41 @@
+.auth-modal {
+   // .auth-modal__main
+
+   &__main {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+   }
+
+   // .auth-modal__form
+
+   &__form {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+   }
+
+   // .auth-modal__check
+
+   &__check {
+      a {
+         color: $black;
+         border-bottom: 1px solid $black;
+      }
+   }
+
+   // .auth-modal__footer
+
+   &__footer {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      .save {
+         border-color: $black;
+      }
+      .exit {
+         color: $dark-grey;
+         border-color: $dark-grey;
+      }
+   }
+}

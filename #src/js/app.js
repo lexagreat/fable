@@ -57,10 +57,11 @@ function headerWork() {
       const openModal = document.querySelector(".modal.open");
       if (openModal) {
          popupClose(openModal);
-         body.classList.remove("lock");
+      } else {
          header.classList.remove("menu-open");
-         burger.classList.remove("active");
       }
+      body.classList.remove("lock");
+      burger.classList.remove("active");
    };
    const openMenu = () => {
       body.classList.add("lock");
@@ -76,9 +77,69 @@ function headerWork() {
       }
    };
    burger.addEventListener("click", burgerWork);
+
+   const assortmentsWork = () => {
+      const modal = document.querySelector(".header__modal");
+      const assortments = document.querySelectorAll(".header-assort");
+      const links = document.querySelectorAll("[data-assort]");
+      links.forEach((item) => {
+         item.onmouseenter = () => {
+            modal.classList.add("show");
+            let attr = item.getAttribute("data-assort");
+            assortments.forEach((item) => {
+               if (item.getAttribute("data-assort-id") !== attr) {
+                  item.classList.remove("active");
+                  item.classList.remove("anim");
+
+                  return;
+               }
+               item.classList.add("active");
+               setTimeout(() => {
+                  item.classList.add("anim");
+               }, 200);
+            });
+         };
+         item.onmouseleave = (e) => {
+            if (!e.relatedTarget.closest(".header__modal")) {
+               modal.classList.remove("show");
+               assortments.forEach((item) => {
+                  item.classList.remove("anim");
+                  item.classList.remove("active");
+               });
+            }
+         };
+      });
+      modal.onmouseleave = (e) => {
+         if (!e.relatedTarget.closest("[data-assort]")) {
+            modal.classList.remove("show");
+            setTimeout(() => {
+               assortments.forEach((item) => {
+                  item.classList.remove("anim");
+                  item.classList.remove("active");
+               });
+            }, 300);
+         }
+      };
+   };
+   assortmentsWork();
 }
 function productPage() {
    tabs('[name="installmentWay"]', ".installment-modal__tab");
+   const initSliders = () => {
+      if (!document.querySelector(".product-gallery__main")) {
+         return;
+      }
+      const mainSwiper = new Swiper(".product-gallery__main", {
+         slidesPerView: 1,
+         navigation: {
+            prevEl: ".product-gallery__main .slider-btn-prev",
+            nextEl: ".product-gallery__main .slider-btn-next",
+         },
+         zoom: true,
+      });
+   };
+   initSliders();
+   accordion(".product-spoiler__header", ".product-spoiler__spoiler");
 }
 // Popup
 const popupLinks = document.querySelectorAll(".modal__link");
