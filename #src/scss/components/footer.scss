@@ -1,10 +1,11 @@
 .footer {
+   background-color: #000000;
    // .footer__wrapper
 
    &__wrapper {
       white-space: nowrap;
-      padding-top: 80px;
-      padding-bottom: 20px;
+      padding-top: 64px;
+      padding-bottom: 32px;
       display: flex;
       flex-direction: column;
       gap: 40px;
@@ -22,6 +23,7 @@
       justify-content: center;
       a {
          @include h3;
+         color: #f6f6f6;
       }
    }
 
@@ -32,23 +34,24 @@
       display: flex;
       gap: 20px;
       li {
-         color: $dark-grey;
+         color: $light-grey;
       }
    }
    @media (max-width: $tablet) {
       &__wrapper {
-         padding-top: 40px;
-         padding-bottom: 30px;
+         padding: 32px 0;
          white-space: unset;
+         gap: 32px;
       }
       &__list {
          width: 100%;
          flex-direction: column;
          justify-content: flex-start;
          align-items: flex-start;
-         gap: 16px;
+         gap: 28px;
          a {
             @include h3-mobile;
+            color: #f6f6f6;
          }
       }
       &__copy {

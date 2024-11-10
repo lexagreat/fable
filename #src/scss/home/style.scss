@@ -63,6 +63,10 @@
       }
       &__image {
          max-height: 302px;
+         .btn {
+            padding: 0 32px;
+            border: 1px solid #8e8e8e;
+         }
       }
    }
 }

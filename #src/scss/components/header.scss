@@ -110,15 +110,19 @@
             pointer-events: none;
          }
       }
+      &__logo {
+         width: 90px;
+         flex: 0 0 90px;
+      }
       &__menu {
          position: fixed;
-         top: 46px;
+         top: 40px;
          left: 0;
          right: 0;
          bottom: 0;
          translate: 100%;
          transition: $transition;
-         padding: 0 8px;
+         padding: 0 20px;
          background-color: $white;
          .breadcrumbs {
             display: block;
@@ -147,7 +151,7 @@
       &__wrapper {
          padding: 8px 0;
          gap: 16px;
-         height: 46px;
+         height: 40px;
       }
       &__icons {
          flex: 1;
@@ -157,6 +161,10 @@
             height: 16px;
             a {
                height: 16px;
+               font-size: 10px;
+               font-weight: 400;
+               line-height: 15px;
+               letter-spacing: 0.06em;
             }
          }
          li:last-child {
@@ -218,11 +226,14 @@
       }
       &__links {
          flex-direction: column;
-         gap: 12px;
+         gap: 28px;
       }
       &__link {
          padding: 0;
          @include h3-mobile;
+      }
+      .breadcrumbs__list {
+         height: 79px;
       }
    }
 }

@@ -12,8 +12,11 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 24px;
+      height: 48px;
       span {
+      }
+      .btn {
+         height: 32px;
       }
    }
 
@@ -61,7 +64,7 @@
    // .filters-modal__content
 
    &__content {
-      width: 448px;
+      width: 481px;
       padding: 64px;
       display: flex;
       flex-direction: column;
@@ -114,11 +117,30 @@
    &__sort {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
       span {
          @include p;
       }
-      li:nth-child(2n) {
-         justify-self: end;
+      li {
+         width: 100%;
+      }
+      label {
+         width: 100%;
+         height: 48px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         border: 1px solid #d9d9d9;
+         transition: 0.4s;
+         div {
+            display: none;
+         }
+         span {
+            @include p-mobile;
+         }
+      }
+      input:checked + label {
+         border-color: black;
       }
    }
 
@@ -127,10 +149,30 @@
    &__size {
       display: flex;
       flex-wrap: wrap;
-      row-gap: 20px;
-      column-gap: 32px;
+      gap: 8px;
       span {
          @include p;
+      }
+      li {
+         flex: 0 0 48px;
+      }
+      label {
+         width: 100%;
+         height: 48px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         border: 1px solid #d9d9d9;
+         transition: 0.4s;
+         div {
+            display: none;
+         }
+         span {
+            @include p-mobile;
+         }
+      }
+      input:checked + label {
+         border-color: black;
       }
    }
 
@@ -139,7 +181,7 @@
    &__color {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
+      gap: 8px;
       input {
          display: none;
       }
@@ -149,14 +191,16 @@
          align-items: center;
          cursor: pointer;
          border: 1px solid $light-grey;
-         padding: 4px;
+
+         padding: 0 16px;
+         height: 48px;
          div {
-            width: 20px;
-            height: 20px;
-            flex: 0 0 20px;
+            width: 8px;
+            height: 8px;
+            flex: 0 0 8px;
          }
          span {
-            @include p;
+            @include p-mobile;
             flex: 1;
          }
          button {
@@ -177,6 +221,7 @@
 
    &__reset {
       height: 32px;
+      flex: 0 0 32px;
       width: fit-content;
    }
    @media (max-width: $tablet) {
@@ -202,8 +247,6 @@
          }
       }
       &__size {
-         row-gap: 8px;
-         column-gap: 24px;
          span {
             @include p-mobile;
          }
@@ -222,13 +265,17 @@
 .catalog-pagination {
    padding: 48px 0;
    position: relative;
+   display: flex;
+   flex-direction: column;
+   gap: 28px;
+   align-items: center;
    // .catalog-pagination__button
 
    &__button {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      translate: -50% -50%;
+      // position: absolute;
+      // top: 50%;
+      // left: 50%;
+      // translate: -50% -50%;
       height: 32px;
    }
 
@@ -239,7 +286,7 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      gap: 12px;
+      gap: 26px;
       button {
          @include button;
          color: $dark-grey;

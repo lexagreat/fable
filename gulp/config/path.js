@@ -1,6 +1,5 @@
-import * as nodePath from 'path';
+import * as nodePath from "path";
 const rootFolder = nodePath.basename(nodePath.resolve());
-
 
 const buildFolder = `./dist`;
 const srcFolder = `./#src`;
@@ -20,6 +19,7 @@ export const path = {
       svg: `${srcFolder}/img/**/*.svg`,
       scss: `${srcFolder}/scss/style.scss`,
       html: `${srcFolder}/*.html`,
+      fonts: `${srcFolder}/fonts/**/*.*`, // Добавим путь к исходным шрифтам здесь
       files: `${srcFolder}/files/**/*.*`,
    },
    watch: {
@@ -33,5 +33,5 @@ export const path = {
    buildFolder: buildFolder,
    srcFolder: srcFolder,
    rootFolder: rootFolder,
-   ftp: ``
-}
+   ftp: ``,
+};

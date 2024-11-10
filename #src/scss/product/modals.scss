@@ -233,7 +233,7 @@
    &__grid {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
-      row-gap: 10px;
+      row-gap: 20px;
       @include p;
       text-align: center;
    }

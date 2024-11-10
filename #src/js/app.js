@@ -124,6 +124,7 @@ function headerWork() {
    assortmentsWork();
 }
 function productPage() {
+   if (!document.querySelector(".product-buy")) return;
    tabs('[name="installmentWay"]', ".installment-modal__tab");
    const initSliders = () => {
       if (!document.querySelector(".product-gallery__main")) {
@@ -138,7 +139,28 @@ function productPage() {
          zoom: true,
       });
    };
+   const makeShutter = () => {
+      if (window.innerWidth > 1024) return;
+      const section = document.querySelectorAll(".products-section")[0];
+      const shutter = document.querySelector(".product-buy");
+      if (section.getBoundingClientRect().top - window.innerHeight < 0) {
+         shutter.style.position = "relative";
+         shutter.style.left = "";
+         shutter.style.right = "";
+         shutter.style.bottom = "";
+         section.style.marginTop = "";
+      } else {
+         section.style.marginTop = shutter.clientHeight + "px";
+
+         shutter.style.position = "fixed";
+         shutter.style.left = "8px";
+         shutter.style.right = "8px";
+         shutter.style.bottom = "0";
+      }
+   };
    initSliders();
+   makeShutter();
+   window.addEventListener("scroll", makeShutter);
    accordion(".product-spoiler__header", ".product-spoiler__spoiler");
 }
 // Popup

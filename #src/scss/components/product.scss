@@ -6,7 +6,8 @@
    // .cart-item__image
 
    &__image {
-      flex: 0 0 104px;
+      flex: 0 0 90px;
+      height: 170px;
       img {
          width: 100%;
          height: 100%;
@@ -47,6 +48,7 @@
 
    &__size {
       @include overline;
+      font-size: 10px;
    }
 
    // .cart-item__count
@@ -56,6 +58,7 @@
       align-items: center;
       gap: 15px;
       @include overline;
+      font-size: 12px;
       button {
          height: 6px;
          display: flex;
@@ -86,13 +89,16 @@
       align-items: center;
       gap: 8px;
       white-space: nowrap;
+      justify-content: end;
       flex-wrap: wrap;
       row-gap: 0;
       .old {
          @include strike-p;
+         font-size: 12px;
       }
       .actual {
          @include p;
+         font-size: 12px;
       }
    }
 
@@ -101,27 +107,24 @@
    &__remove {
       @include overline;
       color: $dark-grey;
+      font-size: 10px;
    }
    @media (max-width: $tablet) {
       gap: 8px;
       padding: 8px 0;
       &__image {
-         flex: 0 0 76px;
       }
       &__info {
          gap: 8px;
       }
-      &__name,
-      &__size,
-      &__remove {
-         @include p-mobile;
-      }
       &__price {
          .actual {
-            @include p-mobile;
+            // @include p-mobile;
+            // font-size: 10px;
          }
          .old {
-            @include strike-p-mobile;
+            // @include strike-p-mobile;
+            // font-size: 10px;
          }
       }
    }
@@ -148,7 +151,54 @@
       left: 10px;
       @include p;
    }
-
+   &__banners {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      display: flex;
+      gap: 10px;
+      li {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         @include p;
+         color: $dark-grey;
+         background-color: #e8e8e8;
+         padding: 0 4px;
+      }
+      @media (max-width: $mobile) {
+         gap: 8px;
+         top: 12px;
+         left: 8px;
+         li {
+            @include overline-mobile;
+         }
+      }
+   }
+   &__colors {
+      position: absolute;
+      left: 10px;
+      bottom: 20px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      button {
+         display: block;
+         width: 10px;
+         height: 10px;
+         flex: 0 0 10px;
+      }
+      @media (max-width: $mobile) {
+         left: 8px;
+         bottom: 12px;
+         gap: 8px;
+         button {
+            width: 8px;
+            height: 8px;
+            flex: 0 0 8px;
+         }
+      }
+   }
    // .product-card__main
 
    &__main {
@@ -170,6 +220,7 @@
 
    &__name {
       @include p;
+      text-transform: unset;
    }
 
    // .product-card__price
@@ -183,9 +234,6 @@
    }
    @media (max-width: $tablet) {
       &__sale {
-         @include p-mobile;
-      }
-      &__name {
          @include p-mobile;
       }
       &__buy {

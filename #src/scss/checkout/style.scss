@@ -28,7 +28,7 @@
       padding-right: 50px;
       display: flex;
       flex-direction: column;
-      gap: 40px;
+      gap: 28px;
    }
 
    // .checkout-page__block
@@ -45,11 +45,12 @@
 .checkout-block {
    display: flex;
    flex-direction: column;
-   gap: 8px;
+   gap: 28px;
    // .checkout-block__title
 
    &__title {
       @include subtitle-2;
+      font-size: 16px;
    }
 
    // .checkout-block__main
@@ -62,7 +63,7 @@
    &__list {
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 16px;
    }
    &__items {
       display: flex;
@@ -86,7 +87,7 @@
          padding-bottom: 8px;
       }
       li:first-child {
-         border-bottom: 1px dashed $light-grey;
+         border-bottom: 1px solid $light-grey;
       }
       li:has(input:checked) .checkout-res__input {
          display: flex;
@@ -128,7 +129,7 @@
          align-items: center;
          justify-content: space-between;
          @include p;
-         border-bottom: 1px dashed $light-grey;
+         border-bottom: 1px solid $light-grey;
          p {
             display: flex;
             align-items: center;
@@ -179,6 +180,7 @@
    .checkout-page {
       &__wrapper {
          padding: 0;
+         padding-bottom: 48px;
          gap: 0;
       }
       &__title {
@@ -192,7 +194,6 @@
       &__main {
          padding-right: 0;
          padding-top: 16px;
-         gap: 20px;
          padding-bottom: 16px;
          position: relative;
          &::after {
@@ -237,5 +238,58 @@
       &__footer {
          gap: 16px;
       }
+   }
+}
+.checkout-ways {
+   // .checkout-ways__radios
+   &:has(input:checked) .checkout-block__list {
+      display: flex !important;
+      margin-top: 16px;
+   }
+   &__radios {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      input {
+         display: none;
+      }
+      label {
+         min-height: 96px;
+         display: flex;
+         flex-direction: column;
+         padding: 8px;
+         border: 1px solid #d9d9d9;
+         transition: 0.4s;
+         color: black;
+         border: 1px solid #d9d9d9;
+         cursor: pointer;
+         span {
+            @include p;
+         }
+         p {
+            flex: 1;
+            @include overline;
+         }
+         .price {
+            @include p;
+         }
+         @media (max-width: $tablet) {
+            span {
+               @include p-mobile;
+            }
+            p {
+               flex: 1;
+               @include overline-mobile;
+            }
+            .price {
+               @include p-mobile;
+            }
+         }
+      }
+      input:checked + label {
+         border-color: black;
+      }
+   }
+   &__list {
    }
 }

@@ -2,6 +2,7 @@
    display: none;
 }
 .wrapper {
+   background-color: #f6f6f6;
    font-family: $font-kitetika;
    min-height: 100vh;
    display: flex;
@@ -11,7 +12,7 @@
    flex: 1;
    padding-top: 70px;
    @media (max-width: $tablet) {
-      padding-top: 46px;
+      padding-top: 40px;
    }
 }
 .container {
@@ -26,6 +27,7 @@
    display: flex;
    flex-direction: column;
    @include p;
+   font-size: 12px;
    input {
       height: 28px;
       border: 1px solid $light-grey;
@@ -37,15 +39,16 @@
    }
    &:has(input:focus) ul {
       opacity: 1;
+      pointer-events: all;
    }
    &.autocomplete {
       position: relative;
       z-index: 1;
 
       ul {
+         pointer-events: none;
          opacity: 0;
          border: 1px solid $dark-grey;
-         border-top: none;
          position: absolute;
          top: 100%;
          translate: 0 -1px;
@@ -54,18 +57,19 @@
          z-index: 2;
          background-color: $white;
          transition: $transition;
-
+         background-color: #d9d9d9;
          li {
             cursor: pointer;
             height: 24px;
             padding-left: 8px;
             display: flex;
             align-items: center;
+            color: #8e8e8e;
+            font-size: 12px;
          }
       }
    }
    @media (max-width: $tablet) {
-      @include p-mobile;
    }
 }
 

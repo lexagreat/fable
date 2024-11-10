@@ -341,7 +341,7 @@
       </div>
    </div>
 </div>
-<div class="modal cart-modal auth-modal" id="authModal">
+<div class="modal cart-modal auth-modal" id="authModal1">
    <div class="modal__content cart-modal__content">
       <div class="cart-modal__header">
          <h2 class="cart-modal__title">ЗАРЕГЕСТРИРОВАТЬСЯ</h2>
@@ -396,6 +396,36 @@
 
    </div>
 </div>
+<div class="modal cart-modal auth-modal" id="authModal">
+   <div class="modal__content cart-modal__content">
+      <div class="cart-modal__header">
+         <h2 class="cart-modal__title">ВХОД</h2>
+         <button class="filters-modal__close modal__close">
+            <img src="img/icons/escape-button.svg" alt="">
+         </button>
+      </div>
+      <section class="breadcrumbs">
+         <div class="container">
+            <ul class="breadcrumbs__list scrollbar-none">
+               <li>
+                  <a href="#">ВХОД</a>
+               </li>
+            </ul>
+         </div>
+      </section>
+      <div class="auth-modal__main">
+         <h4 class="auth-modal__subtitle">войдите в аккаунт или продолжите как гость</h4>
+         <p class="auth-modal__text">Зарегистрируйтесь или войдите в свой аккаунт, чтобы воспользоваться программой
+            лояльности</p>
+         <div class="auth-modal__footer">
+            <a href="#authModal1" class="modal__link btn btn_black">войти по номеру телефона </a>
+            <a href="#authModal1" class="modal__link btn btn_black">войти через email</a>
+            <button class="btn btn_white modal__close">Продолжить как гость</button>
+         </div>
+      </div>
+
+   </div>
+</div>
       <main class="main">
          <section class="breadcrumbs">
             <div class="container">
@@ -432,6 +462,64 @@
                                        <li>москвоский, москва, россия</li>
                                     </ul>
                                  </li>
+                              </ul>
+                           </div>
+                           <div class="checkout-ways">
+                              <ul class="checkout-ways__radios">
+                                 <li>
+                                    <input type="radio" name="checkoutWay" value="0" id="checkoutWay0">
+                                    <label for="checkoutWay0">
+                                       <span>СДЭК (курьер)</span>
+                                       <p> Доставка до двери по России</p>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <input type="radio" name="checkoutWay" value="1" id="checkoutWay1">
+                                    <label for="checkoutWay1">
+                                       <span>СДЭК (пвз)</span>
+                                       <p>доставка до пункта выдачи по россии</p>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <input type="radio" name="checkoutWay" value="2" id="checkoutWay2">
+                                    <label for="checkoutWay2">
+                                       <span>boxberry (курьер)</span>
+                                       <p>Доставка до двери по России</p>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <input type="radio" name="checkoutWay" value="3" id="checkoutWay3">
+                                    <label for="checkoutWay3">
+                                       <span>boxberry (пвз)</span>
+                                       <p>Доставка до пункта выдачи по России</p>
+                                       <span class="price">228 ₽</span>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <input type="radio" name="checkoutWay" value="4" id="checkoutWay4">
+                                    <label for="checkoutWay4">
+                                       <span>Курьер по Москве</span>
+                                       <p>Доставка до двери по Москве</p>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <input type="radio" name="checkoutWay" value="5" id="checkoutWay5">
+                                    <label for="checkoutWay5">
+                                       <span>Самовывоз</span>
+                                       <p>Дизайн-завод Флакон</p>
+                                    </label>
+                                 </li>
+                              </ul>
+                              <ul class="checkout-block__list" style="display: none;">
+                                 <li class="app-input">
+                                    <span>адрес</span>
+                                    <input type="text">
+                                 </li>
+                                 <li class="app-input">
+                                    <span>комментарий к заказу</span>
+                                    <input type="text">
+                                 </li>
+
                               </ul>
                            </div>
                         </div>
