@@ -59,3 +59,136 @@
       }
    }
 }
+.footer-form {
+   color: $white;
+   padding-top: 60px;
+   padding-bottom: 80px;
+   display: flex;
+   gap: 60px;
+   justify-content: center;
+   // .footer-form__main
+
+   &__main {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 385px;
+   }
+
+   // .footer-form__title
+
+   &__title {
+      font-family: $font-play;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: calc(19 / 16);
+   }
+
+   // .footer-form__text
+
+   &__text {
+      font-family: $font-play;
+      font-size: 14px;
+      line-height: calc(21 / 14);
+   }
+
+   // .footer-form__actions
+
+   &__actions {
+      flex: 0 0 400px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+   }
+
+   // .footer-form__radios
+
+   &__radios {
+      display: flex;
+      gap: 10px;
+      li {
+         flex: 0 0 125px;
+      }
+      input {
+         display: none;
+      }
+      label {
+         cursor: pointer;
+         display: flex;
+         gap: 10px;
+         align-items: center;
+         font-family: $font-play;
+         font-size: 14px;
+
+         div {
+            width: 20px;
+            height: 20px;
+            flex: 0 0 20px;
+            border-radius: 50%;
+            border: 1.5px solid $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &::after {
+               content: "";
+               display: block;
+               width: 11px;
+               height: 11px;
+               flex: 0 0 11px;
+               border-radius: 50%;
+               background-color: $white;
+               transition: $transition;
+               opacity: 0;
+            }
+         }
+      }
+      input:checked + label div::after {
+         opacity: 1;
+      }
+   }
+
+   // .footer-form__input
+
+   &__input {
+      max-width: 400px;
+      width: 100%;
+      display: flex;
+      position: relative;
+      input {
+         height: 47px;
+         border-bottom: 1px solid #ababab;
+         width: 100%;
+         padding-left: 8px;
+         padding-right: 40px;
+         font-family: $font-play;
+         background-color: transparent;
+         font-size: 16px;
+         line-height: 16.2px;
+         color: $white;
+      }
+      button {
+         position: absolute;
+         top: 50%;
+         right: 8px;
+
+         translate: 0 -50%;
+      }
+   }
+   @media (max-width: $tablet) {
+      display: flex;
+      flex-direction: column;
+      padding-top: 40px;
+      padding-bottom: 53px;
+      gap: 30px;
+      &__main {
+         gap: 10px;
+      }
+      &__title {
+         font-size: 20px;
+         font-weight: 400;
+      }
+      &__actions {
+         flex: unset;
+      }
+   }
+}

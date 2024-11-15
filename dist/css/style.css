@@ -586,12 +586,23 @@ svg path {
 }
 
 .header__cart {
+  position: relative;
   margin-left: 20px;
 }
 
 .header__cart svg {
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
+}
+
+.header__cart span {
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  translate: -50% 0;
+  font-family: "Play", sans-serif;
+  font-size: 10px;
+  color: black;
 }
 
 .header__burger {
@@ -788,6 +799,156 @@ svg path {
   color: #d9d9d9;
 }
 
+.footer-form {
+  color: #fff;
+  padding-top: 60px;
+  padding-bottom: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 60px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer-form__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+  max-width: 385px;
+}
+
+.footer-form__title {
+  font-family: "Play", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.1875;
+}
+
+.footer-form__text {
+  font-family: "Play", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.footer-form__actions {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 400px;
+          flex: 0 0 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+.footer-form__radios {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.footer-form__radios li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 125px;
+          flex: 0 0 125px;
+}
+
+.footer-form__radios input {
+  display: none;
+}
+
+.footer-form__radios label {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Play", sans-serif;
+  font-size: 14px;
+}
+
+.footer-form__radios label div {
+  width: 20px;
+  height: 20px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20px;
+          flex: 0 0 20px;
+  border-radius: 50%;
+  border: 1.5px solid #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer-form__radios label div::after {
+  content: "";
+  display: block;
+  width: 11px;
+  height: 11px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 11px;
+          flex: 0 0 11px;
+  border-radius: 50%;
+  background-color: #fff;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  opacity: 0;
+}
+
+.footer-form__radios input:checked + label div::after {
+  opacity: 1;
+}
+
+.footer-form__input {
+  max-width: 400px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.footer-form__input input {
+  height: 47px;
+  border-bottom: 1px solid #ababab;
+  width: 100%;
+  padding-left: 8px;
+  padding-right: 40px;
+  font-family: "Play", sans-serif;
+  background-color: transparent;
+  font-size: 16px;
+  line-height: 16.2px;
+  color: #fff;
+}
+
+.footer-form__input button {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  translate: 0 -50%;
+}
+
 .breadcrumbs__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -948,9 +1109,6 @@ svg path {
           align-items: center;
   gap: 8px;
   white-space: nowrap;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   row-gap: 0;
@@ -1087,6 +1245,7 @@ svg path {
           justify-content: space-between;
   padding: 0 10px;
   gap: 16px;
+  margin-top: 10px;
 }
 
 .product-card__info {
@@ -2919,6 +3078,11 @@ body.lock {
     right: 16px;
   }
 
+  .header__cart span {
+    bottom: 1px;
+    font-size: 8px;
+  }
+
   .header__modal {
     display: none;
   }
@@ -3158,6 +3322,34 @@ body.lock {
     line-height: 10px;
     text-transform: uppercase;
     color: #000;
+  }
+
+  .footer-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 53px;
+    gap: 30px;
+  }
+
+  .footer-form__main {
+    gap: 10px;
+  }
+
+  .footer-form__title {
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .footer-form__actions {
+    -webkit-box-flex: unset;
+        -ms-flex: unset;
+            flex: unset;
   }
 
   .breadcrumbs__list {
