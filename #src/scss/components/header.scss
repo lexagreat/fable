@@ -28,6 +28,9 @@
    // .header__links
    &__menu {
       flex: 1;
+      @media (max-width: $tablet) {
+         overflow-y: auto;
+      }
       .breadcrumbs {
          display: none;
       }
@@ -44,6 +47,9 @@
       li:last-child a {
          padding-right: 0;
       }
+      @media (max-width: $tablet) {
+         padding-bottom: 32px !important;
+      }
    }
    &__link {
       @include h1;
@@ -56,6 +62,10 @@
       transition: $transition;
       display: flex;
       gap: 20px;
+      @media (max-width: $tablet) {
+         gap: 28px !important;
+         padding-top: 32px !important;
+      }
    }
 
    // .header__cart
@@ -331,5 +341,33 @@
       height: 25px;
       top: 100%;
       left: 0;
+      @media (max-width: $tablet) {
+         display: none;
+      }
    }
+}
+.header-menu {
+   position: fixed;
+   z-index: 101;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   padding-left: 20px;
+   background-color: white;
+   overflow-y: auto;
+   translate: 100% 0;
+   transition: $transition;
+   &.active {
+      translate: 0 0;
+   }
+}
+
+.header-back {
+   &::before {
+      content: "<";
+   }
+}
+.header:has(.header-menu.active) .header__menu {
+   overflow: hidden !important;
 }

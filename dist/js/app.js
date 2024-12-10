@@ -121,6 +121,23 @@ function headerWork() {
          }
       };
    };
+
+   const mobileMenu = () => {
+      const menus = document.querySelectorAll(".header-menu");
+      menus.forEach((menu) => {
+         menu.previousElementSibling.onclick = (e) => {
+            e.preventDefault();
+            menu.classList.add("active");
+         };
+      });
+      const backs = document.querySelectorAll(".header-back");
+      backs.forEach((back) => {
+         back.onclick = () => {
+            back.closest(".header-menu").classList.remove("active");
+         };
+      });
+   };
+   mobileMenu();
    assortmentsWork();
 }
 function productPage() {
