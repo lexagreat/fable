@@ -30,6 +30,7 @@
       flex: 1;
       @media (max-width: $tablet) {
          overflow-y: auto;
+         overflow-x: hidden !important;
       }
       .breadcrumbs {
          display: none;
@@ -347,6 +348,10 @@
    }
 }
 .header-menu {
+   display: none;
+   @media (max-width: $tablet) {
+      display: block;
+   }
    position: fixed;
    z-index: 101;
    top: 0;
@@ -356,6 +361,7 @@
    padding-left: 20px;
    background-color: white;
    overflow-y: auto;
+   overflow-x: hidden;
    translate: 100% 0;
    transition: $transition;
    &.active {
