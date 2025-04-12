@@ -39,7 +39,6 @@
          font-size: 18px;
       }
    }
-
    // .opt-hero__description
 
    &__description {
@@ -130,7 +129,7 @@
       letter-spacing: 0%;
       text-transform: uppercase;
       @media (max-width: 568px) {
-         font-size: 12px;
+         font-size: 14px;
       }
    }
 
@@ -212,7 +211,7 @@
          span {
             color: #000;
             translate: 0 7px;
-            font-size: 12px;
+            font-size: 14px;
             font-weight: 400;
             line-height: 130%; /* 15.6px */
             text-transform: uppercase;
@@ -383,9 +382,8 @@
          display: flex;
          flex-direction: column;
          & > span {
-            color: var(--Black, #000);
-
-            font-size: 12px;
+            color: #8e8e8e;
+            font-size: 14px;
             font-style: normal;
             font-weight: 400;
             line-height: 120%; /* 14.4px */
@@ -425,7 +423,7 @@
             padding: 12px 20px;
             background: #f7f7f7;
             color: #000;
-            font-size: 12px;
+            font-size: 14px;
             font-style: normal;
             font-weight: 400;
             line-height: 120%; /* 14.4px */
@@ -433,7 +431,7 @@
             cursor: pointer;
             @media (hover: hover) {
                &:hover {
-                  opacity: 0.3;
+                  background-color: #ececec;
                }
             }
             &:has(input:checked) {
@@ -452,7 +450,7 @@
       gap: 20px;
       .app-checkbox {
          label {
-            font-size: 12px;
+            font-size: 14px;
             color: black;
             a {
                color: black;

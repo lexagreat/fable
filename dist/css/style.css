@@ -3229,7 +3229,7 @@ body.lock {
 .opt-preferences__list li span {
   color: #000;
   translate: 0 7px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 130%;
   /* 15.6px */
@@ -3406,8 +3406,8 @@ body.lock {
 }
 
 .opt-form__list > li > span {
-  color: var(--Black, #000);
-  font-size: 12px;
+  color: #8e8e8e;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
@@ -3451,7 +3451,7 @@ body.lock {
   padding: 12px 20px;
   background: #f7f7f7;
   color: #000;
-  font-size: 12px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
@@ -3483,7 +3483,7 @@ body.lock {
 }
 
 .opt-form__footer .app-checkbox label {
-  font-size: 12px;
+  font-size: 14px;
   color: black;
 }
 
@@ -4726,7 +4726,7 @@ body.lock {
   }
 
   .opt-about__subtitle {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .opt-about__title {
@@ -4835,6 +4835,6 @@ body.lock {
   }
 
   .opt-form__items ul label:hover {
-    opacity: 0.3;
+    background-color: #ececec;
   }
 }
